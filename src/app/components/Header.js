@@ -11,6 +11,7 @@ const Header = () => {
         </div>
         <nav className="flex space-x-4">
           <Link href="#home" className="hover:text-yellow-500">Home</Link>
+          
           <Link href="#about" className="hover:text-yellow-500">About</Link>
           <Link href="#projects" className="hover:text-yellow-500">Projects</Link>
           <Link href="#contact" className="hover:text-yellow-500">Contact</Link>
