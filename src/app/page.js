@@ -7,7 +7,7 @@ const HomePage = () => {
       <main className="min-h-screen flex flex-col items-center justify-center mt-20">
         <section id="home" className="section">
           <h1 className="text-4xl font-bold text-blue-900">
-            Welcome to My Portfolio
+            Welcome to My Portfolio !
           </h1>
           <p className="text-lg mt-4 text-blue-900">
             I am Sandra COLOMER, a web integrator passionate about creating
