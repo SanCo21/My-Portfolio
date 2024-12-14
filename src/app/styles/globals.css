@@ -23,3 +23,13 @@ body {
 .bg-foreground {
   background-color: var(--foreground);
 }
+
+.nav-active {
+  background-color: white;
+  color: #1E3A8A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+

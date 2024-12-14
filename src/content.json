@@ -1,0 +1,72 @@
+{
+  "home": {
+    "id": "home",    
+    "title": {
+      "en": "Welcome to My Portfolio!",
+      "fr": "Bienvenue sur Mon Portfolio !"
+    },
+    "intro": {
+      "en": "I am Sandra COLOMER, a web integrator passionate about creating dynamic and interactive websites.",
+      "fr": "Je suis Sandra COLOMER, une intégratrice web passionnée par la création de sites web dynamiques et interactifs."
+    },
+    "description": {
+      "en": "Passionate about digital and driven by the desire to create, I embarked on the journey of front-end web development. I love taking on new challenges and learning new technologies to transform ideas into reality, offering users intuitive and aesthetic digital experiences. My goal is to contribute to creating innovative digital products that improve users' everyday lives.",
+      "fr": "Passionnée par le numérique et motivée par l'envie de créer, je me suis lancée dans l'aventure du développement web front-end. J'aime relever de nouveaux défis et apprendre de nouvelles technologies pour transformer des idées en réalité et offrir aux utilisateurs des expériences digitales intuitives et esthétiques. Mon objectif est de contribuer à la création de produits numériques innovants qui améliorent le quotidien des utilisateurs."
+    }
+  },
+  "about": {
+    "id": "about",
+    "title": {
+      "en": "About",
+      "fr": "À propos"
+    },
+    "content": {
+      "en": "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor.",
+      "fr": "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor."
+    }
+  },
+  "activities": {
+    "id": "activities",
+    "title": {
+      "en": "Activities",
+      "fr": "Activités"
+    },
+    "content": {
+      "en": "Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.",
+      "fr": "Voici quelques activités que j'apprécie... Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh."
+    }
+  },
+  "projects": {
+    "id": "projects",
+    "title": {
+      "en": "Projects",
+      "fr": "Projets"
+    },
+    "content": {
+      "en": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis.",
+      "fr": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis."
+    }
+  },
+  "skills": {
+    "id": "skills",
+    "title": {
+      "en": "Skills",
+      "fr": "Compétences"
+    },
+    "content": {
+      "en": "Suspendisse in justo eu magna luctus suscipit. Sed lectus.",
+      "fr": "Voici quelques compétences que je possède... Suspendisse in justo eu magna luctus suscipit. Sed lectus."
+    }
+  },
+  "contact": {
+    "id": "contact",
+    "title": {
+      "en": "Contact",
+      "fr": "Contact"
+    },
+    "content": {
+      "en": "Praesent blandit dolor. Sed non quam.",
+      "fr": "N'hésitez pas à me contacter pour plus d'informations ou pour discuter de potentiels projets de collaboration."
+    }
+  }
+}
