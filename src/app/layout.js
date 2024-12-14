@@ -15,12 +15,13 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Portfolio - Sandra COLOMER",
-  description: "Bienvenue sur le portfolio de Sandra COLOMER. Explorez mes projets de développement web, apprenez-en davantage sur moi, et contactez-moi pour vos projets numériques.",
+  description:
+    "Bienvenue sur le portfolio de Sandra COLOMER. Explorez mes projets de développement web, apprenez-en davantage sur moi, et contactez-moi pour vos projets numériques.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

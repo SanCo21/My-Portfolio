@@ -2,7 +2,7 @@ import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
 // import Image from 'next/image';
 
-const Header = ({ onLanguageChange }) => {
+const Header = ({ lang, toggleLanguage }) => {
   return (
     <header className="bg-blue-900 text-white p-4 fixed top-0 left-0 w-full z-10">  
       <div className="container mx-auto flex justify-between items-center">
@@ -11,14 +11,14 @@ const Header = ({ onLanguageChange }) => {
           <h1 className="text-xl font-bold ml-2">My Portfolio</h1>          
         </div>
         <nav className="flex space-x-4">
-          <Link href="#home" className="hover:text-yellow-500">Home</Link>
-          <Link href="#home" className="hover:text-yellow-500">Activities</Link>
+          <Link href="#home" className="hover:text-yellow-500">Home</Link>          
           <Link href="#about" className="hover:text-yellow-500">About</Link>
+          <Link href="#home" className="hover:text-yellow-500">Activities</Link>
           <Link href="#projects" className="hover:text-yellow-500">Projects</Link>
           <Link href="#projects" className="hover:text-yellow-500">Skills</Link>
           <Link href="#contact" className="hover:text-yellow-500">Contact</Link>
         </nav>
-        <LanguageSwitcher onLanguageChange={onLanguageChange} />
+        <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} />  
       </div>
     </header>
   );
