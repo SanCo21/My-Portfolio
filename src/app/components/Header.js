@@ -5,6 +5,10 @@ import sectionsData from '../../content';
 
 const Header = ({ lang, toggleLanguage, activeSection }) => {
   const sections = sectionsData;
+  const headerTitle = { 
+    en: "S & Co - Digital solutions", 
+    fr: "S & Co - Solutions digitales" 
+  };
 
   return (
     <header className="bg-blue-900 text-white p-4 fixed top-0 left-0 w-full z-10">  
@@ -12,7 +16,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
         <div className="flex items-center flex-grow-0">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
           <h1 className="text-xl font-bold ml-0 mr-5">
-            {lang === 'fr' ? sections.home.title.fr : sections.home.title.en}
+            {lang === 'fr' ? headerTitle.fr : headerTitle.en}
           </h1>          
         </div>
         <nav className="flex space-x-4">

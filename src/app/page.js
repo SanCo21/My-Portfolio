@@ -17,13 +17,13 @@ const HomePage = () => {
 
   const handleScroll = useCallback(() => { 
     const offsets = Object.keys(sectionsData).map(key => { 
-      const el = document.getElementById(sections[key].id);
+      const el = document.getElementById(sectionsData[key].id);
       if (el) { 
         const offsetTop = el.offsetTop; 
         // console.log(`Section: ${sections[key].id}, Offset: ${offsetTop}`);
-        return { section: sections[key].id, offset: offsetTop };  
+        return { section: sectionsData[key].id, offset: offsetTop };  
       }
-      return { section:sections[key].id, offset: 0 };    
+      return { section:sectionsData[key].id, offset: 0 };    
     });
 
     const currentSection = offsets.reduce((acc, curr) => { 
