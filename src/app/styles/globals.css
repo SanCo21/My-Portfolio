@@ -33,3 +33,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.max-w-1440px { 
+  max-width: 1440px; 
+}
+
+.header-bg-limiter {
+  background-color: inherit;
+  max-width: 1440px;
+  margin: 0 auto;
+}
