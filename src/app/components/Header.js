@@ -11,7 +11,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
   };
 
   return (
-    <header className="bg-blue-900 max-w-screen-max mx-auto text-white p-4 fixed top-0 w-full z-10 ">
+    <header className="bg-blue-900 max-w-screen-max mx-auto text-white p-4 fixed top-0 w-full z-10 lg:hidden">
       <div className=" flex justify-between items-center px-4">
         <div className="flex-1 text-left">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
@@ -28,7 +28,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
             </Link> 
           ))}
         </nav>
-        <div className="flex-1 text-right mr-2">
+        <div className="flex-1 justify-items-end mr-2 ml-5">
           <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} /> 
         </div>
       </div>
