@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,9 +12,11 @@ export default {
         foreground: "var(--foreground)",
       },
       maxWidth: {
-        "1440px": "1440px",
+        "screen-max": "var(--screen-max)",
       },
     },
   },
   plugins: [],
 };
+
+export default config;

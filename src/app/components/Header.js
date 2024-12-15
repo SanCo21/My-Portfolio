@@ -11,8 +11,8 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
   };
 
   return (
-    <header className="bg-blue-900 text-white p-4 fixed top-0 left-0 w-full z-10">  
-      <div className="container mx-auto flex justify-between items-center max-w-1500px">
+    <header className="bg-blue-900 max-w-screen-max mx-auto text-white p-4 fixed top-0 w-full z-10 ">
+      <div className=" flex justify-between items-center px-4">
         <div className="flex-1 text-left">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
           <h1 className="text-xl font-bold ml-2 mr-5 whitespace-pre-line">
@@ -21,8 +21,10 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
         </div>
         <nav className="flex-1 flex justify-center space-x-4">
           {Object.keys(sections).filter(key => key !== 'home').map(key => ( 
-            <Link href={`#${sections[key].id}`} key={key} scroll={false} className={`hover:text-yellow-500 ${activeSection === sections[key].id ? 'bg-white text-blue-900' : ''} ${sections[key].id === 'about' ? 'whitespace-nowrap' : ''}`}> 
-              {lang === 'fr' ? sections[key].title.fr : sections[key].title.en} 
+            <Link href={`#${sections[key].id}`} key={key} scroll={false} legacyBehavior>
+              <a className={`hover:text-yellow-500 ${activeSection === sections[key].id ? 'bg-white text-blue-900' : ''} ${sections[key].id === 'about' ? 'whitespace-nowrap' : ''}`}> 
+                {lang === 'fr' ? sections[key].title.fr : sections[key].title.en} 
+              </a>
             </Link> 
           ))}
         </nav>
