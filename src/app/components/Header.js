@@ -1,10 +1,9 @@
-import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
 import content from '../../content';
+import Navbar from './Navbar';
 // import Image from 'next/image';
 
 const Header = ({ lang, toggleLanguage, activeSection }) => {
-  const sections = content.sectionsData;
   const { base, complement } = content.companyName;
 
   return (
@@ -16,15 +15,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
           {base}<br/>{complement[lang]}
           </h1>          
         </div>
-        <nav className="flex-1 flex justify-center space-x-4">
-          {Object.keys(sections).filter(key => key !== 'home').map(key => ( 
-            <Link href={`#${sections[key].id}`} key={key} scroll={false} legacyBehavior>
-              <a className={`hover:text-yellow-500 ${activeSection === sections[key].id ? 'bg-white text-blue-900' : ''} ${sections[key].id === 'about' ? 'whitespace-nowrap' : ''}`}> 
-                {lang === 'fr' ? sections[key].title.fr : sections[key].title.en} 
-              </a>
-            </Link> 
-          ))}
-        </nav>
+        <Navbar lang={lang} activeSection={activeSection} orientation = "horizontal" />
         <div className="flex-1 justify-items-end mr-2 ml-5">
           <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} /> 
         </div>

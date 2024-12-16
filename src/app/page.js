@@ -1,9 +1,11 @@
 "use client"
 
 import { useEffect, useState, useCallback } from 'react';
+import Image from 'next/image';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import content from '../content';
+import projectsList from '../projectsList';
 import ContactForm from './components/contactForm';
 import Footer from './components/Footer';
 
@@ -64,24 +66,43 @@ const HomePage = () => {
             <p className="text-lg mt-6 text-blue-900">{lang === 'fr' ? sectionsData.home.intro.fr : sectionsData.home.intro.en}</p>
             <p className="text-lg mt-2 text-blue-900">{lang === 'fr' ? sectionsData.home.description.fr : sectionsData.home.description.en}</p>
           </section>
+          
           {/* Other Sections */}
-          {Object.keys(sectionsData).filter(key => key !== 'home' && key !== 'contact').map(key => ( 
+          {Object.keys(sectionsData).filter(key => key !== 'home' && key !== 'projects' && key !== 'contact').map(key => ( 
             <section id={sectionsData[key].id} className="section mt-20 w-full text-center" key={key}> 
               <h2 className="text-3xl font-bold text-blue-900 text-center">{lang === 'fr' ? sectionsData[key].title.fr : sectionsData[key].title.en}</h2> 
               <p className="text-lg mt-6 text-blue-900">{lang === 'fr' ? sectionsData[key].content.fr : sectionsData[key].content.en}</p> 
             </section> 
           ))}
-            <section id="contact" className="section mt-20 flex flex-col items-center justify-center w-full text-center"> 
-              <div className="max-w-xl w-full ">
-                <h2 className="text-3xl font-bold text-blue-900 text-center"> 
-                  {lang === 'fr' ? sectionsData.contact.title.fr : sectionsData.contact.title.en} 
-                </h2> 
-                <p className="text-lg mt-4 text-blue-900 mb-4 ">
-                  {lang === 'fr' ? sectionsData.contact.content.fr : sectionsData.contact.content.en}
-                </p> 
-                <ContactForm lang={lang} />
-              </div>
-            </section>          
+          {/* Projects Section */} 
+          <section id={sectionsData.projects.id} className="section mt-20 w-full text-center"> 
+            <h2 className="text-3xl font-bold text-blue-900 text-center">{lang === 'fr' ? sectionsData.projects.title.fr : sectionsData.projects.title.en}</h2> 
+            <p className="text-lg mt-6 text-blue-900">{lang === 'fr' ? sectionsData.projects.content.fr : sectionsData.projects.content.en}</p> 
+            <div className="mt-10 flex flex-wrap justify-center"> 
+              {projectsList.projects.map((project, index) => ( 
+                <div key={index} className="m-4 p-4 bg-white shadow-lg rounded-lg w-60"> 
+              <Image src={project.imageUrl} alt={project.title} width={45} height={45} className="w-full h-40 object-cover rounded-lg"/> 
+              <h3 className="mt-4 text-xl font-bold">{project.title[lang]}</h3> 
+              <p className="mt-2 text-blue-900">{project.description[lang]}</p> 
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-4 text-yellow-500 hover:underline"> 
+                {lang === 'fr' ? 'Voir le projet' : 'View Project'} 
+              </a> 
+            </div> 
+            ))} 
+            </div> 
+          </section>
+          {/* Contact Section */}
+          <section id="contact" className="section mt-20 flex flex-col items-center justify-center w-full text-center"> 
+            <div className="max-w-xl w-full ">
+              <h2 className="text-3xl font-bold text-blue-900 text-center"> 
+                {lang === 'fr' ? sectionsData.contact.title.fr : sectionsData.contact.title.en} 
+              </h2> 
+              <p className="text-lg mt-4 text-blue-900 mb-4 ">
+                {lang === 'fr' ? sectionsData.contact.content.fr : sectionsData.contact.content.en}
+              </p> 
+              <ContactForm lang={lang} />
+            </div>
+          </section>          
         </main>
         <Footer lang={lang} />
       </div>

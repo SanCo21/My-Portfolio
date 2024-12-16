@@ -42,13 +42,13 @@ html {
   margin: 0 auto;
 }
 
-.linkedin-icon {
+.social-icon {
   display: block;
   width: 16px !important;
   height: auto;
   object-fit: contain;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(101%);
 }
-.linkedin-icon:hover {
+.social-icon:hover {
   filter: invert(72%) sepia(85%) saturate(366%) hue-rotate(173deg) brightness(93%) contrast(89%);
 }

@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "title": {
+        "fr": "Projet 1",
+        "en": "Project 1"
+      },
+      "description": {
+        "fr": "Description du projet 1.",
+        "en": "Description of project 1."
+      },
+      "imageUrl": "/images/projet1.jpg",
+      "link": "https://lien-vers-le-projet1.com"
+    },
+    {
+      "title": {
+        "fr": "Projet 2",
+        "en": "Project 2"
+      },
+      "description": {
+        "fr": "Description du projet 2.",
+        "en": "Description of project 2."
+      },
+      "imageUrl": "/images/projet2.jpg",
+      "link": "https://lien-vers-le-projet2.com"
+    },
+    {
+      "title": {
+        "fr": "Projet 3",
+        "en": "Project 3"
+      },
+      "description": {
+        "fr": "Description du projet 3.",
+        "en": "Description of project 3."
+      },
+      "imageUrl": "/images/projet3.jpg",
+      "link": "https://lien-vers-le-projet3.com"
+    }
+  ]
+}

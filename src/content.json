@@ -17,7 +17,9 @@
     }
   }, 
   "information": {
-    "linkedinUrl": "https://www.linkedin.com/in/sandra-colomer-pro79/" 
+    "linkedinUrl": "https://www.linkedin.com/in/sandra-colomer-pro79/",
+    "githubUrl": "https://github.com/SanCo21", 
+    "email": "mailto:sandra.colomer@outlook.fr"
   },
   "sectionsData": {
     "home": {
@@ -28,7 +30,7 @@
       },
       "intro": {
         "en": "I am Sandra COLOMER, a web integrator passionate about creating dynamic and interactive websites.",
-        "fr": "Je suis Sandra COLOMER, une intégratrice web passionnée par la création de sites web dynamiques et interactifs."
+        "fr": "Je suis Sandra COLOMER, une intégratrice web passionnée par la création de sites dynamiques et interactifs."
       },
       "description": {
         "en": "Passionate about digital and driven by the desire to create, I embarked on the journey of front-end web development. I love taking on new challenges and learning new technologies to transform ideas into reality, offering users intuitive and aesthetic digital experiences. My goal is to contribute to creating innovative digital products that improve users' everyday lives.",
@@ -57,17 +59,6 @@
         "fr": "Voici quelques activités que j'apprécie... Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh."
       }
     },
-    "projects": {
-      "id": "projects",
-      "title": {
-        "en": "Projects",
-        "fr": "Projets"
-      },
-      "content": {
-        "en": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis.",
-        "fr": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis."
-      }
-    },
     "skills": {
       "id": "skills",
       "title": {
@@ -77,6 +68,17 @@
       "content": {
         "en": "Suspendisse in justo eu magna luctus suscipit. Sed lectus.",
         "fr": "Voici quelques compétences que je possède... Suspendisse in justo eu magna luctus suscipit. Sed lectus."
+      }
+    },
+    "projects": {
+      "id": "projects",
+      "title": {
+        "en": "Projects",
+        "fr": "Projets"
+      },
+      "content": {
+        "en": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis.",
+        "fr": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis."
       }
     },
     "contact": {
