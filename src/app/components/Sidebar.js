@@ -4,7 +4,7 @@ import SocialLinks from './socialLinks';
 import Navbar from './Navbar';
 
 const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
-  const sections = content.sectionsData;
+//   const sections = content.sectionsData;
   const { base, complement } = content.companyName;
   const legalNoticesTextBreaks = {
     en: content.legalNotices.textBreaks.en.replace("${base}", base).replace("${complement.en}", complement.en),
@@ -17,7 +17,7 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
             <h1 className="text-2xl font-bold mb-5">
             {base}<br/>{complement[lang]}
             </h1>
-            <div className="flex justify-center mt-4 mb-4">
+            <div className="flex justify-center mt-8 mb-4">
                 <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} /> 
             </div> 
             <div className='text-xl'>

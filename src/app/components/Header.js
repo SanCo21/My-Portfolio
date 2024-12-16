@@ -1,10 +1,19 @@
+
+import { useState } from 'react';
+import Navbar from './Navbar';
 import LanguageSwitcher from './LanguageSwitcher';
 import content from '../../content';
-import Navbar from './Navbar';
+import HamburgerMenu from './HamburgerMenu';
+
 // import Image from 'next/image';
 
 const Header = ({ lang, toggleLanguage, activeSection }) => {
-  const { base, complement } = content.companyName;
+  const { base, complement } = content.companyName;  
+  const [IsNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const handleHamburgerClick = () => {
+    setIsNavbarOpen(!IsNavbarOpen);
+  };
 
   return (
     <header className="bg-blue-900 max-w-screen-max mx-auto text-white p-4 fixed top-0 w-full z-10 lg:hidden">
@@ -15,11 +24,21 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
           {base}<br/>{complement[lang]}
           </h1>          
         </div>
-        <Navbar lang={lang} activeSection={activeSection} orientation = "horizontal" />
-        <div className="flex-1 justify-items-end mr-2 ml-5">
-          <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} /> 
+        <div className="md:hidden"> 
+          <HamburgerMenu onClick={handleHamburgerClick} />
         </div>
+        <div className="md:flex hidden">
+          <Navbar lang={lang} activeSection={activeSection} orientation = "horizontal" />
+        </div>
+        <div className="flex-1 flex justify-end items-center space-x-4 lg:hidden">
+          <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} />               
+        </div>        
       </div>
+      {IsNavbarOpen && (
+        <div className="md:hidden bg-blue-900 flex flex-col items-center">
+          <Navbar lang={lang} activeSection={activeSection} orientation = "vertical" />
+        </div>
+      )}
     </header>
   );
 };
