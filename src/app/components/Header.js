@@ -1,22 +1,19 @@
 import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
-import sectionsData from '../../content';
+import content from '../../content';
 // import Image from 'next/image';
 
 const Header = ({ lang, toggleLanguage, activeSection }) => {
-  const sections = sectionsData;
-  const headerTitle = { 
-    en: "S & Co\nDigital solutions", 
-    fr: "S & Co\nSolutions digitales" 
-  };
+  const sections = content.sectionsData;
+  const { base, complement } = content.companyName;
 
   return (
     <header className="bg-blue-900 max-w-screen-max mx-auto text-white p-4 fixed top-0 w-full z-10 lg:hidden">
       <div className=" flex justify-between items-center px-4">
         <div className="flex-1 text-left">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
-          <h1 className="text-xl font-bold ml-2 mr-5 whitespace-pre-line">
-            {lang === 'fr' ? headerTitle.fr : headerTitle.en}
+          <h1 className="text-lg font-bold ml-2 mr-5 whitespace-pre-line">
+          {base}<br/>{complement[lang]}
           </h1>          
         </div>
         <nav className="flex-1 flex justify-center space-x-4">

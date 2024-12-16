@@ -1,19 +1,16 @@
 import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
-import sectionsData from '../../content';
+import content from '../../content';
 
 const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
-  const sections = sectionsData;
-  const headerTitle = { 
-    en: "S & Co\nDigital solutions", 
-    fr: "S & Co\nSolutions digitales" 
-  };
+  const sections = content.sectionsData;
+  const { base, complement } = content.companyName;
 
   return (
     <aside className="bg-blue-900 text-white w-64 h-full fixed top-0 left-0 p-4  flex-col justify-between hidden lg:flex">
       <div>
-        <h1 className="text-xl font-bold mb-5">
-          {lang === 'fr' ? headerTitle.fr : headerTitle.en}
+        <h1 className="text-2xl font-bold mb-5">
+        {base}<br/>{complement[lang]}
         </h1>
         <nav className="space-y-4">
           {Object.keys(sections).filter(key => key !== 'home').map(key => (
