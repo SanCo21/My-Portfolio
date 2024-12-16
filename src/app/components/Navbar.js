@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import content from '../../content';
 
-const Navbar = ({ lang, activeSection, orientation = 'horizontal' }) => {
+const Navbar = ({ lang, activeSection, orientation = 'horizontal', compact = false }) => {
   const sections = content.sectionsData;
-  const navClass = orientation === 'vertical' ? 'flex-col items-center space-y-20 mt-32' : 'space-x-4';
+  const navClass = orientation === 'vertical' ? `flex-col items-center ${compact ? 'space-y-4 mt-8' : 'space-y-20 mt-32'}` : 'space-x-4';
   const itemClass = orientation === 'vertical' ? 'w-full text-center py-2' : '';
 
   return (

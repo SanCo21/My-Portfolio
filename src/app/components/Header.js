@@ -21,7 +21,8 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
         <div className="flex-1 text-left">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
           <h1 className="text-lg font-bold ml-2 mr-5 whitespace-pre-line">
-          {base}<br/>{complement[lang]}
+          {base}
+          <span className="block">{complement[lang].replace(' ', '\n')}</span>
           </h1>          
         </div>
         <div className="md:hidden"> 
@@ -36,7 +37,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
       </div>
       {IsNavbarOpen && (
         <div className="md:hidden bg-blue-900 flex flex-col items-center">
-          <Navbar lang={lang} activeSection={activeSection} orientation = "vertical" />
+          <Navbar lang={lang} activeSection={activeSection} orientation = "vertical" compact={true} />
         </div>
       )}
     </header>
