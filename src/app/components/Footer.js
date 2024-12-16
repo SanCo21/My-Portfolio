@@ -16,7 +16,7 @@ const Footer = ({ lang }) => {
             <p className="text-sm text-center">{lang === 'fr' ? footerText.fr : footerText.en}</p>
             <div className="mt-3 flex justify-center space-x-6">
                 <a href="https://www.linkedin.com/in/sandra-colomer-pro79/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500">
-                  <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} className='linkedin-icon' />
+                  <Image src="/icons/linkedin.svg" alt="LinkedIn" width={32} height={32} className='linkedin-icon' />
                 </a>
             </div>
         </div>
