@@ -6,16 +6,17 @@ import content from '../../content';
 const Footer = ({ lang }) => {
   const { base, complement } = content.companyName;
   const footerText = {
-    en: `© 2024 - ${base} - ${complement.en} - All Rights Reserved`,
-    fr: `© 2024 - ${base} - ${complement.fr} - Tous droits réservés`
+    en: content.footer.text.en.replace("${base}", base).replace("${complement.en}", complement.en),
+    fr: content.footer.text.fr.replace("${base}", base).replace("${complement.fr}", complement.fr),
   };
+  const linkedinUrl = content.footer.linkedinUrl;
 
   return (
-    <footer className="bg-blue-900 text-white mt-20 py-4 w-full">
+    <footer className="bg-blue-900 text-white mt-20 py-4 w-full lg:hidden">
         <div className="max-w-screen-max mx-auto px-4">
             <p className="text-sm text-center">{lang === 'fr' ? footerText.fr : footerText.en}</p>
             <div className="mt-3 flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/in/sandra-colomer-pro79/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500">
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500">
                   <Image src="/icons/linkedin.svg" alt="LinkedIn" width={32} height={32} className='linkedin-icon' />
                 </a>
             </div>
