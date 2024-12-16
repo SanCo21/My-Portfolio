@@ -57,7 +57,7 @@ const HomePage = () => {
       <Sidebar lang={lang} toggleLanguage={toggleLanguage} activeSection={activeSection} />
       <div className="flex-1 lg:ml-64">
         <Header lang={lang} toggleLanguage={toggleLanguage} activeSection={activeSection}/>
-        <main className="min-h-screen flex flex-col justify-center mt-20 lg:mt-0 w-full mx-auto px-4">
+        <main className="min-h-screen flex flex-col justify-center mt-20 lg:mt-0 lg:mb-24 w-full mx-auto px-4">
           {/* Intro Section */}
           <section id="home" className="section mt-20 w-full text-center lg:mt-20">
             <h2 className="text-4xl font-bold text-blue-900 text-center">{lang === 'fr' ? sectionsData.home.title.fr : sectionsData.home.title.en}</h2>

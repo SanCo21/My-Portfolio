@@ -6,11 +6,11 @@ import content from '../../content';
 const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
   const sections = content.sectionsData;
   const { base, complement } = content.companyName;
-  const footerText = {
-    en: content.footer.text.en.replace("${base}", base).replace("${complement.en}", complement.en),
-    fr: content.footer.text.fr.replace("${base}", base).replace("${complement.fr}", complement.fr),
+  const legalNoticesTextBreaks = {
+    en: content.legalNotices.textBreaks.en.replace("${base}", base).replace("${complement.en}", complement.en),
+    fr: content.legalNotices.textBreaks.fr.replace("${base}", base).replace("${complement.fr}", complement.fr),
   };
-  const linkedinUrl = content.footer.linkedinUrl;
+  const linkedinUrl = content.information.linkedinUrl;
 
   return (
     <aside className="bg-blue-900 text-white w-64 h-full fixed top-0 left-0 p-4 flex-col justify-between hidden lg:flex">
@@ -32,9 +32,9 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
             </nav>
         </div>
         <div className="mt-4 text-center"> {/* Footer content in sidebar */} 
-            <p className="text-sm">{lang === 'fr' ? footerText.fr : footerText.en}</p> 
+            <p className="text-sm" dangerouslySetInnerHTML={{ __html:lang === 'fr' ? legalNoticesTextBreaks.fr : legalNoticesTextBreaks.en}}></p> 
             <div className="mt-4 flex justify-center space-x-6"> 
-                <a href="https://www.linkedin.com/in/your-profile-name/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500"> 
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500"> 
                     <Image src="/icons/linkedin.svg" alt="LinkedIn" width={32} height={32} className="linkedin-icon" /> 
                 </a> 
             </div> 

@@ -6,11 +6,17 @@
       "fr": "Solutions Digitales" 
     } 
   },
-  "footer": { 
+  "legalNotices": { 
     "text": { 
       "en": "© 2024 - ${base} - ${complement.en} - All Rights Reserved", 
       "fr": "© 2024 - ${base} - ${complement.fr} - Tous droits réservés" 
-    }, 
+    },
+    "textBreaks": { 
+      "en": "© 2024<br>${base}<br>${complement.en}<br>All Rights Reserved", 
+      "fr": "© 2024<br>${base}<br>${complement.fr}<br>Tous droits réservés"
+    }
+  }, 
+  "information": {
     "linkedinUrl": "https://www.linkedin.com/in/sandra-colomer-pro79/" 
   },
   "sectionsData": {
