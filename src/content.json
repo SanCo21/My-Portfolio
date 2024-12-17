@@ -28,13 +28,9 @@
         "en": "Welcome to My Portfolio!",
         "fr": "Bienvenue sur Mon Portfolio !"
       },
-      "intro": {
+      "content": {
         "en": "I am Sandra COLOMER, a web integrator passionate about creating dynamic and interactive websites.",
         "fr": "Je suis Sandra COLOMER, une intégratrice web passionnée par la création de sites dynamiques et interactifs."
-      },
-      "description": {
-        "en": "Passionate about digital and driven by the desire to create, I embarked on the journey of front-end web development. I love taking on new challenges and learning new technologies to transform ideas into reality, offering users intuitive and aesthetic digital experiences. My goal is to contribute to creating innovative digital products that improve users' everyday lives.",
-        "fr": "Passionnée par le numérique et motivée par l'envie de créer, je me suis lancée dans l'aventure du développement web front-end. J'aime relever de nouveaux défis et apprendre de nouvelles technologies pour transformer des idées en réalité et offrir aux utilisateurs des expériences digitales intuitives et esthétiques. Mon objectif est de contribuer à la création de produits numériques innovants qui améliorent le quotidien des utilisateurs."
       }
     },
     "about": {
@@ -44,8 +40,8 @@
         "fr": "À propos"
       },
       "content": {
-        "en": "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor.",
-        "fr": "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor."
+        "en": "Passionate about digital and driven by the desire to create, I embarked on the journey of front-end web development. I love taking on new challenges and learning new technologies to transform ideas into reality, offering users intuitive and aesthetic digital experiences. My goal is to contribute to creating innovative digital products that improve users' everyday lives.",
+        "fr": "Passionnée par le numérique et motivée par l'envie de créer, je me suis lancée dans l'aventure du développement web front-end. J'aime relever de nouveaux défis et apprendre de nouvelles technologies pour transformer des idées en réalité et offrir aux utilisateurs des expériences digitales intuitives et esthétiques. Mon objectif est de contribuer à la création de produits numériques innovants qui améliorent le quotidien des utilisateurs."
       }
     },
     "activities": {
@@ -68,7 +64,46 @@
       "content": {
         "en": "Suspendisse in justo eu magna luctus suscipit. Sed lectus.",
         "fr": "Voici quelques compétences que je possède... Suspendisse in justo eu magna luctus suscipit. Sed lectus."
-      }
+      },
+      "component": "SkillsCards",
+    
+      "skillsList": [
+        { 
+          "src": "/icons/html5.svg", 
+          "alt": "HTML 5", 
+          "name": "HTML 5" 
+        }, 
+        { 
+          "src": "/icons/css3.svg", 
+          "alt": "CSS 3", 
+          "name": "CSS 3" 
+        }, 
+        { 
+          "src": "/icons/sass.svg", 
+          "alt": "Sass", 
+          "name": "Sass" 
+        }, 
+        { 
+          "src": "/icons/react.svg", 
+          "alt": "React.js", 
+          "name": "React.js" 
+        }, 
+        { 
+          "src": "/icons/js.svg", 
+          "alt": "JavaScript", 
+          "name": "JavaScript" 
+        }, 
+        { 
+          "src": "/icons/nextjs.svg", 
+          "alt": "Next.js", 
+          "name": "Next.js" 
+        }, 
+        { 
+          "src": "/icons/tailwind.svg", 
+          "alt": "Tailwind", 
+          "name": "Tailwind" 
+        } 
+      ] 
     },
     "projects": {
       "id": "projects",
@@ -79,7 +114,8 @@
       "content": {
         "en": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis.",
         "fr": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis."
-      }
+      },
+      "component": "ProjectCard"
     },
     "contact": {
       "id": "contact",
@@ -88,9 +124,10 @@
         "fr": "Contact"
       },
       "content": {
-        "en": "Praesent blandit dolor. Sed non quam.",
-        "fr": "N'hésitez pas à me contacter pour plus d'informations ou pour discuter de potentiels projets de collaboration."
-      }
+        "en": "Feel free to contact me for more information...",
+        "fr": "N'hésitez pas à me contacter pour plus d'informations..."
+      }, 
+      "component": "ContactForm"
     }
   }
 }

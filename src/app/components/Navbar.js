@@ -6,11 +6,21 @@ const Navbar = ({ lang, activeSection, orientation = 'horizontal', compact = fal
   const navClass = orientation === 'vertical' ? `flex-col items-center ${compact ? 'space-y-4 mt-8' : 'space-y-20 mt-32'}` : 'space-x-4';
   const itemClass = orientation === 'vertical' ? 'w-full text-center py-2' : '';
 
+  const handleLinkClick = (event, id) => {
+    event.preventDefault(); 
+    const element = document.getElementById(id); 
+    if (element) { 
+      element.scrollIntoView({ behavior: 'smooth' }); 
+      window.history.pushState(null, null, `#${id}`); 
+    } 
+  };
+
   return (
     <nav className={`flex-1 flex justify-center ${navClass}`}>
       {Object.keys(sections).filter(key => key !== 'home').map(key => ( 
         <Link href={`#${sections[key].id}`} key={key} scroll={false} legacyBehavior>
-          <a className={`${itemClass} hover:text-yellow-500 ${activeSection === sections[key].id ? 'bg-white text-blue-900 px-1' : ''} ${sections[key].id === 'about' ? 'whitespace-nowrap' : ''}`}> 
+          <a className={`${itemClass} hover:text-yellow-500 ${activeSection === sections[key].id ? 'bg-white text-blue-900 px-1' : ''} ${sections[key].id === 'about' ? 'whitespace-nowrap' : ''}`}
+          onClick={(event) => handleLinkClick(event, sections[key].id)}> 
             {lang === 'fr' ? sections[key].title.fr : sections[key].title.en} 
           </a>
         </Link> 

@@ -17,8 +17,6 @@ body {
   line-height: 1.6;
 }
 
-
-
 .text-foreground {
   color: var(--foreground);
 }
@@ -51,4 +49,16 @@ html {
 }
 .social-icon:hover {
   filter: invert(72%) sepia(85%) saturate(366%) hue-rotate(173deg) brightness(93%) contrast(89%);
+}
+
+.skills-icon {
+  width: 80px;
+  height: 80px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(101%);
+}
+
+.skill-card {
+  background-color: #1E3A8A ;
+  padding: 5px; 
+  border-radius: 8px; 
 }
