@@ -5,7 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #093257;
-  --screen-max: 1500px;
+  --screen-max: 1536px;
 }
 
 body {
@@ -34,11 +34,16 @@ html {
   scroll-behavior: smooth;
 }
 
-.bg-limiter {
+/* .bg-limiter {
   background-color: inherit;
   max-width: var(--screen-max);
   margin: 0 auto;
-}
+} */
+
+/* .section > div {
+  width: 100%;
+  max-width: 100%;
+} */
 
 .social-icon {
   display: block;
@@ -60,5 +65,32 @@ html {
 .skill-card {
   background-color: #1E3A8A ;
   padding: 5px; 
-  border-radius: 8px; 
+  border-radius: 8px;
 }
+
+.skills-track {
+  /* display: flex; */
+  width: 100%;
+  max-width: 100%;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+} 
+
+.skills-wrapper:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
+/* @media screen and (min-width: 1024px) {
+  .skills-track {
+    max-width: calc(100vw - 16rem);
+  }
+} */
+
+

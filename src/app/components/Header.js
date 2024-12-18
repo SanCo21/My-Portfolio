@@ -16,7 +16,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
   };
 
   return (
-    <header className="bg-blue-900 max-w-screen-max mx-auto text-white p-4 fixed top-0 w-full z-10 lg:hidden">
+    <header className="bg-blue-900 text-white p-4 fixed top-0 w-full z-10 lg:hidden">
       <div className=" flex justify-between items-center px-4">
         <div className="flex-1 text-left">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}

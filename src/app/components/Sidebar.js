@@ -12,9 +12,9 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
   };
 
   return (
-    <aside className="bg-blue-900 text-white w-64 h-full fixed top-0 left-0 p-4 flex-col justify-between hidden lg:flex">
+    <aside className="bg-blue-900 text-white w-64 min-h-screen fixed top-0 left-0 p-4 flex-col justify-between hidden lg:flex">
         <div>
-            <h1 className="text-2xl font-bold mb-5">
+            <h1 className="text-2xl text-center font-bold mb-5">
             {base}<br/>{complement[lang]}
             </h1>
             <div className="flex justify-center mt-8 mb-4">

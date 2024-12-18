@@ -8,8 +8,8 @@ const ProjectCards = ({ lang, projects }) => {
           <Image className="w-full h-40 object-cover rounded-lg"
             src={project.imageUrl}
             alt={project.title[lang]}
-            width={45}
-            height={45}            
+            width={100}
+            height={100}            
           />
           <h3 className="mt-4 text-xl font-bold">{project.title[lang]}</h3>
           <p className="mt-2 text-blue-900">{project.description[lang]}</p>

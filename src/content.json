@@ -70,29 +70,39 @@
       "skillsList": [
         { 
           "src": "/icons/html5.svg", 
-          "alt": "HTML 5", 
+          "alt": "HTML 5 logo", 
           "name": "HTML 5" 
         }, 
         { 
           "src": "/icons/css3.svg", 
-          "alt": "CSS 3", 
+          "alt": "CSS 3 logo", 
           "name": "CSS 3" 
         }, 
         { 
           "src": "/icons/sass.svg", 
-          "alt": "Sass", 
+          "alt": "Sass logo", 
           "name": "Sass" 
         }, 
         { 
           "src": "/icons/react.svg", 
-          "alt": "React.js", 
+          "alt": "React logo", 
           "name": "React.js" 
         }, 
         { 
           "src": "/icons/js.svg", 
-          "alt": "JavaScript", 
+          "alt": "JavaScript logo", 
           "name": "JavaScript" 
-        }, 
+        },
+        { 
+          "src": "/icons/git.svg", 
+          "alt": "Git logo", 
+          "name": "Git" 
+        },
+        { 
+          "src": "/icons/figma.svg", 
+          "alt": "Figma logo", 
+          "name": "Figma" 
+        },
         { 
           "src": "/icons/nextjs.svg", 
           "alt": "Next.js", 
