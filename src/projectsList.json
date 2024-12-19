@@ -1,49 +1,37 @@
 {
   "projects": [
     {
-      "title": {
-        "fr": "Projet 1",
-        "en": "Project 1"
-      },
+      "title": "Booki",
       "description": {
-        "fr": "Description du projet 1.",
-        "en": "Description of project 1."
+        "fr": "Agence de voyage",
+        "en": "Travel agency"
       },
-      "imageUrl": "/images/projet1.jpg",
+      "imageUrl": "/images/Booki.jpg",
       "link": "https://lien-vers-le-projet1.com"
     },
     {
-      "title": {
-        "fr": "Projet 2",
-        "en": "Project 2"
-      },
+      "title": "Oh my food",
       "description": {
-        "fr": "Description du projet 2.",
-        "en": "Description of project 2."
+        "fr": "Site de réservation de restaurants",
+        "en": "Restaurant reservation website"
       },
-      "imageUrl": "/images/projet2.jpg",
+      "imageUrl": "/images/OhMyFood.jpg",
       "link": "https://lien-vers-le-projet2.com"
     },
     {
-      "title": {
-        "fr": "Projet 3",
-        "en": "Project 3"
-      },
+      "title": "Kasa",
       "description": {
-        "fr": "Description du projet 3.",
-        "en": "Description of project 3."
+        "fr": "Site de location de logements entre particuliers",
+        "en": "Site for renting accommodations between individuals"
       },
-      "imageUrl": "/images/projet3.jpg",
+      "imageUrl": "/images/Kasa.png",
       "link": "https://lien-vers-le-projet3.com"
     },
     {
-      "title": {
-        "fr": "Nina Carducci",
-        "en": "Nina Carducci"
-      },
+      "title": "Nina Carducci",
       "description": {
-        "fr": "Portfolio d'une photographe professionnelle.",
-        "en": "Portfolio of a professional photographer."
+        "fr": "Portfolio d'une photographe professionnelle",
+        "en": "Portfolio of a professional photographer"
       },
       "imageUrl": "/images/NinaCarducci.jpg",
       "link": "https://lien-vers-le-projet4.com"
