@@ -93,4 +93,9 @@ html {
   }
 } */
 
+.filter-white {
+  width: 80px;
+  height: 80px;
+  /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(101%); */
+}
 
