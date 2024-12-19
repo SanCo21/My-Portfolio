@@ -35,6 +35,18 @@
       },
       "imageUrl": "/images/projet3.jpg",
       "link": "https://lien-vers-le-projet3.com"
+    },
+    {
+      "title": {
+        "fr": "Nina Carducci",
+        "en": "Nina Carducci"
+      },
+      "description": {
+        "fr": "Portfolio d'une photographe professionnelle.",
+        "en": "Portfolio of a professional photographer."
+      },
+      "imageUrl": "/images/NinaCarducci.jpg",
+      "link": "https://lien-vers-le-projet4.com"
     }
   ]
 }

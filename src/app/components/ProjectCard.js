@@ -4,12 +4,12 @@ const ProjectCards = ({ lang, projects }) => {
   return (
     <div className="projects-content mt-10 flex flex-wrap justify-center">
       {projects.map((project, index) => (
-        <div key={index} className="m-4 p-4 bg-white shadow-lg rounded-lg w-60">
-          <Image className="w-full h-40 object-cover rounded-lg"
+        <div key={index} className="m-4 p-4 bg-white shadow-lg rounded-lg w-80">
+          <Image className="w-full h-60 object-cover rounded-lg"
             src={project.imageUrl}
             alt={project.title[lang]}
-            width={100}
-            height={100}            
+            width={300}
+            height={300}            
           />
           <h3 className="mt-4 text-xl font-bold">{project.title[lang]}</h3>
           <p className="mt-2 text-blue-900">{project.description[lang]}</p>
