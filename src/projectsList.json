@@ -9,7 +9,7 @@
       "imageUrl": "/images/Booki.jpg",
       "link": "https://lien-vers-le-projet1.com",
       "github": "https://github.com/utilisateur/projet1",
-      "tools": ["test1", "test2"]
+      "tools": ["HTML", "CSS"]
     },
     {
       "title": "Oh my food",
@@ -20,7 +20,7 @@
       "imageUrl": "/images/OhMyFood.jpg",
       "link": "https://lien-vers-le-projet2.com",
       "github": "https://github.com/utilisateur/projet1",
-      "tools": ["test1", "test2"]
+      "tools": ["HTML", "CSS", "Sass"]
     },
     {
       "title": "Kasa",
@@ -31,7 +31,7 @@
       "imageUrl": "/images/Kasa.png",
       "link": "https://lien-vers-le-projet3.com",
       "github": "https://github.com/utilisateur/projet1",
-      "tools": ["test1", "test2"]
+      "tools": ["React.js", "Sass"]
     },
     {
       "title": "Nina Carducci",

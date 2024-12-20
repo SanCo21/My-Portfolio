@@ -46,7 +46,7 @@ const ProjectCards = ({ lang, projects }) => {
                 />
               </a>
             </div>
-            <div className="p-1 mt-2 text-white text-xs">
+            <div className="p-1 mt-2 w-20 h-14 text-white text-xs">
               <ul>
                 {project.tools.map((tool, toolIndex) => (
                   <li key={toolIndex}>{tool}</li>
