@@ -27,7 +27,7 @@ body {
 
 .nav-active {
   background-color: white;
-  color: #1E3A8A;
+  color: #1e3a8a;
 }
 
 html {
@@ -50,21 +50,24 @@ html {
   width: 16px !important;
   height: auto;
   object-fit: contain;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(101%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
+    contrast(101%);
 }
 .social-icon:hover {
-  filter: invert(72%) sepia(85%) saturate(366%) hue-rotate(173deg) brightness(93%) contrast(89%);
+  filter: invert(72%) sepia(85%) saturate(366%) hue-rotate(173deg)
+    brightness(93%) contrast(89%);
 }
 
 .skills-icon {
   width: 80px;
   height: 80px;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(101%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
+    contrast(101%);
 }
 
 .skill-card {
-  background-color: #1E3A8A ;
-  padding: 5px; 
+  background-color: #1e3a8a;
+  padding: 5px;
   border-radius: 8px;
 }
 
@@ -75,13 +78,17 @@ html {
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-scroll {
   animation: scroll 25s linear infinite;
-} 
+}
 
 .skills-wrapper:hover .animate-scroll {
   animation-play-state: paused;
@@ -93,9 +100,50 @@ html {
   }
 } */
 
+/* Only for Tailwind icon */
 .filter-white {
   width: 80px;
   height: 80px;
   /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(101%); */
 }
 
+@keyframes container-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animated-container-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+.translate-y-full {
+  transform: translateY(6rem); /* Ajuste cette valeur pour que l'icône soit visible et l'encart caché */
+}
+.translate-y-0 {
+  transform: translateY(2rem);
+}
+
+.container-wrapper {
+  /* width: 100%; */
+  bottom: 2rem; /* Ajuste cette valeur en fonction de la hauteur de l'encart */
+  transition: transform 0.3s ease-out;
+}
+
+.icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
+    contrast(101%);
+}
+
+/* .icon-wrapper {
+  margin-bottom: -1rem;
+  background-color: #1e3a8a; 
+  border-radius: 50%;
+  padding: 0.5rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */

@@ -7,7 +7,9 @@
         "en": "Travel agency"
       },
       "imageUrl": "/images/Booki.jpg",
-      "link": "https://lien-vers-le-projet1.com"
+      "link": "https://lien-vers-le-projet1.com",
+      "github": "https://github.com/utilisateur/projet1",
+      "tools": ["test1", "test2"]
     },
     {
       "title": "Oh my food",
@@ -16,7 +18,9 @@
         "en": "Restaurant reservation website"
       },
       "imageUrl": "/images/OhMyFood.jpg",
-      "link": "https://lien-vers-le-projet2.com"
+      "link": "https://lien-vers-le-projet2.com",
+      "github": "https://github.com/utilisateur/projet1",
+      "tools": ["test1", "test2"]
     },
     {
       "title": "Kasa",
@@ -25,7 +29,9 @@
         "en": "Site for renting accommodations between individuals"
       },
       "imageUrl": "/images/Kasa.png",
-      "link": "https://lien-vers-le-projet3.com"
+      "link": "https://lien-vers-le-projet3.com",
+      "github": "https://github.com/utilisateur/projet1",
+      "tools": ["test1", "test2"]
     },
     {
       "title": "Nina Carducci",
@@ -34,7 +40,9 @@
         "en": "Portfolio of a professional photographer"
       },
       "imageUrl": "/images/NinaCarducci.jpg",
-      "link": "https://lien-vers-le-projet4.com"
+      "link": "https://lien-vers-le-projet4.com",
+      "github": "https://github.com/utilisateur/projet1",
+      "tools": ["LightHouse", "Rich Snippet", "WaveTools"]
     }
   ]
 }
