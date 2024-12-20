@@ -15,18 +15,18 @@
       "en": "© 2024<br>${base}<br>${complement.en}<br>All Rights Reserved", 
       "fr": "© 2024<br>${base}<br>${complement.fr}<br>Tous droits réservés"
     }
-  }, 
-  "information": {
-    "linkedinUrl": "https://www.linkedin.com/in/sandra-colomer-pro79/",
-    "githubUrl": "https://github.com/SanCo21", 
-    "email": "mailto:sandra.colomer@outlook.fr"
-  },
+  },   
+  "socialLinks": [ 
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/sandra-colomer-pro79/", "icon": "/icons/linkedin.svg" }, 
+    { "name": "GitHub", "url": "https://github.com/SanCo21", "icon": "/icons/github.svg" }, 
+    { "name": "Email", "url": "mailto:sandra.colomer@outlook.fr", "icon": "/icons/email.svg" } 
+  ],  
   "sectionsData": {
     "home": {
       "id": "home",    
       "title": {
         "en": "Welcome to My Portfolio!",
-        "fr": "Bienvenue sur Mon Portfolio !"
+        "fr": "Bienvenue sur mon Portfolio !"
       },
       "content": {
         "en": "I am Sandra COLOMER, a web integrator passionate about creating dynamic and interactive websites.",

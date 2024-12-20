@@ -93,11 +93,11 @@ const HomePage = () => {
   };
   
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col custom:flex-row">
       <Sidebar lang={lang} toggleLanguage={toggleLanguage} activeSection={activeSection} />
       <div className="flex-1 lg:ml-64">
         <Header lang={lang} toggleLanguage={toggleLanguage} activeSection={activeSection}/>
-        <main className="min-h-screen flex flex-col mt-20 lg:mt-0 lg:mb-24 max-w-screen-md mx-auto px-4">
+        <main className="min-h-screen flex flex-col mt-20 lg:mt-0 lg:mb-24 max-w-screen-lg mx-auto px-4">
         {/* <main className="min-h-screen flex flex-col justify-center mt-20 lg:mt-0 lg:mb-24 container mx-auto px-4"> */}
         {Object.keys(sectionsData).map(key => { 
           const section = sectionsData[key]; 

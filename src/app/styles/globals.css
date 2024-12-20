@@ -8,6 +8,10 @@
   --screen-max: 1536px;
 }
 
+html, body {
+  width: 100%;
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
@@ -38,11 +42,6 @@ html {
   background-color: inherit;
   max-width: var(--screen-max);
   margin: 0 auto;
-} */
-
-/* .section > div {
-  width: 100%;
-  max-width: 100%;
 } */
 
 .social-icon {
@@ -129,13 +128,13 @@ html {
   transform: translateY(2rem);
 }
 
-.container-wrapper {
+.container-wrapper, .container-wrapper-info {
   /* width: 100%; */
   bottom: 2rem; /* Ajuste cette valeur en fonction de la hauteur de l'encart */
   transition: transform 0.3s ease-out;
 }
 
-.icon {
+.icon-style {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
     contrast(101%);
 }
