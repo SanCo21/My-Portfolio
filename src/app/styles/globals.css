@@ -8,7 +8,8 @@
   --screen-max: 1536px;
 }
 
-html, body {
+html,
+body {
   width: 100%;
 }
 
@@ -93,6 +94,12 @@ html {
   animation-play-state: paused;
 }
 
+.skill-card {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+
+
 /* @media screen and (min-width: 1024px) {
   .skills-track {
     max-width: calc(100vw - 16rem);
@@ -122,13 +129,16 @@ html {
 }
 
 .translate-y-full {
-  transform: translateY(6rem); /* Ajuste cette valeur pour que l'icône soit visible et l'encart caché */
+  transform: translateY(
+    6rem
+  ); /* Ajuste cette valeur pour que l'icône soit visible et l'encart caché */
 }
 .translate-y-0 {
   transform: translateY(2rem);
 }
 
-.container-wrapper, .container-wrapper-info {
+.container-wrapper,
+.container-wrapper-info {
   /* width: 100%; */
   bottom: 2rem; /* Ajuste cette valeur en fonction de la hauteur de l'encart */
   transition: transform 0.3s ease-out;

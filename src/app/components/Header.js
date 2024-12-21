@@ -21,8 +21,8 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
         <div className="flex-1 text-left">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
           <h1 className="text-lg font-bold ml-2 mr-5 whitespace-pre-line">
-          {base}
-          <span className="block">{complement[lang].replace(' ', '\n')}</span>
+          <a href="#home">{base}
+          <span className="block">{complement[lang].replace(' ', '\n')}</span></a>
           </h1>          
         </div>
         <div className="md:hidden"> 

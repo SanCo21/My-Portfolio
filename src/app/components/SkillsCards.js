@@ -39,7 +39,7 @@ const SkillsCards = () => {
 
   return (
     <div className="skills-content mt-10 mx-auto container overflow-hidden">
-      <div className="skills-track">
+      <div className="skills-wrapper hover:skills-paused">
         <div className="flex animate-scroll gap-6 w-fit">
           {skillsList.map((skill, index) => (
             <div 
