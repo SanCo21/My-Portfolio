@@ -10,6 +10,7 @@ import ProjectCard from './components/ProjectCard';
 import SkillsCards from './components/SkillsCards';
 import ContactForm from "./components/ContactForm";
 import Footer from './components/Footer';
+import Typewriter from './components/Typewriter';
 
 const componentsMap = {
   ProjectCard,
@@ -104,8 +105,9 @@ const HomePage = () => {
           const Component = componentsMap[section.component]; 
           return ( 
             <section id={section.id} className="section mt-20 w-full text-center" key={key}> 
-              <h2 className="text-3xl font-bold text-blue-900 text-center">
-                {lang === 'fr' ? section.title.fr : section.title.en}
+              <h2 className={`text-3xl font-bold text-blue-900 text-center ${section.id === 'home' ? 'text-4xl uppercase' : ''}`}>
+              {section.id === 'home' ? <Typewriter text={lang === 'fr' ? section.title.fr : section.title.en} /> : 
+                (lang === 'fr' ? section.title.fr : section.title.en)}
               </h2> 
               {section.content && ( 
                 <p className="text-lg mt-6 text-blue-900">
