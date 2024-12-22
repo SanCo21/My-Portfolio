@@ -34,7 +34,7 @@
       "title": "Kasa",
       "description": {
         "fr": "Site de location de logements entre particuliers",
-        "en": "Site for renting accommodations between individuals"
+        "en": "Peer-to-peer accommodation rental website"
       },
       "information": {
         "fr": "Création d'une application web dynamique utilisant React pour une expérience utilisateur fluide et une gestion moderne du routage. ",
@@ -52,11 +52,11 @@
         "en": "Portfolio of a professional photographer"
       },
       "information": {
-        "fr": "Amélioration du SEO d'un site web existant en utilisant des outils de référencement et des bonnes pratiques.",
+        "fr": "Amélioration du SEO d'un site web existant en utilisant des outils de référencement et de bonnes pratiques.",
         "en": "SEO improvement of an existing website using SEO tools and best practices."
       },
       "imageUrl": "/images/NinaCarducci.jpg",
-      "link": "https://lien-vers-le-projet4.com",
+      "link": "https://lien-vers-le-proje4.com",
       "github": "https://github.com/utilisateur/projet1",
       "tools": ["LightHouse", "Rich Snippet", "WaveTools"]
     }

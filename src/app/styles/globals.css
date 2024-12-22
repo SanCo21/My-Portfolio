@@ -58,6 +58,7 @@ html {
     brightness(93%) contrast(89%);
 }
 
+
 .skills-icon {
   width: 80px;
   height: 80px;
@@ -65,16 +66,23 @@ html {
     contrast(101%);
 }
 
-.skill-card {
-  background-color: #1e3a8a;
-  padding: 5px;
-  border-radius: 8px;
+.hover-pause:hover .animate-infinite-scroll {
+  animation-play-state: paused;
 }
 
-.skills-track {
-  /* display: flex; */
-  width: 100%;
-  max-width: 100%;
+.animate-infinite-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.skill-item {
+  position: relative;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+  z-index: 50;
 }
 
 @keyframes scroll {
@@ -82,29 +90,11 @@ html {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.33%);
   }
 }
 
-.animate-scroll {
-  animation: scroll 25s linear infinite;
-}
 
-.skills-wrapper:hover .animate-scroll {
-  animation-play-state: paused;
-}
-
-.skill-card {
-  transition: transform 0.3s ease-in-out;
-  display: inline-block;
-}
-
-
-/* @media screen and (min-width: 1024px) {
-  .skills-track {
-    max-width: calc(100vw - 16rem);
-  }
-} */
 
 /* Only for Tailwind icon */
 .filter-white {
@@ -129,18 +119,15 @@ html {
 }
 
 .translate-y-full {
-  transform: translateY(
-    6rem
-  ); /* Ajuste cette valeur pour que l'icône soit visible et l'encart caché */
+  transform: translateY(6rem); 
 }
 .translate-y-0 {
   transform: translateY(2rem);
 }
 
-.container-wrapper,
-.container-wrapper-info {
+.container-wrapper, .container-wrapper-info {
   /* width: 100%; */
-  bottom: 2rem; /* Ajuste cette valeur en fonction de la hauteur de l'encart */
+  bottom: 2rem;
   transition: transform 0.3s ease-out;
 }
 
