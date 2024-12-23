@@ -7,7 +7,7 @@ import Sidebar from './components/Sidebar';
 import content from '../content';
 import projectsList from '../projectsList';
 import ProjectCard from './components/ProjectCard';
-import SkillsCards from './components/SkillsCards';
+import SkillsCards from './components/SkillsCards.js';
 import ContactForm from "./components/ContactForm";
 import Footer from './components/Footer';
 import Typewriter from './components/Typewriter';

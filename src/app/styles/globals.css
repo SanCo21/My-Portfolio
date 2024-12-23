@@ -58,15 +58,15 @@ html {
     brightness(93%) contrast(89%);
 }
 
-
-.skills-icon {
+/* For Skillcards component */
+/* .skills-icon { 
   width: 80px;
   height: 80px;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
     contrast(101%);
-}
+} */
 
-.hover-pause:hover .animate-infinite-scroll {
+/* .hover-pause:hover .animate-infinite-scroll {
   animation-play-state: paused;
 }
 
@@ -92,7 +92,7 @@ html {
   100% {
     transform: translateX(-33.33%);
   }
-}
+} */ 
 
 
 
@@ -143,3 +143,40 @@ html {
   padding: 0.5rem; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 } */
+
+
+.skill-card {
+  /* transition: transform 0.3s ease-in-out;
+  position: relative;
+  display: inline-block; */
+  position: relative;
+  /* transform-origin: center;
+  will-change: transform; */
+}
+
+/* .skill-card:hover {
+  transform: scale(1.1);
+  z-index: 10; 
+} */
+.skills-content {
+  /* overflow: hidden;  */
+  position: relative;
+  /* width: 100%; */
+} 
+.skills-wrapper {
+  position: relative;
+  padding: 20px 0;
+  /* display: flex;
+  align-items: center;  */
+}
+/* .marquee-wrapper {
+  width: 100%;
+  overflow: hidden; 
+} */
+
+.skills-icon {
+  margin: 0 auto;
+  display: block;
+  width: 80px;
+  height: 80px;
+}
