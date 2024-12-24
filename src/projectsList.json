@@ -11,7 +11,7 @@
         "en": "Creation of a website with an interface suitable for display on computer, tablet and mobile."
       },
       "imageUrl": "/images/Booki.jpg",
-      "link": "https://lien-vers-le-projet1.com",
+      "link": "https://sanco21.github.io/Booki/",
       "github": "https://github.com/utilisateur/projet1",
       "tools": ["HTML & CSS", "Responsive design"]
     },
@@ -26,7 +26,7 @@
         "en": "Creation of a web application with interactive navigation, animations and visual effects."
       },
       "imageUrl": "/images/OhMyFood.jpg",
-      "link": "https://lien-vers-le-projet2.com",
+      "link": "https://sanco21.github.io/Ohmyfood/",
       "github": "https://github.com/utilisateur/projet1",
       "tools": ["HTML & CSS", "Animation Sass"]
     },
@@ -56,7 +56,7 @@
         "en": "SEO improvement of an existing website using SEO tools and best practices."
       },
       "imageUrl": "/images/NinaCarducci.jpg",
-      "link": "https://lien-vers-le-proje4.com",
+      "link": "https://sanco21.github.io/ninacarducci/",
       "github": "https://github.com/utilisateur/projet1",
       "tools": ["LightHouse", "Rich Snippet", "WaveTools"]
     }

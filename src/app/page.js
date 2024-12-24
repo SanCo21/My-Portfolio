@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import content from '../content';
+import ActivityCards from './components/ActivityCards';
 import projectsList from '../projectsList';
 import ProjectCard from './components/ProjectCard';
 import SkillsCards from './components/SkillsCards.js';
@@ -13,6 +14,7 @@ import Footer from './components/Footer';
 import Typewriter from './components/Typewriter';
 
 const componentsMap = {
+  ActivityCards,
   ProjectCard,
   SkillsCards,
   ContactForm

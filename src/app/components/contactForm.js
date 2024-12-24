@@ -59,6 +59,13 @@ const ContactForm = ({ lang }) => {
             {lang === "fr" ? "Envoyer" : "Send"}
           </button>
         </div>
+        <div className="mb-4">
+          {" "}
+          <p className="text-sm text-blue-900">
+            {" "}
+            Vos informations personnelles seront uniquement utilisées pour traiter votre demande.{" "}
+          </p>{" "}
+        </div>
       </form>
     </div>
     // </div>

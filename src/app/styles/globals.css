@@ -180,3 +180,11 @@ html {
   width: 80px;
   height: 80px;
 }
+
+.overlay-slide {
+  transform: translateY(-100%);
+}
+
+.overlay-slide.active {
+  transform: translateY(0);
+}

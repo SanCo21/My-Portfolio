@@ -1,29 +1,41 @@
 {
-  "companyName": { 
-    "base": "S and Co", 
-    "complement": { 
-      "en": "Digital Solutions", 
-      "fr": "Solutions Digitales" 
-    } 
+  "companyName": {
+    "base": "S and Co",
+    "complement": {
+      "en": "Digital Solutions",
+      "fr": "Solutions Digitales"
+    }
   },
-  "legalNotices": { 
-    "text": { 
-      "en": "© 2024 - ${base} - ${complement.en} - All Rights Reserved", 
-      "fr": "© 2024 - ${base} - ${complement.fr} - Tous droits réservés" 
+  "legalNotices": {
+    "text": {
+      "en": "© 2024 - ${base} - ${complement.en} - All Rights Reserved",
+      "fr": "© 2024 - ${base} - ${complement.fr} - Tous droits réservés"
     },
-    "textBreaks": { 
-      "en": "© 2024<br>${base}<br>${complement.en}<br>All Rights Reserved", 
+    "textBreaks": {
+      "en": "© 2024<br>${base}<br>${complement.en}<br>All Rights Reserved",
       "fr": "© 2024<br>${base}<br>${complement.fr}<br>Tous droits réservés"
     }
-  },   
-  "socialLinks": [ 
-    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/sandra-colomer-pro79/", "icon": "/icons/linkedin.svg" }, 
-    { "name": "GitHub", "url": "https://github.com/SanCo21", "icon": "/icons/github.svg" }, 
-    { "name": "Email", "url": "mailto:sandra.colomer@outlook.fr", "icon": "/icons/email.svg" } 
-  ],  
+  },
+  "socialLinks": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/sandra-colomer-pro79/",
+      "icon": "/icons/linkedin.svg"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/SanCo21",
+      "icon": "/icons/github.svg"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:sandra.colomer@outlook.fr",
+      "icon": "/icons/email.svg"
+    }
+  ],
   "sectionsData": {
     "home": {
-      "id": "home",    
+      "id": "home",
       "title": {
         "en": "Welcome to My Portfolio!",
         "fr": "Bienvenue sur mon Portfolio !"
@@ -53,7 +65,54 @@
       "content": {
         "en": "Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.",
         "fr": "Voici quelques activités que j'apprécie... Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh."
-      }
+      },
+      "component": "ActivityCards",
+      "commonImage": {
+        "src": "/images/working.jpg",
+        "alt": "Activity image"
+      },
+      "activitiesList": [
+        {
+          "name": {
+            "en": "Websites",
+            "fr": "Sites web"
+          },
+          "description": {
+            "en": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.",
+            "fr": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris."
+          }
+        },
+        {
+          "name": {
+            "en": "Website",
+            "fr": "Site web"
+          },
+          "description": {
+            "en": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.",
+            "fr": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris."
+          }
+        },
+        {
+          "name": {
+            "en": "Websites",
+            "fr": "sites web"
+          },
+          "description": {
+            "en": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.",
+            "fr": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris."
+          }
+        },
+        {
+          "name": {
+            "en": "Websites",
+            "fr": "sites web"
+          },
+          "description": {
+            "en": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.",
+            "fr": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris."
+          }
+        }
+      ]
     },
     "skills": {
       "id": "skills",
@@ -66,54 +125,54 @@
         "fr": "Voici quelques compétences que je possède... Suspendisse in justo eu magna luctus suscipit. Sed lectus."
       },
       "component": "SkillsCards",
-    
+
       "skillsList": [
-        { 
-          "src": "/icons/html5.svg", 
-          "alt": "HTML 5 logo", 
-          "name": "HTML 5" 
-        }, 
-        { 
-          "src": "/icons/css3.svg", 
-          "alt": "CSS 3 logo", 
-          "name": "CSS 3" 
-        }, 
-        { 
-          "src": "/icons/sass.svg", 
-          "alt": "Sass logo", 
-          "name": "Sass" 
-        }, 
-        { 
-          "src": "/icons/react.svg", 
-          "alt": "React logo", 
-          "name": "React.js" 
-        }, 
-        { 
-          "src": "/icons/js.svg", 
-          "alt": "JavaScript logo", 
-          "name": "JavaScript" 
+        {
+          "src": "/icons/html5.svg",
+          "alt": "HTML 5 logo",
+          "name": "HTML 5"
         },
-        { 
-          "src": "/icons/git.svg", 
-          "alt": "Git logo", 
-          "name": "Git" 
+        {
+          "src": "/icons/css3.svg",
+          "alt": "CSS 3 logo",
+          "name": "CSS 3"
         },
-        { 
-          "src": "/icons/figma.svg", 
-          "alt": "Figma logo", 
-          "name": "Figma" 
+        {
+          "src": "/icons/sass.svg",
+          "alt": "Sass logo",
+          "name": "Sass"
         },
-        { 
-          "src": "/icons/nextjs.svg", 
-          "alt": "Next.js", 
-          "name": "Next.js" 
-        }, 
-        { 
-          "src": "/icons/tailwind.svg", 
-          "alt": "Tailwind", 
-          "name": "Tailwind" 
-        } 
-      ] 
+        {
+          "src": "/icons/react.svg",
+          "alt": "React logo",
+          "name": "React.js"
+        },
+        {
+          "src": "/icons/js.svg",
+          "alt": "JavaScript logo",
+          "name": "JavaScript"
+        },
+        {
+          "src": "/icons/git.svg",
+          "alt": "Git logo",
+          "name": "Git"
+        },
+        {
+          "src": "/icons/figma.svg",
+          "alt": "Figma logo",
+          "name": "Figma"
+        },
+        {
+          "src": "/icons/nextjs.svg",
+          "alt": "Next.js",
+          "name": "Next.js"
+        },
+        {
+          "src": "/icons/tailwind.svg",
+          "alt": "Tailwind",
+          "name": "Tailwind"
+        }
+      ]
     },
     "projects": {
       "id": "projects",
@@ -136,7 +195,7 @@
       "content": {
         "en": "Feel free to contact me for more information...",
         "fr": "N'hésitez pas à me contacter pour plus d'informations..."
-      }, 
+      },
       "component": "ContactForm"
     }
   }
