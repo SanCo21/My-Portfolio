@@ -100,13 +100,13 @@ const HomePage = () => {
       <Sidebar lang={lang} toggleLanguage={toggleLanguage} activeSection={activeSection} />
       <div className="flex-1 lg:ml-64">
         <Header lang={lang} toggleLanguage={toggleLanguage} activeSection={activeSection}/>
-        <main className="min-h-screen flex flex-col mt-20 lg:mt-0 lg:mb-24 max-w-screen-lg mx-auto px-4">
+        <main className="min-h-screen flex flex-col mt-20 lg:mt-0 lg:mb-24 max-w-screen-lg mx-auto">
         {/* <main className="min-h-screen flex flex-col justify-center mt-20 lg:mt-0 lg:mb-24 container mx-auto px-4"> */}
         {Object.keys(sectionsData).map(key => { 
           const section = sectionsData[key]; 
           const Component = componentsMap[section.component]; 
           return ( 
-            <section id={section.id} className="section mt-20 w-full text-center" key={key}> 
+            <section id={section.id} className={`section mt-10 p-10 w-full text-center ${section.backgroundColor}`} key={key}> 
               <h2 className={`text-3xl font-bold text-blue-900 text-center ${section.id === 'home' ? 'text-4xl uppercase' : ''}`}>
               {section.id === 'home' ? <Typewriter text={lang === 'fr' ? section.title.fr : section.title.en} /> : 
                 (lang === 'fr' ? section.title.fr : section.title.en)}

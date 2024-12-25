@@ -7,13 +7,13 @@ const ActivityCard = ({ activity, lang }) => {
 
   return (
     <div
-      className="relative w-64 h-64 m-4 p-4 bg-white bg-opacity-80 border border-gray-200 rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105"
+      className="relative w-64 h-64 m-4 p-4 bg-blue-100 bg-opacity-80 border border-gray-200 rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
         className={`absolute inset-0 transition-opacity duration-300 ${
-          isHovered ? "opacity-100" : "opacity-0"
+          isHovered ? "opacity-70" : "opacity-0"
         }`}
       >
         <Image
@@ -25,7 +25,7 @@ const ActivityCard = ({ activity, lang }) => {
         />
       </div>
       <div
-        className={`absolute inset-0 bg-black bg-opacity-50 transition-transform duration-300 overlay-slide ${
+        className={`absolute inset-0 bg-blue-950 bg-opacity-80 transition-transform duration-300 overlay-slide ${
           isHovered ? "active" : ""
         } `}
       ></div>
@@ -45,7 +45,7 @@ const ActivityCards = ({ lang }) => {
   const activitiesList = content.sectionsData.activities.activitiesList;
 
   return (
-    <div className="activities-section py-12 bg-blue-100">
+    <div className="activities-section py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center">
           {activitiesList.map((activity, index) => (
