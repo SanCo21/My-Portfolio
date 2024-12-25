@@ -63,8 +63,8 @@
         "fr": "Activités"
       },
       "content": {
-        "en": "Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.",
-        "fr": "Voici quelques activités que j'apprécie... Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh."
+        "en": "Creation of dynamic and performant web interfaces, centered on the user with the latest technologies such as React, to bring life to performant and accessible web projects.",
+        "fr": "Création d'interfaces web dynamiques et performantes, centrées sur l'utilisateur avec les technologies les plus récentes, comme React, pour donner vie à des projets web performants et accessibles."
       },
       "component": "ActivityCards",
       "commonImage": {
@@ -74,42 +74,42 @@
       "activitiesList": [
         {
           "name": {
-            "en": "Websites",
-            "fr": "Sites web"
+            "en": "Integration",
+            "fr": "Intégration"
           },
           "description": {
-            "en": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.",
-            "fr": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris."
+            "en": "Transformation of graphic mockups into HTML, CSS and JavaScript code (design and browser/device compatibility).",
+            "fr": "Transformation de maquettes graphiques en code HTML, CSS et JavaScript (respect du design et compatibilité navigateurs/appareils)."
           }
         },
         {
           "name": {
-            "en": "Website",
-            "fr": "Site web"
+            "en": "Development",
+            "fr": "Développement"
           },
           "description": {
-            "en": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.",
-            "fr": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris."
+            "en": "Dynamic and interactive user interfaces with React (state management, API, data management...).",
+            "fr": "Interfaces utilisateur dynamiques et interactives avec React (gestion de l'état, API, gestion des données...)"
           }
         },
         {
           "name": {
-            "en": "Websites",
-            "fr": "sites web"
+            "en": "Optimization",
+            "fr": "Optimisation"
           },
           "description": {
-            "en": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.",
-            "fr": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris."
+            "en": "Improve SEO (SEO) and performance (loading time, rendering and accessibility, web best practices).",
+            "fr": "Améliorer le référencement (SEO) et les performances (temps de chargement, rendu et accessibilité, bonnes pratiques du web)."
           }
         },
         {
           "name": {
-            "en": "Websites",
-            "fr": "sites web"
+            "en": "Maintenance",
+            "fr": "Maintenance"
           },
           "description": {
-            "en": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.",
-            "fr": "Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris."
+            "en": "Add new functionalities, improve the user interface, optimize performance...",
+            "fr": "Ajout de nouvelles fonctionnalités, amélioration de l'interface utilisateur, optimisation des performances..."
           }
         }
       ]
@@ -121,8 +121,8 @@
         "fr": "Compétences"
       },
       "content": {
-        "en": "Suspendisse in justo eu magna luctus suscipit. Sed lectus.",
-        "fr": "Voici quelques compétences que je possède... Suspendisse in justo eu magna luctus suscipit. Sed lectus."
+        "en": "Suspendisse justo magna luctus suscipit. Sed lectus.",
+        "fr": "Suspendisse in justo eu magna luctus suscipit. Sed lectus."
       },
       "component": "SkillsCards",
 

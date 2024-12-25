@@ -29,15 +29,11 @@ const ActivityCard = ({ activity, lang }) => {
           isHovered ? "active" : ""
         } `}
       ></div>
-      <div
-        className={`relative z-10 flex flex-col items-center justify-center h-full transition-colors duration-300 ${
-          isHovered ? "text-white" : "text-blue-900"
-        }`}
-      >
-        <h3 className="text-2xl font-bold">
+      <div className="relative z-10 h-full flex items-center justify-center">
+        <h3 className={`text-2xl font-bold text-blue-900 transition-opacity duration-300 ${isHovered ? "opacity-0" : "opacity-100"}`}>
           {lang === "fr" ? activity.name.fr : activity.name.en}
         </h3>
-        <p className="mt-2">
+        <p className={`px-4 text-white text-center transition-opacity duration-300 absolute ${isHovered ? "opacity-100" : "opacity-0"}`}>
           {lang === "fr" ? activity.description.fr : activity.description.en}
         </p>
       </div>
