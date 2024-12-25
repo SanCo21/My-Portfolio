@@ -10,6 +10,9 @@ const config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#1e3a8a", 
+        secondary: "#dbeafe",
+        accent: "#eab308",
       },
       maxWidth: {
         "screen-max": "var(--screen-max)",

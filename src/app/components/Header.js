@@ -16,7 +16,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
   };
 
   return (
-    <header className="bg-blue-900 text-white p-4 fixed top-0 w-full z-10 lg:hidden">
+    <header className="bg-primary text-white p-4 fixed top-0 w-full z-10 lg:hidden">
       <div className=" flex justify-between items-center px-4">
         <div className="flex-1 text-left">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
@@ -36,7 +36,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
         </div>        
       </div>
       {IsNavbarOpen && (
-        <div className="md:hidden bg-blue-900 flex flex-col items-center">
+        <div className="md:hidden bg-primary flex flex-col items-center">
           <Navbar lang={lang} activeSection={activeSection} orientation = "vertical" compact={true} />
         </div>
       )}

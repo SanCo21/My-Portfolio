@@ -37,9 +37,9 @@ const Navbar = ({
             legacyBehavior
           >
             <a
-              className={`${itemClass} hover:text-yellow-500 ${
+              className={`${itemClass} hover:text-accent ${
                 activeSection === sections[key].id
-                  ? "bg-white text-blue-900 px-1"
+                  ? "bg-white text-primary font-semibold px-1"
                   : ""
               }`}
               onClick={(event) => handleLinkClick(event, sections[key].id)}

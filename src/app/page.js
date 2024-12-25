@@ -109,12 +109,12 @@ const HomePage = () => {
           const Component = componentsMap[section.component]; 
           return ( 
             <section id={section.id} className={`section mt-10 p-10 w-full text-center ${section.backgroundColor}`} key={key}> 
-              <h2 className={`text-3xl font-bold text-blue-900 text-center ${section.id === 'home' ? 'text-4xl uppercase' : ''}`}>
+              <h2 className={`text-3xl font-bold text-primary text-center ${section.id === 'home' ? 'text-4xl uppercase' : ''}`}>
               {section.id === 'home' ? <Typewriter text={lang === 'fr' ? section.title.fr : section.title.en} /> : 
                 (lang === 'fr' ? section.title.fr : section.title.en)}
               </h2> 
               {section.content && ( 
-                <p className="text-lg mt-6 text-blue-900">
+                <p className="text-lg mt-6 text-primary">
                   {lang === 'fr' ? section.content.fr : section.content.en}
                 </p> 
               )} 

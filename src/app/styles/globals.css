@@ -32,7 +32,8 @@ body {
 
 .nav-active {
   background-color: white;
-  color: #1e3a8a;
+  color:theme('colors.primary');
+  font-weight: 900;
 }
 
 html {

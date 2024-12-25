@@ -10,7 +10,7 @@ const ContactForm = ({ lang }) => {
         <div className="flex flex-col">
           <label
             htmlFor="name"
-            className="mb-1 text-lg font-medium text-blue-900 text-left"
+            className="mb-1 text-lg font-medium text-primary text-left"
           >
             {lang === "fr" ? "Nom" : "Name"}
           </label>
@@ -25,7 +25,7 @@ const ContactForm = ({ lang }) => {
         <div className="flex flex-col">
           <label
             htmlFor="email"
-            className="mb-1 text-lg font-medium text-blue-900 text-left"
+            className="mb-1 text-lg font-medium text-primary text-left"
           >
             {lang === "fr" ? "Email" : "Email"}
           </label>
@@ -40,7 +40,7 @@ const ContactForm = ({ lang }) => {
         <div className="flex flex-col">
           <label
             htmlFor="message"
-            className="mb-1 text-lg font-medium text-blue-900 text-left"
+            className="mb-1 text-lg font-medium text-primary text-left"
           >
             {lang === "fr" ? "Message" : "Message"}
           </label>
@@ -54,17 +54,15 @@ const ContactForm = ({ lang }) => {
         <div>
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-transform transform hover:scale-105"
+            className="px-4 py-2 bg-primary text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-transform transform hover:scale-105"
           >
             {lang === "fr" ? "Envoyer" : "Send"}
           </button>
         </div>
         <div className="mb-4">
-          {" "}
-          <p className="text-sm text-blue-900">
-            {" "}
+          <p className="text-sm text-primary">
             Vos informations personnelles seront uniquement utilisées pour traiter votre demande.{" "}
-          </p>{" "}
+          </p>
         </div>
       </form>
     </div>

@@ -12,7 +12,7 @@ const Footer = ({ lang }) => {
   };
 
   return (
-    <footer className="bg-blue-900 text-white  py-4 w-full lg:hidden">
+    <footer className="bg-primary text-white  py-4 w-full lg:hidden">
       <SocialLinks />
       <div className="max-w-screen-max mx-auto py-4">
           <p className="text-sm text-center">{lang === 'fr' ? footerText.fr : footerText.en}</p>
