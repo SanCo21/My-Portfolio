@@ -96,11 +96,13 @@ const HomePage = () => {
   };
   
   return (
-    <div className="flex flex-col custom:flex-row">
+    <div className="w-full">
+      <div className='w-full mx-auto relative'>
+    {/* <div className="flex flex-col custom:flex-row"> */}
       <Sidebar lang={lang} toggleLanguage={toggleLanguage} activeSection={activeSection} />
-      <div className="flex-1 lg:ml-64">
+      <div className="flex-1 lg:pl-64">
         <Header lang={lang} toggleLanguage={toggleLanguage} activeSection={activeSection}/>
-        <main className="min-h-screen flex flex-col mt-20 lg:mt-0 lg:mb-24 max-w-screen-lg mx-auto">
+        <main className="min-h-screen flex flex-col mt-20 lg:mt-2  max-w-screen-2xl mx-auto">
         {/* <main className="min-h-screen flex flex-col justify-center mt-20 lg:mt-0 lg:mb-24 container mx-auto px-4"> */}
         {Object.keys(sectionsData).map(key => { 
           const section = sectionsData[key]; 
@@ -123,7 +125,7 @@ const HomePage = () => {
         </main>
         <Footer lang={lang} />
       </div>
-     </div>
+     </div></div>
   );
 };
 

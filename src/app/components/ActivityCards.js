@@ -25,7 +25,7 @@ const ActivityCard = ({ activity, lang }) => {
         />
       </div>
       <div
-        className={`absolute inset-0 bg-blue-950 bg-opacity-80 transition-transform duration-300 overlay-slide ${
+        className={`absolute inset-0 bg-blue-900 bg-opacity-80 transition-transform duration-300 overlay-slide ${
           isHovered ? "active" : ""
         } `}
       ></div>
