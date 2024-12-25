@@ -37,7 +37,7 @@
     "home": {
       "id": "home",
       "title": {
-        "en": "Welcome to My Portfolio!",
+        "en": "Welcome to my Portfolio!",
         "fr": "Bienvenue sur mon Portfolio !"
       },
       "content": {
@@ -59,8 +59,8 @@
     "activities": {
       "id": "activities",
       "title": {
-        "en": "Activities",
-        "fr": "Activités"
+        "en": "Services",
+        "fr": "Prestations"
       },
       "content": {
         "en": "Creation of dynamic and performant web interfaces, centered on the user with the latest technologies such as React, to bring life to performant and accessible web projects.",
