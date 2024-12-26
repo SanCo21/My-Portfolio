@@ -65,12 +65,12 @@ const HomePage = () => {
     }
     setActiveSection(currentSection);
 
-    if (headerElement) {
-      const rect = headerElement.getBoundingClientRect();
-      setIsVisible(rect.top < window.innerHeight && rect.bottom >= 0);
-    } else {
-      setIsVisible(true);
-    }
+    
+    const rect = headerElement.getBoundingClientRect();
+    const hasScrolledDown = window.scrollY > 200;
+    const isisHeaderVisible = rect?.top < window.innerHeight && rect?.bottom >= 0;
+    setIsVisible(hasScrolledDown && isisHeaderVisible);
+    
   }, [sectionsData]);
 
   useEffect(() => {
@@ -168,7 +168,7 @@ const HomePage = () => {
           {isVisible && (
             <button
               id="scrollToTopBtn"
-              className="fixed bottom-28 right-5 w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:bg-accent"
+              className="fixed bottom-28 right-3 w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:bg-accent"
               onClick={scrollToTop}
             >
               <svg
