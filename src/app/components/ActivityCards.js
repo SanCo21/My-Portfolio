@@ -19,9 +19,9 @@ const ActivityCard = ({ activity, lang }) => {
         <Image
           src="/images/working.jpg"
           alt="Activity image"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="rounded-lg object-cover"
         />
       </div>
       <div

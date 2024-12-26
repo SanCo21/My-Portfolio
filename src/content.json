@@ -1,15 +1,15 @@
 {
   "companyName": {
-    "base": "S and Co",
+    "base": "",
     "complement": {
-      "en": "Digital Solutions",
-      "fr": "Solutions Digitales"
+      "en": "Sandra COLOMER",
+      "fr": "Sandra COLOMER"
     }
   },
   "legalNotices": {
     "text": {
-      "en": "© 2024 - ${base} - ${complement.en} - All Rights Reserved",
-      "fr": "© 2024 - ${base} - ${complement.fr} - Tous droits réservés"
+      "en": "© 2024 - ${base}  ${complement.en} - All Rights Reserved",
+      "fr": "© 2024 - ${base}  ${complement.fr} - Tous droits réservés"
     },
     "textBreaks": {
       "en": "© 2024<br>${base}<br>${complement.en}<br>All Rights Reserved",

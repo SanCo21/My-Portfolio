@@ -12,7 +12,7 @@ const Navbar = ({
     orientation === "vertical"
       ? "flex flex-col items-center h-full justify-evenly m-8 space-y-4"
       : "flex space-x-4";
-  
+
   const itemClass =
     orientation === "vertical" ? "w-full text-center py-2 truncate" : "";
 

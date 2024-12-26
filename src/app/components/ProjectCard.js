@@ -55,6 +55,7 @@ const ProjectCards = ({ lang, projects }) => {
                   alt="Code Icon"
                   width={20}
                   height={20}
+                  style={{ width: "20px", height: "20px" }}
                   className="cursor-pointer icon"
                 />
               </a>

@@ -24,7 +24,7 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
         <div className='text-xl flex-grow flex flex-col justify-between'> 
             <Navbar lang={lang} activeSection={activeSection} orientation = "vertical" /> 
         </div>
-        <div className='mt-6'>
+        <div className='mt-6 '>
           <SocialLinks />
           <div className="mt-6 text-center"> 
               <p className="text-sm" dangerouslySetInnerHTML={{ __html:lang === 'fr' ? legalNoticesTextBreaks.fr : legalNoticesTextBreaks.en}}></p> 

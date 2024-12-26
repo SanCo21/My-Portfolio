@@ -19,6 +19,7 @@ const SocialLinks = () => {
             alt={link.name}
             width={16}
             height={16}
+            style={{ width: "16px", height: "16px" }}
             className="social-icon"
           />
         </a>

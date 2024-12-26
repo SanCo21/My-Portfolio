@@ -17,21 +17,21 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
 
   return (
     <header className="bg-primary text-white p-4 fixed top-0 w-full z-10 lg:hidden">
-      <div className=" flex justify-between items-center px-4">
-        <div className="flex-1 text-left">
+      <div className=" flex items-center justify-between w-full lg:w-auto px-4">
+        <div className="text-left">
           {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
-          <h1 className="text-lg font-bold ml-2 mr-5 whitespace-pre-line">
+          <h1 className="text-lg font-bold  whitespace-pre-line">
           <a href="#home">{base}
           <span className="block">{complement[lang].replace(' ', '\n')}</span></a>
           </h1>          
         </div>
-        <div className="md:hidden"> 
-          <HamburgerMenu onClick={handleHamburgerClick} />
+        <div className="md:hidden mr-5"> 
+          <HamburgerMenu isOpen={IsNavbarOpen} onClick={handleHamburgerClick} />
         </div>
         <div className="md:flex hidden">
           <Navbar lang={lang} activeSection={activeSection} orientation = "horizontal" />
         </div>
-        <div className="flex-1 flex justify-end items-center space-x-4 lg:hidden">
+        <div className="text-right flex justify-end items-center space-x-4 lg:hidden">
           <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} />               
         </div>        
       </div>
