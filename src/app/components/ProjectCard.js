@@ -10,11 +10,13 @@ const ProjectCards = ({ lang, projects }) => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="relative m-4 p-4 bg-white shadow-lg rounded-lg w-custom overflow-hidden"
+          className="relative m-4 p-4 bg-white shadow-lg rounded-lg w-custom project-card"
         >
-          <div className="relative w-full" 
-          onMouseEnter={() => setHoveredImage(index)} 
-          onMouseLeave={() => setHoveredImage(null)} >
+          <div
+            className="relative w-full"
+            onMouseEnter={() => setHoveredImage(index)}
+            onMouseLeave={() => setHoveredImage(null)}
+          >
             <Image
               className="w-full h-60 object-cover rounded-lg"
               src={project.imageUrl}
@@ -22,8 +24,11 @@ const ProjectCards = ({ lang, projects }) => {
               width={900}
               height={900}
             />
-            <div className={`absolute inset-0 bg-primary bg-opacity-85 flex items-center justify-center text-white text-center p-4 transition-opacity duration-300 ease-in-out ${
-              hoveredImage === index ? 'opacity-100' : 'opacity-0'}`}> 
+            <div
+              className={`absolute inset-0 bg-primary bg-opacity-85 flex items-center justify-center text-white text-center p-4 project-card-overlay transition-opacity duration-300 ease-in-out ${
+                hoveredImage === index ? "opacity-100" : "opacity-0"
+              }`}
+            >
               <p>{project.information[lang]}</p>
             </div>
           </div>
