@@ -44,7 +44,8 @@ const Navbar = ({
               }`}
               onClick={(event) => handleLinkClick(event, sections[key].id)}
             >
-              {lang === "fr" ? sections[key].title.fr : sections[key].title.en}
+              {/* {lang === "fr" ? sections[key].title.fr : sections[key].title.en} */}
+              {sections[key].title[lang]}
             </a>
           </Link>
         ))}

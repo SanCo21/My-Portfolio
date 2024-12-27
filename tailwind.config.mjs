@@ -17,9 +17,9 @@ const config = {
       maxWidth: {
         "screen-max": "var(--screen-max)",
       },
-      // screens: {
-      //   'custom': '1500px',
-      // },
+      width: {
+        'custom': '34rem',
+      },
     },
   },
   plugins: [],

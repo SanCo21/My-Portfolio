@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Navbar from './Navbar';
 import LanguageSwitcher from './LanguageSwitcher';
 import content from '../../content';
@@ -19,7 +20,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
     <header className="bg-primary text-white p-4 fixed top-0 w-full z-10 lg:hidden">
       <div className=" flex items-center justify-between w-full lg:w-auto px-4">
         <div className="text-left">
-          {/* <Image src="/logo.png" alt="Logo" width={50} height={50} /> */}
+          {/* <Image src="Logo Sandra.svg" alt="Logo" width={50} height={50} /> */}
           <h1 className="text-lg font-bold  whitespace-pre-line">
           <a href="#home">{base}
           <span className="block">{complement[lang].replace(' ', '\n')}</span></a>

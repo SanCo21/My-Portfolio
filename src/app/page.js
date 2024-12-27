@@ -13,6 +13,12 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Typewriter from "./components/Typewriter";
 
+const colorMapping = {
+  primary: "bg-primary",
+  secondary: "bg-secondary",
+  accent: "bg-accent",
+};
+
 const componentsMap = {
   ActivityCards,
   ProjectCard,
@@ -65,12 +71,11 @@ const HomePage = () => {
     }
     setActiveSection(currentSection);
 
-    
     const rect = headerElement.getBoundingClientRect();
     const hasScrolledDown = window.scrollY > 200;
-    const isisHeaderVisible = rect?.top < window.innerHeight && rect?.bottom >= 0;
+    const isisHeaderVisible =
+      rect?.top < window.innerHeight && rect?.bottom >= 0;
     setIsVisible(hasScrolledDown && isisHeaderVisible);
-    
   }, [sectionsData]);
 
   useEffect(() => {
@@ -128,10 +133,11 @@ const HomePage = () => {
             {Object.keys(sectionsData).map((key) => {
               const section = sectionsData[key];
               const Component = componentsMap[section.component];
+              const backgroundColorClass = colorMapping[section.backgroundColor]|| '';
               return (
                 <section
                   id={section.id}
-                  className={`section mt-10 p-10 w-full text-center ${section.backgroundColor}`}
+                  className={`section mt-10 p-10 w-full text-center ${backgroundColorClass}`}
                   key={key}
                 >
                   <h2
@@ -164,7 +170,6 @@ const HomePage = () => {
             })}
           </main>
           <Footer lang={lang} />
-          {/* Bouton de retour en haut */}
           {isVisible && (
             <button
               id="scrollToTopBtn"

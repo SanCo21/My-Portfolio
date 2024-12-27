@@ -10,7 +10,7 @@ const ProjectCards = ({ lang, projects }) => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="relative m-4 p-4 bg-white shadow-lg rounded-lg w-96 overflow-hidden"
+          className="relative m-4 p-4 bg-white shadow-lg rounded-lg w-custom overflow-hidden"
         >
           <div className="relative w-full" 
           onMouseEnter={() => setHoveredImage(index)} 
