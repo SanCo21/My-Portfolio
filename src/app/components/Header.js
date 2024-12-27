@@ -26,7 +26,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
           <span className="block">{complement[lang].replace(' ', '\n')}</span></a>
           </h1>          
         </div>
-        <div className="md:hidden mr-5"> 
+        <div className="md:hidden items-center mr-1"> 
           <HamburgerMenu isOpen={IsNavbarOpen} onClick={handleHamburgerClick} />
         </div>
         <div className="md:flex hidden">
