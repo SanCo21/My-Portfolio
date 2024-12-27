@@ -1,12 +1,40 @@
 import { useState } from "react";
 
 const ContactForm = ({ lang }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [confirmationMessage, setConfirmationMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await fetch("https://formspree.io/f/mgvejwjb", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    setName("");
+    setEmail("");
+    setMessage("");
+
+    setConfirmationMessage(
+      lang === "fr"
+        ? "Merci, votre message a été envoyé !"
+        : "Thank you, your message has been sent!"
+    );
+
+    setTimeout(() => {
+      setConfirmationMessage("");
+    }, 5000);
+  };
   return (
     // <div className="mt-20 flex flex-col justify-center w-full">
     <div className="mt-10 flex max-w-xl justify-center mx-auto w-full">
       <form
-        action="https://formspree.io/f/mgvejwjb"
-        method="POST"
+        // action="https://formspree.io/f/mgvejwjb"
+        // method="POST"
+        onSubmit={handleSubmit}
         className="space-y-4 w-full"
       >
         <div className="flex flex-col">
@@ -20,6 +48,8 @@ const ContactForm = ({ lang }) => {
             type="text"
             id="name"
             name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
             className="p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
           />
@@ -35,6 +65,8 @@ const ContactForm = ({ lang }) => {
             type="email"
             id="email"
             name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             className="p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
           />
@@ -50,6 +82,8 @@ const ContactForm = ({ lang }) => {
             id="message"
             name="message"
             required
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             className="p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 h-32 "
           ></textarea>
         </div>
@@ -61,9 +95,15 @@ const ContactForm = ({ lang }) => {
             {lang === "fr" ? "Envoyer" : "Send"}
           </button>
         </div>
+        {confirmationMessage && (
+          <div className="mt-4 p-2 bg-accent text-primary rounded">            
+            {confirmationMessage}
+          </div>
+        )}
         <div className="mb-4">
           <p className="text-sm text-primary">
-            Vos informations personnelles seront uniquement utilisées pour traiter votre demande.{" "}
+            Vos informations personnelles seront uniquement utilisées pour
+            traiter votre demande.
           </p>
         </div>
       </form>
