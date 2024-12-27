@@ -1,12 +1,10 @@
 
 import { useState } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Navbar from './Navbar';
 import LanguageSwitcher from './LanguageSwitcher';
-import content from '../../content';
+import { content } from '../../content';
 import HamburgerMenu from './HamburgerMenu';
-
-// import Image from 'next/image';
 
 const Header = ({ lang, toggleLanguage, activeSection }) => {
   const { base, complement } = content.companyName;  

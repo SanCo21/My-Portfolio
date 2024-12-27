@@ -58,7 +58,7 @@
         "fr": "Passionnée par le numérique et animée par une forte volonté de créer, j'ai acquis mes compétences en développement web grâce à une formation professionnalisante d'Intégrateur Web chez OpenClassrooms. J'aime relever les défis techniques et explorer les dernières technologies pour transformer des idées en expériences digitales intuitives et esthétiques. Au-delà des lignes de code, je crois au potentiel du web pour connecter les gens et simplifier leur quotidien. J'aborde chaque projet avec une approche centrée sur l'utilisateur, convaincue qu'un site web doit être accessible à tous et offrir une expérience fluide et agréable. Un grand merci à mon mentor OpenClassrooms, pour son accompagnement précieux et ses conseils avisés qui ont grandement contribué à mon apprentissage."
       },
       "component": "null",
-      "backgroundColor": "secondary"
+      "backgroundColor": "null"
     },
     "activities": {
       "id": "activities",
@@ -134,7 +134,7 @@
         "fr": ""
       },
       "component": "SkillsCards",
-      "backgroundColor": "secondary",
+      "backgroundColor": "",
 
       "skillsList": [
         {
@@ -194,7 +194,7 @@
         "en": "Here is a selection of projects carried out as part of my training at OpenClassrooms.",
         "fr": "Voici une sélection de projets réalisés dans le cadre de mon cursus chez OpenClassrooms."
       },
-      "component": "ProjectCard",
+      "component": "ProjectsCards",
       "backgroundColor": "null"
     },
     "contact": {
@@ -208,7 +208,7 @@
         "fr": "N'hésitez pas à me contacter pour plus d'informations..."
       },
       "component": "ContactForm",
-      "backgroundColor": "secondary"
+      "backgroundColor": "null"
     }
   }
 }

@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import content from "../../content";
+import { content } from "../../content";
 
-const SocialLinks = () => {  
-  
+const SocialLinks = () => {
   return (
     <div className="flex justify-center items-center space-x-4">
       {content.socialLinks.map((link, index) => (

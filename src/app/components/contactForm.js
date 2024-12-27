@@ -172,7 +172,7 @@ const ContactForm = ({ lang }) => {
           </button>
         </div>
         {confirmationMessage && !isLoading && (
-          <div className={`mt-4 p-2 bg-green-200 text-green-800 rounded ${showConfirmation ? 'fade-in' : 'fade-out'}`}>
+          <div className={`mt-4 p-2 bg-accent text-primary rounded ${showConfirmation ? 'fade-in' : 'fade-out'}`}>
             {confirmationMessage}
           </div>
         )}

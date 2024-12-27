@@ -1,13 +1,17 @@
 import { useState } from "react";
 import Image from "next/image";
+// import { content } from "../../content";
+// import { projectsList } from "../../projectsList";
 
-const ProjectCards = ({ lang, projects }) => {
+const ProjectsCards = ({ lang, projects }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [hoveredImage, setHoveredImage] = useState(null);
 
+  console.log("Projects received:", projects);
+
   return (
     <div className="projects-content mt-10 flex flex-wrap justify-center">
-      {projects.map((project, index) => (
+      {projects?.map((project, index) => (
         <div
           key={index}
           className="relative m-4 p-4 bg-white shadow-lg rounded-lg w-custom project-card"
@@ -78,4 +82,4 @@ const ProjectCards = ({ lang, projects }) => {
     </div>
   );
 };
-export default ProjectCards;
+export default ProjectsCards;

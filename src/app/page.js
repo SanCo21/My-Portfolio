@@ -1,14 +1,242 @@
+// "use client";
+
+// import { useEffect, useState, useCallback } from "react";
+// import { motion } from "framer-motion";
+// import { containerVariants, itemVariants } from "./variants";
+// import Header from "./components/Header";
+// import Sidebar from "./components/Sidebar";
+// import content from "../content";
+// import ActivityCards from "./components/ActivityCards";
+// import projectsList from "../projectsList";
+// import ProjectsCards from "./components/ProjectsCards";
+// import SkillsCards from "./components/SkillsCards";
+// import ContactForm from "./components/ContactForm";
+// import Footer from "./components/Footer";
+// import Typewriter from "./components/Typewriter";
+
+// const colorMapping = {
+//   primary: "bg-primary",
+//   secondary: "bg-secondary",
+//   accent: "bg-accent",
+// };
+
+// const componentsMap = {
+//   ActivityCards,
+//   ProjectsCards,
+//   SkillsCards,
+//   ContactForm,
+// };
+
+// const HomePage = () => {
+//   const [lang, setLang] = useState("fr");
+//   const [activeSection, setActiveSection] = useState("home");
+//   const [isVisible, setIsVisible] = useState(false);
+//   const [hydratedContent, setHydratedContent] = useState(null);
+//   const [hydratedProjects, setHydratedProjects] = useState([]);
+//   const sectionsData = content.sectionsData;
+
+//   useEffect(() => {
+//     const storedLang = localStorage.getItem("language") || "fr";
+//     setLang(storedLang);
+//     setHydratedProjects(JSON.parse(JSON.stringify(projectsList.projects)));
+//     setHydratedContent(JSON.parse(JSON.stringify(content)));
+//   }, []);
+
+//   const handleScroll = useCallback(() => {
+//     const headerElement = document.querySelector("header");
+//     const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+//     const isSmallScreen = window.innerWidth <= 768;
+//     const offsetAdjustment = isSmallScreen ? headerHeight : 120;
+
+//     const offsets = Object.keys(sectionsData).map((key) => {
+//       const element = document.getElementById(sectionsData[key].id);
+//       if (element) {
+//         const offsetTop = element.offsetTop - offsetAdjustment;
+//         return { section: sectionsData[key].id, offset: offsetTop };
+//       }
+//       return { section: sectionsData[key].id, offset: 0 };
+//     });
+
+//     const bottomOfWindow = window.scrollY + window.innerHeight;
+//     const bottomOfDocument = document.documentElement.scrollHeight;
+
+//     let currentSection = "home";
+
+//     if (bottomOfWindow >= bottomOfDocument - 100) {
+//       // If near the bottom, highlight contact section
+//       currentSection = "contact";
+//     } else {
+//       currentSection = offsets.reduce((acc, curr) => {
+//         if (window.scrollY + 100 >= curr.offset) {
+//           // Adjust for endpoint of the screen
+//           return curr.section;
+//         }
+//         return acc;
+//       }, "home");
+//     }
+//     setActiveSection(currentSection);
+
+//     const rect = headerElement.getBoundingClientRect();
+//     const hasScrolledDown = window.scrollY > 200;
+//     const isisHeaderVisible =
+//       rect?.top < window.innerHeight && rect?.bottom >= 0;
+//     setIsVisible(hasScrolledDown && isisHeaderVisible);
+//   }, [sectionsData]);
+
+//   useEffect(() => {
+//     window.addEventListener("scroll", handleScroll);
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, [handleScroll]);
+
+//   // useEffect(() => {
+//   //   const handleHashChange = () => {
+//   //     const { hash } = window.location;
+//   //     if (hash) {
+//   //       const element = document.querySelector(hash);
+//   //       if (element) {
+//   //         element.scrollIntoView({ behavior: 'smooth' });
+//   //       }
+//   //     }
+//   //   };
+
+//   //   window.addEventListener('hashchange', handleHashChange);
+//   //   handleHashChange();
+//   //   return () => {
+//   //     window.removeEventListener('hashchange', handleHashChange);
+//   //   };
+//   // }, []);
+
+//   const toggleLanguage = () => {
+//     const newLang = lang === "en" ? "fr" : "en";
+//     setLang(newLang);
+//     localStorage.setItem("language", newLang);
+//   };
+
+//   const scrollToTop = () => {
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+//   };
+
+//   // if (!hydratedContent) return null;
+
+//   return (
+//     <div className="w-full">
+//       <div className="w-full mx-auto relative">
+//         {/* <div className="flex flex-col custom:flex-row"> */}
+//         <Sidebar
+//           lang={lang}
+//           toggleLanguage={toggleLanguage}
+//           activeSection={activeSection}
+//         />
+//         <div className="flex-1 lg:pl-64">
+//           <Header
+//             lang={lang}
+//             toggleLanguage={toggleLanguage}
+//             activeSection={activeSection}
+//           />
+//           <motion.main
+//             className="min-h-screen flex flex-col mt-20 lg:mt-2 max-w-screen-2xl mx-auto"
+//             variants={containerVariants}
+//             initial="hidden"
+//             animate="visible"
+//           >
+//             {Object.keys(sectionsData).map((key) => {
+//               const section = sectionsData[key];
+//               // console.log(`Rendering section: ${section.id}`);
+//               const Component = componentsMap[section.component];
+//               const backgroundColorClass =
+//                 colorMapping[section.backgroundColor] || "";
+//               return (
+//                 <motion.section
+//                   id={section.id}
+//                   className={`section mt-10 p-10 w-full text-center ${backgroundColorClass}`}
+//                   key={key}
+//                   variants={itemVariants}
+//                   initial="hidden"
+//                   whileInView="visible"
+//                   viewport={{ once: true, amount: 0.8 }}
+//                   transition={{ duration: 1 }}
+//                 >
+//                   <h2
+//                     className={`text-3xl font-bold text-primary text-center ${
+//                       section.id === "home" ? "text-4xl uppercase" : ""
+//                     }`}
+//                   >
+//                     {section.id === "home" ? (
+//                       <Typewriter
+//                         text={
+//                           lang === "fr" ? section.title.fr : section.title.en
+//                         }
+//                       />
+//                     ) : lang === "fr" ? (
+//                       section.title.fr
+//                     ) : (
+//                       section.title.en
+//                     )}
+//                   </h2>
+//                   {section.content && (
+//                     <p className="text-lg mt-6 text-primary">
+//                       {lang === "fr" ? section.content.fr : section.content.en}
+//                     </p>
+//                   )}
+//                   {Component ? (
+//                     <Component
+//                       lang={lang}
+//                       projects={
+//                         section.id === "projects" ? hydratedProjects : []
+//                       }
+//                     />
+//                   ) : (
+//                     console.log(`No component found for section: ${section.id}`)
+//                   )}
+//                 </motion.section>
+//               );
+//             })}
+//           </motion.main>
+//           <Footer lang={lang} />
+//           {isVisible && (
+//             <button
+//               id="scrollToTopBtn"
+//               className="fixed bottom-28 right-3 w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:bg-accent"
+//               onClick={scrollToTop}
+//             >
+//               <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 fill="none"
+//                 viewBox="0 0 24 24"
+//                 stroke="currentColor"
+//                 className="w-6 h-6"
+//               >
+//                 <path
+//                   strokeLinecap="round"
+//                   strokeLinejoin="round"
+//                   strokeWidth={2}
+//                   d="M5 15l7-7 7 7"
+//                 />
+//               </svg>
+//             </button>
+//           )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HomePage;
+
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
-import Image from "next/image";
+import { useEffect, useState, useCallback, useMemo } from "react";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "./variants";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import content from "../content";
+import { content } from "../content";
 import ActivityCards from "./components/ActivityCards";
-import projectsList from "../projectsList";
-import ProjectCard from "./components/ProjectCard";
-import SkillsCards from "./components/SkillsCards.js";
+import { projectsList } from "../projectsList";
+import ProjectsCards from "./components/ProjectsCards";
+import SkillsCards from "./components/SkillsCards";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Typewriter from "./components/Typewriter";
@@ -21,7 +249,7 @@ const colorMapping = {
 
 const componentsMap = {
   ActivityCards,
-  ProjectCard,
+  ProjectsCards,
   SkillsCards,
   ContactForm,
 };
@@ -30,16 +258,21 @@ const HomePage = () => {
   const [lang, setLang] = useState("fr");
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
-  const sectionsData = content.sectionsData;
 
   useEffect(() => {
     const storedLang = localStorage.getItem("language") || "fr";
     setLang(storedLang);
+    console.log("Content Data:", content); // Add log to check content
+    console.log("Projects Data:", projectsList); // Add log to check projects
   }, []);
+
+  const sectionsData = content.sectionsData;
 
   const handleScroll = useCallback(() => {
     const headerElement = document.querySelector("header");
-    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+    if (!headerElement) return; // Add null check
+
+    const headerHeight = headerElement?.offsetHeight || 0;
     const isSmallScreen = window.innerWidth <= 768;
     const offsetAdjustment = isSmallScreen ? headerHeight : 120;
 
@@ -58,12 +291,10 @@ const HomePage = () => {
     let currentSection = "home";
 
     if (bottomOfWindow >= bottomOfDocument - 100) {
-      // If near the bottom, highlight contact section
       currentSection = "contact";
     } else {
       currentSection = offsets.reduce((acc, curr) => {
         if (window.scrollY + 100 >= curr.offset) {
-          // Adjust for endpoint of the screen
           return curr.section;
         }
         return acc;
@@ -73,9 +304,8 @@ const HomePage = () => {
 
     const rect = headerElement.getBoundingClientRect();
     const hasScrolledDown = window.scrollY > 200;
-    const isisHeaderVisible =
-      rect?.top < window.innerHeight && rect?.bottom >= 0;
-    setIsVisible(hasScrolledDown && isisHeaderVisible);
+    const isHeaderVisible = rect?.top < window.innerHeight && rect?.bottom >= 0;
+    setIsVisible(hasScrolledDown && isHeaderVisible);
   }, [sectionsData]);
 
   useEffect(() => {
@@ -84,24 +314,6 @@ const HomePage = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
-
-  // useEffect(() => {
-  //   const handleHashChange = () => {
-  //     const { hash } = window.location;
-  //     if (hash) {
-  //       const element = document.querySelector(hash);
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //       }
-  //     }
-  //   };
-
-  //   window.addEventListener('hashchange', handleHashChange);
-  //   handleHashChange();
-  //   return () => {
-  //     window.removeEventListener('hashchange', handleHashChange);
-  //   };
-  // }, []);
 
   const toggleLanguage = () => {
     const newLang = lang === "en" ? "fr" : "en";
@@ -116,7 +328,6 @@ const HomePage = () => {
   return (
     <div className="w-full">
       <div className="w-full mx-auto relative">
-        {/* <div className="flex flex-col custom:flex-row"> */}
         <Sidebar
           lang={lang}
           toggleLanguage={toggleLanguage}
@@ -128,17 +339,26 @@ const HomePage = () => {
             toggleLanguage={toggleLanguage}
             activeSection={activeSection}
           />
-          <main className="min-h-screen flex flex-col mt-20 lg:mt-2  max-w-screen-2xl mx-auto">
-            {/* <main className="min-h-screen flex flex-col justify-center mt-20 lg:mt-0 lg:mb-24 container mx-auto px-4"> */}
-            {Object.keys(sectionsData).map((key) => {
+          <motion.main
+            className="min-h-screen flex flex-col mt-20 lg:mt-2 max-w-screen-2xl mx-auto"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {Object.keys(sectionsData).map((key, index) => {
               const section = sectionsData[key];
               const Component = componentsMap[section.component];
-              const backgroundColorClass = colorMapping[section.backgroundColor]|| '';
+              const backgroundColorClass =
+                colorMapping[section.backgroundColor] || "";
               return (
-                <section
+                <motion.section
                   id={section.id}
                   className={`section mt-10 p-10 w-full text-center ${backgroundColorClass}`}
                   key={key}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
                 >
                   <h2
                     className={`text-3xl font-bold text-primary text-center ${
@@ -163,12 +383,17 @@ const HomePage = () => {
                     </p>
                   )}
                   {Component && (
-                    <Component lang={lang} projects={projectsList.projects} />
+                    <Component
+                      lang={lang}
+                      projects={
+                        section.id === "projects" ? projectsList.projects : []
+                      }
+                    />
                   )}
-                </section>
+                </motion.section>
               );
             })}
-          </main>
+          </motion.main>
           <Footer lang={lang} />
           {isVisible && (
             <button

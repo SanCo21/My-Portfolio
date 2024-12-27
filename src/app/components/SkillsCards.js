@@ -1,7 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
-import content from "../../content";
+import { content } from "../../content";
 
 const SkillsCards = () => {
   const { skillsList } = content.sectionsData.skills;
@@ -21,7 +21,7 @@ const SkillsCards = () => {
         >
           {repeatedSkills.map((skill, index) => (
             <div key={index} className="card-container mx-4 py-6">
-              <div className="skill-card  rounded-lg text-center p-3 bg-primary transform transition-transform duration-300 hover:scale-110 hover:z-10">
+              <div className="skill-card rounded-lg shadow-lg text-center p-3 bg-primary transform transition-transform duration-300 hover:scale-110 hover:z-10">
                 <Image
                   src={skill.src}
                   alt={skill.alt}

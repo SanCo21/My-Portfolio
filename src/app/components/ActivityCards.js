@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import content from "../../content"; // Assurez-vous que le chemin est correct
+import { content } from "../../content";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const ActivityCards = ({ lang }) => {
@@ -13,7 +13,7 @@ const ActivityCards = ({ lang }) => {
           {activitiesList.map((activity, index) => (
             <div key={index} className="relative w-64 h-64 m-4 p-4 card">
               <div className="card-inner">
-                <div className="card-front flex flex-col items-center justify-center bg-secondary bg-opacity-80 border border-gray-200 rounded-lg shadow-md">
+                <div className="card-front flex flex-col items-center justify-center bg-white bg-opacity-80 border border-gray-200 rounded-lg shadow-lg">
                   {activity.icon && (
                     <i className={`fas fa-${activity.icon} text-6xl text-primary mb-10`}></i>
                   )}
