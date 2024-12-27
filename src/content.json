@@ -103,7 +103,7 @@
             "fr": "Optimisation"
           },
           "description": {
-            "en": "Improve SEO (SEO) and performance (loading time, rendering and accessibility, web best practices).",
+            "en": "Improve SEO and performance (loading time, rendering and accessibility, web best practices).",
             "fr": "Améliorer le référencement (SEO) et les performances (temps de chargement, rendu et accessibilité, bonnes pratiques du web)."
           }
         },
@@ -126,8 +126,8 @@
         "fr": "Compétences"
       },
       "content": {
-        "en": "Suspendisse justo magna luctus suscipit. Sed lectus.",
-        "fr": "Suspendisse in justo eu magna luctus suscipit. Sed lectus."
+        "en": "",
+        "fr": ""
       },
       "component": "SkillsCards",
       "backgroundColor": "secondary",
