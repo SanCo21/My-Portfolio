@@ -85,7 +85,8 @@
           "description": {
             "en": "Transformation of graphic mockups into HTML, CSS and JavaScript code (design and browser/device compatibility).",
             "fr": "Transformation de maquettes graphiques en code HTML, CSS et JavaScript (respect du design et compatibilité navigateurs/appareils)."
-          }
+          },
+          "icon": "trowel-bricks"
         },
         {
           "name": {
@@ -95,7 +96,8 @@
           "description": {
             "en": "Dynamic and interactive user interfaces with React (state management, API, data management...).",
             "fr": "Interfaces utilisateur dynamiques et interactives avec React (gestion de l'état, API, gestion des données...)"
-          }
+          },
+          "icon": "code"
         },
         {
           "name": {
@@ -105,7 +107,8 @@
           "description": {
             "en": "Improve SEO and performance (loading time, rendering and accessibility, web best practices).",
             "fr": "Améliorer le référencement (SEO) et les performances (temps de chargement, rendu et accessibilité, bonnes pratiques du web)."
-          }
+          },
+          "icon": "chart-line"
         },
         {
           "name": {
@@ -115,7 +118,8 @@
           "description": {
             "en": "Add new functionalities, improve the user interface, optimize performance...",
             "fr": "Ajout de nouvelles fonctionnalités, amélioration de l'interface utilisateur, optimisation des performances..."
-          }
+          },
+          "icon": "screwdriver-wrench"
         }
       ]
     },

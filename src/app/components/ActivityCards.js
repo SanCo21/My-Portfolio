@@ -1,45 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import content from "../../content"; // Assurez-vous que le chemin est correct
-
-const ActivityCard = ({ activity, lang }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <div
-      className="relative w-64 h-64 m-4 p-4 bg-secondary bg-opacity-80 border border-gray-200 rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div
-        className={`absolute inset-0 transition-opacity duration-300 ${
-          isHovered ? "opacity-70" : "opacity-0"
-        }`}
-      >
-        <Image
-          src="/images/working.jpg"
-          alt="Activity image"
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="rounded-lg object-cover"
-        />
-      </div>
-      <div
-        className={`absolute inset-0 bg-primary bg-opacity-80 transition-transform duration-300 overlay-slide ${
-          isHovered ? "active" : ""
-        } `}
-      ></div>
-      <div className="relative z-10 h-full flex items-center justify-center">
-        <h3 className={`text-2xl font-bold text-primary transition-opacity duration-300 ${isHovered ? "opacity-0" : "opacity-100"}`}>
-          {lang === "fr" ? activity.name.fr : activity.name.en}
-        </h3>
-        <p className={`px-4 text-white text-center transition-opacity duration-300 absolute ${isHovered ? "opacity-100" : "opacity-0"}`}>
-          {lang === "fr" ? activity.description.fr : activity.description.en}
-        </p>
-      </div>
-    </div>
-  );
-};
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const ActivityCards = ({ lang }) => {
   const activitiesList = content.sectionsData.activities.activitiesList;
@@ -49,7 +11,30 @@ const ActivityCards = ({ lang }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center">
           {activitiesList.map((activity, index) => (
-            <ActivityCard key={index} activity={activity} lang={lang} />
+            <div key={index} className="relative w-64 h-64 m-4 p-4 card">
+              <div className="card-inner">
+                <div className="card-front flex flex-col items-center justify-center bg-secondary bg-opacity-80 border border-gray-200 rounded-lg shadow-md">
+                  {activity.icon && (
+                    <i className={`fas fa-${activity.icon} text-6xl text-primary mb-10`}></i>
+                  )}
+                  <h3 className="text-2xl font-bold text-primary">
+                    {lang === "fr" ? activity.name.fr : activity.name.en}
+                  </h3>
+                </div>
+                <div className="card-back flex flex-col items-center justify-center rounded-lg shadow-lg">
+                  <Image
+                    src="/images/working.jpg"
+                    alt="Activity image"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="rounded-lg object-cover opacity-30"
+                  />
+                  <p className="absolute px-4 text-white text-center">
+                    {lang === "fr" ? activity.description.fr : activity.description.en}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -58,3 +43,4 @@ const ActivityCards = ({ lang }) => {
 };
 
 export default ActivityCards;
+
