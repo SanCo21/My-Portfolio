@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { containerVariants } from "./variants";
 import Header from "./components/Header";
@@ -134,39 +135,78 @@ const HomePage = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                 >
-                  
-                  <h2
-                    className={`text-3xl font-bold text-primary text-center ${
-                      section.id === "home" ? "text-4xl uppercase" : ""
-                    }`}
-                  >
-                    {section.id === "home" ? (
-                      <Typewriter
-                        text={
-                          lang === "fr" ? section.title.fr : section.title.en
-                        }
-                      />
-                    ) : lang === "fr" ? (
-                      section.title.fr
-                    ) : (
-                      section.title.en
-                    )}
-                  </h2>
-                  {section.id === "about" ? (
-                    <CollapseAbout
-                      content={
-                        lang === "fr" ? section.content.fr : section.content.en
-                      }
-                    />
-                  ) : (
-                    section.content && (
-                      <p className="text-lg mt-6 text-primary">
-                        {" "}
-                        {lang === "fr"
-                          ? section.content.fr
-                          : section.content.en}{" "}
-                      </p>
-                    )
+                  {section.id === "home" && (
+                    <>
+                    <h2 className="text-4xl font-bold text-primary text-center uppercase">
+                          <Typewriter
+                            text={
+                              lang === "fr"
+                                ? section.title.fr
+                                : section.title.en
+                            }
+                          />
+                        </h2>                    
+                    <div className="flex mt-16 items-center justify-center">
+                      <div className="w-1/3 flex justify-center">
+                        <div className="photo">
+                          <Image
+                            src="/images/Portrait7.png"
+                            alt="Portrait Sandra"
+                            layout="fill"
+                            objectFit="cover"
+                            
+                          />
+                        </div>
+                      </div>
+                      <div className="w-2/3 p-10 flex flex-col justify-center">                        
+                        <p className="text-lg mt-0 text-primary text-left">
+                          {lang === "fr"
+                            ? section.content.fr
+                            : section.content.en}
+                        </p>
+                      </div>
+                    </div>
+                    </>
+                  )}
+                  {section.id !== "home" && (
+                    <>
+                      <h2
+                        className={`text-3xl font-bold text-primary text-center ${
+                          section.id === "home" ? "text-4xl uppercase" : ""
+                        }`}
+                      >
+                        {section.id === "home" ? (
+                          <Typewriter
+                            text={
+                              lang === "fr"
+                                ? section.title.fr
+                                : section.title.en
+                            }
+                          />
+                        ) : lang === "fr" ? (
+                          section.title.fr
+                        ) : (
+                          section.title.en
+                        )}
+                      </h2>
+                      {section.id === "about" ? (
+                        <CollapseAbout
+                          content={
+                            lang === "fr"
+                              ? section.content.fr
+                              : section.content.en
+                          }
+                        />
+                      ) : (
+                        section.content && (
+                          <p className="text-lg mt-6 text-primary">
+                            {lang === "fr"
+                              ? section.content.fr
+                              : section.content.en}
+                          </p>
+                        )
+                      )}
+                    </>
                   )}
                   {/* {section.content && (
                     <p className="text-lg mt-6 text-primary">
