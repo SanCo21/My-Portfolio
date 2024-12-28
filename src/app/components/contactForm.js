@@ -166,7 +166,7 @@ const ContactForm = ({ lang }) => {
           <button
             type="submit"
             disabled={!isFormValid || isLoading}
-            className={`px-4 py-2 ${isFormValid ? 'bg-primary hover:bg-blue-700' : 'bg-gray-400'} text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-transform transform hover:scale-105`}
+            className={`px-4 py-2 ${isFormValid ? 'bg-primary hover:bg-accent' : 'bg-gray-400'} text-white text-lg rounded focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-transform transform hover:scale-105`}
           >
             {isLoading ? (lang === "fr" ? "Envoi en cours..." : "Sending...") : (lang === "fr" ? "Envoyer" : "Send")}
           </button>

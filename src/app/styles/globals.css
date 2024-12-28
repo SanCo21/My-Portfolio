@@ -5,7 +5,7 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 :root {
-  --background: #e4e4e4;
+  --background: #dbeafe;
   --foreground: #093257;
   --screen-max: 1536px;
 }
@@ -34,7 +34,7 @@ body {
 
 .nav-active {
   background-color: white;
-  color:theme('colors.primary');
+  color: theme("colors.primary");
   font-weight: 900;
 }
 
@@ -55,47 +55,9 @@ html {
     brightness(93%) contrast(89%);
 }
 
-/* For Skillcards component */
-/* .skills-icon { 
-  width: 80px;
-  height: 80px;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
-    contrast(101%);
-} */
-
-/* .hover-pause:hover .animate-infinite-scroll {
-  animation-play-state: paused;
-}
-
-.animate-infinite-scroll {
-  animation: scroll 30s linear infinite;
-}
-
-.skill-item {
-  position: relative;
-  transition: all 0.3s ease-out;
-  z-index: 1;
-}
-
-.skill-item:hover {
-  transform: scale(1.1);
-  z-index: 50;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.33%);
-  }
-} */ 
-
-
 /* Project Cards */
 
 /* Style for the shutting effect */
-/* Style pour la carte du projet */
 .project-card {
   position: relative;
   overflow: hidden;
@@ -114,12 +76,11 @@ html {
 
 .project-card-overlay {
   position: absolute;
-  /* bottom: 0; */
-  bottom: -100;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75);
+  background: #122558;
   color: white;
   display: flex;
   flex-direction: column;
@@ -133,8 +94,6 @@ html {
   transform: translateY(0);
   bottom: 0;
 }
-
-
 
 @keyframes container-slide-up {
   from {
@@ -152,13 +111,14 @@ html {
 }
 
 .translate-y-full {
-  transform: translateY(6rem); 
+  transform: translateY(6rem);
 }
 .translate-y-0 {
   transform: translateY(2rem);
 }
 
-.container-wrapper, .container-wrapper-info {
+.container-wrapper,
+.container-wrapper-info {
   /* width: 100%; */
   bottom: 2rem;
   transition: transform 0.3s ease-out;
@@ -168,15 +128,6 @@ html {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
     contrast(101%);
 }
-
-/* .icon-wrapper {
-  margin-bottom: -1rem;
-  background-color: #1e3a8a; 
-  border-radius: 50%;
-  padding: 0.5rem; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-} */
-
 
 .skill-card {
   /* transition: transform 0.3s ease-in-out;
@@ -195,7 +146,7 @@ html {
   /* overflow: hidden;  */
   position: relative;
   /* width: 100%; */
-} 
+}
 .skills-wrapper {
   position: relative;
   padding: 20px 0;
@@ -222,7 +173,6 @@ html {
   transform: translateY(0);
 }
 
-
 /* Validation for form */
 .fade-in {
   opacity: 0;
@@ -246,7 +196,6 @@ html {
   }
 }
 
-
 /* Style for Activity Cards rotation */
 .card {
   perspective: 1000px; /* Perspective for 3D effect */
@@ -264,7 +213,8 @@ html {
   transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -278,7 +228,17 @@ html {
 } */
 
 .card-back {
-  background: black;
+  background: #122558;
   color: white;
   transform: rotateY(180deg);
+}
+
+.bg-home {
+  background-image: url("/images/Sandra.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  width: 50%;
+  opacity: 0.05;
 }

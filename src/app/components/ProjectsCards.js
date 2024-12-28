@@ -17,7 +17,7 @@ const ProjectsCards = ({ lang, projects }) => {
           className="relative m-4 p-4 bg-white shadow-lg rounded-lg w-custom project-card"
         >
           <div
-            className="relative w-full"
+            className="relative w-full overflow-hidden"
             onMouseEnter={() => setHoveredImage(index)}
             onMouseLeave={() => setHoveredImage(null)}
           >
@@ -29,8 +29,8 @@ const ProjectsCards = ({ lang, projects }) => {
               height={900}
             />
             <div
-              className={`absolute inset-0 bg-primary bg-opacity-85 flex items-center justify-center text-white text-center p-4 project-card-overlay transition-opacity duration-300 ease-in-out ${
-                hoveredImage === index ? "opacity-100" : "opacity-0"
+              className={`absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center text-white text-center p-4 project-card-overlay transition-opacity duration-300 ease-in-out ${
+                hoveredImage === index ? "opacity-75" : "opacity-0"
               }`}
             >
               <p>{project.information[lang]}</p>
@@ -39,15 +39,16 @@ const ProjectsCards = ({ lang, projects }) => {
           <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
           <p className="mt-2 mb-2 text-blue-900">{project.description[lang]}</p>
           <a
-            className="mt-4 text-accent hover:underline"
+            className="mt-4 font-medium text-accent hover:text-white hover:bg-accent p-2 rounded"
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {lang === "fr" ? "Voir le projet" : "See the project"}
+            {" "}
+            {lang === "fr" ? "Voir le projet" : "See the project"}{" "}
           </a>
           <div
-            className={`container-wrapper rounded-ss-lg p-2 bg-primary shadow-lg absolute right-0 flex flex-col transform ${
+            className={`container-wrapper rounded-ss-lg p-2 bg-primary shadow-lg absolute  right-0 flex flex-col transform ${
               hoveredProject === index ? "translate-y-0" : "translate-y-full"
             } transition-transform duration-300`}
             onMouseEnter={() => setHoveredProject(index)}
