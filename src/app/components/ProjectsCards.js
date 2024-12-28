@@ -39,13 +39,12 @@ const ProjectsCards = ({ lang, projects }) => {
           <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
           <p className="mt-2 mb-2 text-primary">{project.description[lang]}</p>
           <a
-            className="mt-4 font-medium text-accent hover:text-white hover:bg-accent p-2 rounded"
+            className="mt-4 font-medium text-accent bg-transparent transform transition duration-300 hover:text-white hover:bg-accent hover:scale-105 p-2 rounded inline-block"
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
-            {lang === "fr" ? "Voir le projet" : "See the project"}{" "}
+            {lang === "fr" ? "Voir le projet" : "See the project"}
           </a>
           <div
             className={`container-wrapper rounded-ss-lg p-2 bg-primary shadow-lg absolute  right-0 flex flex-col transform ${
