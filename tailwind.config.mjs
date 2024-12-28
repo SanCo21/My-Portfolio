@@ -6,19 +6,19 @@ const config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {      
+    extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#1e3a8a", 
-        secondary: "#dbeafe",
-        accent: "#eab308",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
       },
       maxWidth: {
         "screen-max": "var(--screen-max)",
       },
       width: {
-        'custom': '34rem',
+        custom: "34rem",
       },
     },
   },

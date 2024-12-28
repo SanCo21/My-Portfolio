@@ -4,10 +4,25 @@
 
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+input, textarea, button, label {
+  font-family: 'Poppins', sans-serif;
+}
+
+
 :root {
   --background: #dbeafe;
-  --foreground: #093257;
+  --foreground: #1d2d44;
   --screen-max: 1536px;
+  /* --primary: #1e3a8a; */
+  --primary: #1d2d44;
+  --secondary: #bfcde0;
+  --accent: #de369D;
 }
 
 html,
@@ -18,7 +33,7 @@ body {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -254,6 +269,49 @@ html {
 .photo img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
+  object-fit: cover;
   /* border-radius: 50%; */
+}
+
+/* Structure de la navigation */
+.navbar-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: space-evenly; */
+  /* gap: 16px; */
+}
+
+.navbar-horizontal {
+  display: flex;
+  /* gap: 16px; */
+}
+
+.nav-item {
+  width: 100%;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.nav-item:hover .nav-icon {
+  color: var(--primary); /* Changer la couleur au survol */
+}
+
+.nav-item:hover .nav-title {
+  color: yellow;
+}
+
+.nav-icon {
+  transition: color 0.3s;
+}
+
+.nav-title {
+  transition: color 0.3s;
+}
+
+.active {
+  background-color: white;
+  border-radius: 8px;
+  color: var(--primary);
+  font-weight: bold;
+  padding: 8px;
 }

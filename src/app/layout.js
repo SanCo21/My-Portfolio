@@ -1,17 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./styles/globals.css";
 // import { appWithTranslation } from 'next-i18next';
 // import { i18n } from '../../next-i18next.config.mjs';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: 'swap'
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+//   display: 'swap'
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["400", "600"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -23,9 +31,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body
+      {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      > */}
+      <body className={`${poppins.variable} antialiased`}>
         {children}
       </body>
     </html>

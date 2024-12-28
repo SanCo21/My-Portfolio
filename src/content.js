@@ -46,6 +46,7 @@ export const content = {
       },
       component: "null",
       backgroundColor: "null",
+      icon: "home",
     },
     about: {
       id: "about",
@@ -59,6 +60,7 @@ export const content = {
       },
       component: "null",
       backgroundColor: "null",
+      icon: "user",
     },
     activities: {
       id: "activities",
@@ -72,6 +74,7 @@ export const content = {
       },
       component: "ActivityCards",
       backgroundColor: "null",
+      icon: "hands-helping",
       commonImage: {
         src: "/images/working.jpg",
         alt: "Activity image",
@@ -135,6 +138,7 @@ export const content = {
       },
       component: "SkillsCards",
       backgroundColor: "",
+      icon: "toolbox",
 
       skillsList: [
         {
@@ -196,6 +200,7 @@ export const content = {
       },
       component: "ProjectsCards",
       backgroundColor: "null",
+      icon: "folder-open",
     },
     contact: {
       id: "contact",
@@ -209,6 +214,7 @@ export const content = {
       },
       component: "ContactForm",
       backgroundColor: "null",
+      icon: "comment-dots",
     },
   },
 };

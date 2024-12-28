@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const ContactForm = ({ lang }) => {
   const [name, setName] = useState("");
@@ -13,40 +13,45 @@ const ContactForm = ({ lang }) => {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  const errorMessages = {
+    name: {
+      fr: "Veuillez saisir votre nom",
+      en: "Please enter your name"
+    },
+    email: {
+      fr: "Adresse email invalide",
+      en: "Invalid email address"
+    },
+    message: {
+      fr: "Veuillez saisir votre message",
+      en: "Please enter your message"
+    }
+  };
+
   const validateField = (fieldName, value) => {
     const newErrors = { ...errors };
 
     if (fieldName === "name") {
       if (!value) {
-        newErrors.name =
-          lang === "fr"
-            ? "Veuillez saisir votre nom"
-            : "Please enter your name";
+        newErrors.name = errorMessages.name[lang];
       } else {
         delete newErrors.name;
       }
     }
-
+  
     if (fieldName === "email") {
       if (!value) {
-        newErrors.email =
-          lang === "fr"
-            ? "Veuillez saisir votre adresse email"
-            : "Please enter your email address";
+        newErrors.email = errorMessages.email[lang];
       } else if (!emailRegex.test(value)) {
-        newErrors.email =
-          lang === "fr" ? "Adresse email invalide" : "Invalid email address";
+        newErrors.email = errorMessages.email[lang];
       } else {
         delete newErrors.email;
       }
     }
-
+  
     if (fieldName === "message") {
       if (!value) {
-        newErrors.message =
-          lang === "fr"
-            ? "Veuillez saisir votre message"
-            : "Please enter your message";
+        newErrors.message = errorMessages.message[lang];
       } else {
         delete newErrors.message;
       }
@@ -135,9 +140,6 @@ const ContactForm = ({ lang }) => {
     }, 5000);
   };
 
-  useEffect(() => {
-    updateErrorMessages(lang);
-  }, [lang]);
 
   return (
     <div className="mt-10 flex max-w-xl justify-center mx-auto w-full">
