@@ -37,7 +37,7 @@ const ProjectsCards = ({ lang, projects }) => {
             </div>
           </div>
           <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
-          <p className="mt-2 mb-2 text-blue-900">{project.description[lang]}</p>
+          <p className="mt-2 mb-2 text-primary">{project.description[lang]}</p>
           <a
             className="mt-4 font-medium text-accent hover:text-white hover:bg-accent p-2 rounded"
             href={project.link}
@@ -70,7 +70,7 @@ const ProjectsCards = ({ lang, projects }) => {
                 />
               </a>
             </div>
-            <div className="p-1 mt-2 w-20 h-14 text-white text-xs">
+            <div className="p-0.5 mt-2 w-20 h-14 text-white text-xs">
               <ul>
                 {project.tools.map((tool, toolIndex) => (
                   <li key={toolIndex}>{tool}</li>

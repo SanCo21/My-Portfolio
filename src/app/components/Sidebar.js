@@ -16,7 +16,7 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
   };
 
   return (
-    <aside className="bg-primary text-white w-64 min-h-screen fixed top-0 left-0 p-4 flex-col justify-between hidden lg:flex">
+    <aside className="bg-primary text-white items-center w-64 min-h-screen fixed top-0 left-0 p-4 flex-col justify-between hidden lg:flex">
       <div className="flex-shrink-0 mb-8">
         <h1 className="text-2xl text-center font-bold mb-5">
           <a href="#home">
@@ -29,7 +29,7 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
           <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} />
         </div>
       </div>
-      <div className="text-xl flex-grow flex flex-col"> 
+      <div className="text-xl  flex-grow flex flex-col "> 
         <Navbar
           lang={lang}
           activeSection={activeSection}

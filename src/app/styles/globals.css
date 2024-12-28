@@ -16,10 +16,9 @@ input, textarea, button, label {
 
 
 :root {
-  --background: #dbeafe;
+  --background: #bfcbe0;
   --foreground: #1d2d44;
   --screen-max: 1536px;
-  /* --primary: #1e3a8a; */
   --primary: #1d2d44;
   --secondary: #bfcde0;
   --accent: #de369D;
@@ -43,9 +42,9 @@ body {
   color: var(--foreground);
 }
 
-.bg-foreground {
+/* .bg-foreground {
   background-color: var(--foreground);
-}
+} */
 
 .nav-active {
   background-color: white;
@@ -66,8 +65,8 @@ html {
     contrast(101%);
 }
 .social-icon:hover {
-  filter: invert(72%) sepia(85%) saturate(366%) hue-rotate(173deg)
-    brightness(93%) contrast(89%);
+  filter: invert(37%) sepia(95%) saturate(1642%) hue-rotate(297deg)
+    brightness(91%) contrast(97%);
 }
 
 /* Project Cards */
@@ -274,44 +273,40 @@ html {
 }
 
 /* Structure de la navigation */
-.navbar-vertical {
+/* .navbar-vertical {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; */
   /* justify-content: space-evenly; */
   /* gap: 16px; */
-}
 
-.navbar-horizontal {
+
+/* .navbar-horizontal {
   display: flex;
   /* gap: 16px; */
-}
 
-.nav-item {
+
+/* .nav-item {
   width: 100%;
   transition: transform 0.3s, color 0.3s;
-}
+} */
 
-.nav-item:hover .nav-icon {
-  color: var(--primary); /* Changer la couleur au survol */
-}
+/* .nav-item:hover .nav-icon {
+  color: var(--primary); 
+} */
 
-.nav-item:hover .nav-title {
-  color: yellow;
-}
-
-.nav-icon {
+/* .nav-icon {
   transition: color 0.3s;
-}
+} */
 
-.nav-title {
+/* .nav-title {
   transition: color 0.3s;
-}
+} */
 
-.active {
+/* .active {
   background-color: white;
   border-radius: 8px;
   color: var(--primary);
   font-weight: bold;
-  padding: 8px;
-}
+  padding: 6px;
+} */

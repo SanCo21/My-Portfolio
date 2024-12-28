@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 const ContactForm = ({ lang }) => {
@@ -16,16 +15,16 @@ const ContactForm = ({ lang }) => {
   const errorMessages = {
     name: {
       fr: "Veuillez saisir votre nom",
-      en: "Please enter your name"
+      en: "Please enter your name",
     },
     email: {
       fr: "Adresse email invalide",
-      en: "Invalid email address"
+      en: "Invalid email address",
     },
     message: {
       fr: "Veuillez saisir votre message",
-      en: "Please enter your message"
-    }
+      en: "Please enter your message",
+    },
   };
 
   const validateField = (fieldName, value) => {
@@ -38,7 +37,7 @@ const ContactForm = ({ lang }) => {
         delete newErrors.name;
       }
     }
-  
+
     if (fieldName === "email") {
       if (!value) {
         newErrors.email = errorMessages.email[lang];
@@ -48,7 +47,7 @@ const ContactForm = ({ lang }) => {
         delete newErrors.email;
       }
     }
-  
+
     if (fieldName === "message") {
       if (!value) {
         newErrors.message = errorMessages.message[lang];
@@ -69,29 +68,6 @@ const ContactForm = ({ lang }) => {
 
   const handleBlur = (fieldName, value) => {
     validateField(fieldName, value);
-  };
-
-  const updateErrorMessages = (currentLang) => {
-    const newErrors = { ...errors };
-    if (newErrors.name) {
-      newErrors.name =
-        currentLang === "fr"
-          ? "Veuillez saisir votre nom"
-          : "Please enter your name";
-    }
-    if (newErrors.email) {
-      newErrors.email =
-        currentLang === "fr"
-          ? "Adresse email invalide"
-          : "Invalid email address";
-    }
-    if (newErrors.message) {
-      newErrors.message =
-        currentLang === "fr"
-          ? "Veuillez saisir votre message"
-          : "Please enter your message";
-    }
-    setErrors(newErrors);
   };
 
   const handleSubmit = async (e) => {
@@ -140,7 +116,6 @@ const ContactForm = ({ lang }) => {
     }, 5000);
   };
 
-
   return (
     <div className="mt-10 flex max-w-xl justify-center mx-auto w-full">
       <form onSubmit={handleSubmit} noValidate className="space-y-4 w-full">
@@ -152,17 +127,17 @@ const ContactForm = ({ lang }) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             onBlur={(e) => handleBlur("name", e.target.value)}
-            className={`peer block w-full px-4 py-2 mt-2 text-primary font-medium bg-secondary border-2 rounded-md focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring focus:ring-opacity-40 ${
-              errors.name ? "border-red-500" : "border-gray-400"
+            className={`peer block w-full px-4 py-2 mt-2 text-primary font-medium bg-secondary border-2 rounded-md focus:border-gray-500 focus:ring-gray-400 focus:outline-none focus:ring focus:ring-opacity-40 ${
+              errors.name ? "border-red-600" : "border-gray-400"
             }`}
             placeholder=" "
           />
           {errors.name && (
-            <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+            <p className="text-red-600 text-sm mt-1">{errors.name}</p>
           )}
           <label
             htmlFor="name"
-            className="absolute left-4 -top-0.5 text-gray-600 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-blue-500 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-primary text-lg peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
+            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-500 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
           >
             {lang === "fr" ? "Votre nom" : "Your name"}
           </label>
@@ -175,17 +150,17 @@ const ContactForm = ({ lang }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             onBlur={(e) => handleBlur("email", e.target.value)}
-            className={`peer block w-full px-4 py-2 mt-2 text-primary font-medium bg-secondary border-2 rounded-md focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring focus:ring-opacity-40 ${
-              errors.email ? "border-red-500" : "border-gray-400"
+            className={`peer block w-full px-4 py-2 mt-2 text-primary font-medium bg-secondary border-2 rounded-md focus:border-gray-500 focus:ring-gray-400 focus:outline-none focus:ring focus:ring-opacity-40 ${
+              errors.email ? "border-red-600" : "border-gray-400"
             }`}
             placeholder=" "
           />
           {errors.email && (
-            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+            <p className="text-red-600 text-sm mt-1">{errors.email}</p>
           )}
           <label
             htmlFor="email"
-            className="absolute left-4 -top-0.5 text-gray-600 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-blue-500 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-primary text-lg peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
+            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-500 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
           >
             {lang === "fr" ? "Votre email" : "Your email"}
           </label>
@@ -197,17 +172,17 @@ const ContactForm = ({ lang }) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onBlur={(e) => handleBlur("message", e.target.value)}
-            className={`peer block w-full px-4 py-2 mt-2 text-primary font-medium bg-secondary border-2 rounded-md focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring focus:ring-opacity-40 ${
-              errors.message ? "border-red-500" : "border-gray-400"
+            className={`peer block w-full px-4 py-2 mt-2 text-primary font-medium bg-secondary border-2 rounded-md focus:border-gray-500 focus:ring-gray-400 focus:outline-none focus:ring focus:ring-opacity-40 ${
+              errors.message ? "border-red-600" : "border-gray-400"
             } h-32`}
             placeholder=" "
           ></textarea>
           {errors.message && (
-            <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+            <p className="text-red-600 text-sm mt-1">{errors.message}</p>
           )}
           <label
             htmlFor="message"
-            className="absolute left-4 -top-0.5 text-gray-600 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-blue-500 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-primary text-lg peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
+            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-500 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
           >
             {lang === "fr" ? "Votre message" : "Your message"}
           </label>
@@ -248,6 +223,5 @@ const ContactForm = ({ lang }) => {
       </form>
     </div>
   );
-
 };
 export default ContactForm;
