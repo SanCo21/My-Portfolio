@@ -18,7 +18,7 @@ input, textarea, button, label {
 
 :root {
   --background: #d2d7df;
-  --foreground: #1d2d44;
+  --foreground: black;
   --screen-max: 1536px;
   --primary: black;
   --secondary: #d2d7df;
@@ -63,8 +63,6 @@ html {
   width: 16px !important;
   height: auto;
   object-fit: contain;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
-    contrast(101%);
 }
 
 .social-icon:hover, .icon-style:hover {
@@ -72,7 +70,7 @@ html {
     brightness(91%) contrast(97%);
 }
 
-.icon-style {
+.icon-style, .social-icon {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%)
     contrast(101%);
 }
@@ -134,7 +132,6 @@ html {
 
 
 .card-back {
-  /* background: #122558; */
   color: white;
   transform: rotateY(180deg);
 }
@@ -182,7 +179,10 @@ html {
 
 
 .title-home {
-  @apply text-5xl md:text-6xl font-bold text-primary mb-4 leading-tight;
+  @apply text-5xl lg:text-6xl xl:text-7xl font-bold text-primary mb-4 leading-tight;
   letter-spacing: 2px; 
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
 }
+
+
+/* className="text-md md:text-lg lg:text-xl xl:text-1xl" */

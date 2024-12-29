@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Image from "next/image";
 
@@ -38,7 +39,7 @@ const ProjectsCards = ({ lang, projects }) => {
               <p>{project.information[lang]}</p>
             </div>
           </div>
-          <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
+          <h4 className="mt-4 text-xl font-bold">{project.title}</h4>
           <p className="mt-2 mb-2 text-primary">{project.description[lang]}</p>
           <a
             className="mt-4 font-medium text-accent bg-transparent transform transition duration-300 hover:text-white hover:bg-accent hover:scale-105 p-2 rounded inline-block"

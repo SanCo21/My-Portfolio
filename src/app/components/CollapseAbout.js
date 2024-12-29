@@ -1,7 +1,7 @@
 import { useState } from "react";
 ("@fortawesome/fontawesome-free/css/all.min.css");
 
-const CollapseAbout = ({ title, content }) => {
+const CollapseAbout = ({ content, textSize }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -14,13 +14,12 @@ const CollapseAbout = ({ title, content }) => {
 
   return (
     <div className="collapse-about p-2">
-      <h2 className="text-3xl font-bold mb-4">{title}</h2>
       <div className="flex flex-col items-center">
-        <p className="flex-grow text-primary text-justify text-lg mb-2">
+        <p className={`flex-grow text-justify ${textSize} mb-2`}>
           {firstSentence}
         </p>
         <span
-          className="cursor-pointer text-primary ml-2 inline-flex items-center"
+          className="cursor-pointer ml-2 inline-flex items-center"
           onClick={toggleOpen}
         >
           <i
@@ -35,9 +34,9 @@ const CollapseAbout = ({ title, content }) => {
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <p className="text-primary text-justify text-lg mt-2">
+        <p className={`text-justify ${textSize} mt-2`}>
           {remainingText}
-        </p>{" "}
+        </p>
       </div>
     </div>
   );

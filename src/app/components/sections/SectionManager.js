@@ -23,6 +23,16 @@ const componentsMap = {
   ContactForm,
 };
 
+const textSizes = {
+  // title: "text-4xl md:text-5xl lg:text-6xl",
+  content: "text-base md:text-lg lg:text-xl",
+  h3: "text-3xl md:text-3xl lg:text-4xl xl:text-5xl",
+};
+const textMargins = {
+  // title: "mb-4 md:mb-6 lg:mb-8",
+  h3: "mb-6 md:mb-7 lg:mb-20",
+};
+
 const SectionManager = ({ lang, sectionsData }) => {
   return (
     <motion.main
@@ -48,9 +58,19 @@ const SectionManager = ({ lang, sectionsData }) => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               {section.id === "home" ? (
-                <HomeSection section={section} lang={lang} />
+                <HomeSection
+                  section={section}
+                  lang={lang}
+                  textSize={textSizes.title}
+                  textMargin={textMargins.title}
+                />
               ) : (
-                <GeneralSection section={section} lang={lang} />
+                <GeneralSection
+                  section={section}
+                  lang={lang}
+                  textSize={textSizes}
+                  textMargin={textMargins}
+                />
               )}
               {Component && (
                 <Component
