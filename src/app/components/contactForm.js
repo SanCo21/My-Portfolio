@@ -9,6 +9,7 @@ const ContactForm = ({ lang }) => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -75,6 +76,7 @@ const ContactForm = ({ lang }) => {
 
     if (!isFormValid) {
       setShowConfirmation(false);
+    //   setShowError(true);
       return;
     }
 
@@ -115,6 +117,12 @@ const ContactForm = ({ lang }) => {
       setShowConfirmation(false);
     }, 5000);
   };
+
+//   const handleButtonClick = () => {
+//     if (!isFormValid) {
+//       setShowError(true);
+//     }
+//   };
 
   return (
     <div className="mt-10 flex max-w-xl justify-center mx-auto w-full">
@@ -193,7 +201,8 @@ const ContactForm = ({ lang }) => {
             disabled={!isFormValid || isLoading}
             className={`px-4 py-2 ${
               isFormValid ? "bg-primary hover:bg-accent" : "bg-gray-400"
-            } text-white text-lg rounded focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-transform transform hover:scale-105`}
+            } text-white text-lg rounded focus:outline-none focus:ring-2 focus:ring-accent shadow-md transition-transform transform hover:scale-105`}
+            // onClick={handleButtonClick}
           >
             {isLoading
               ? lang === "fr"
@@ -204,6 +213,13 @@ const ContactForm = ({ lang }) => {
               : "Send"}
           </button>
         </div>
+        {showError && (
+          <p className="text-red-600 text-xs mt-2">
+            {lang === "fr"
+              ? "Veuillez remplir le message avant d'envoyer le formulaire."
+              : "Please fill in the message before submitting the form."}
+          </p>
+        )}
         {confirmationMessage && !isLoading && (
           <div
             className={`mt-4 p-2 bg-accent text-primary rounded ${

@@ -14,7 +14,7 @@ const Navbar = ({
     orientation === "vertical"
       ? "flex flex-col items-start justify-evenly space-y-8"
       : header
-      ? "flex items-center justify-center space-x-0"
+      ? "flex items-center justify-center space-x-2"
       : "flex items-center justify-center space-x-4";
 
   const itemClass =
