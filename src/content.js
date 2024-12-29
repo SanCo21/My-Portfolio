@@ -177,6 +177,16 @@ export const content = {
           name: "Figma",
         },
         {
+          src: "/icons/swagger.svg",
+          alt: "Swagger logo",
+          name: "Swagger",
+        },
+        {
+          src: "/icons/mongodb.svg",
+          alt: "MongoDB logo",
+          name: "MongoDB",
+        },
+        {
           src: "/icons/nextjs.svg",
           alt: "Next.js",
           name: "Next.js",

@@ -6,6 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -172,8 +173,16 @@ html {
 
 
 .connected-background {
-  background-color: var(--background); /* Utilise la variable pour la couleur de fond */
-  background-image: var(--background-image); /* Utilise la variable pour l'image de fond */
+  background-color: var(--background); 
+  background-image: var(--background-image); 
   background-size: 50 px 50px;
-  background-size: repeat; 
+  background-attachment: fixed;
+  background-repeat: repeat; 
+}
+
+
+.title-home {
+  @apply text-5xl md:text-6xl font-bold text-primary mb-4 leading-tight;
+  letter-spacing: 2px; 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
 }

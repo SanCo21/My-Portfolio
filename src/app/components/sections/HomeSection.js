@@ -3,7 +3,7 @@ import Typewriter from "../Typewriter";
 
 const HomeSection = ({ section, lang }) => (
   <>
-    <h2 className="text-4xl font-bold text-primary text-center uppercase">
+    <h2 className="title-home text-4xl font-bold text-primary text-center uppercase">
       <Typewriter text={lang === "fr" ? section.title.fr : section.title.en} />
     </h2>
     <div className="flex mt-16 items-center justify-center">
