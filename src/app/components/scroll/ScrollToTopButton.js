@@ -1,5 +1,4 @@
 
-
 const ScrollToTopButton = ({ isVisible, scrollToTop }) => {
     return (
       isVisible && (

@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { content } from "../content";
-import SectionManager from "./components/SectionManager";
-import { projectsList } from "../projectsList";
-import ScrollHandler from "./components/ScrollHandler";
+import SectionManager from "./components/sections/SectionManager";
+import ScrollHandler from "./components/scroll/ScrollHandler";
 import Footer from "./components/Footer";
 
 const HomePage = () => {
