@@ -16,12 +16,13 @@ input, textarea, button, label {
 
 
 :root {
-  --background: #bfcbe0;
+  --background: #d2d7df;
   --foreground: #1d2d44;
   --screen-max: 1536px;
-  --primary: #1d2d44;
-  --secondary: #bfcde0;
+  --primary: black;
+  --secondary: #d2d7df;
   --accent: #de369D;
+  --background-image: url('/images/connected.png');
 }
 
 html,
@@ -146,8 +147,33 @@ html {
 }
 
 .photo img {
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: cover;
   /* border-radius: 50%; */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
+
+
+.connected-background {
+  background-color: var(--background); /* Utilise la variable pour la couleur de fond */
+  background-image: var(--background-image); /* Utilise la variable pour l'image de fond */
+  background-size: 50 px 50px;
+  background-size: repeat; 
 }

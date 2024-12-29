@@ -26,6 +26,8 @@ const HomePage = () => {
     localStorage.setItem("language", newLang);
   };
 
+  
+
   return (
     <div className="w-full relative">
       <div className="w-full mx-auto relative">
