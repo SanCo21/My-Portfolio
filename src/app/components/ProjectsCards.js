@@ -1,37 +1,39 @@
 import { useState } from "react";
 import Image from "next/image";
-// import { content } from "../../content";
-// import { projectsList } from "../../projectsList";
 
 const ProjectsCards = ({ lang, projects }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [hoveredImage, setHoveredImage] = useState(null);
 
-  console.log("Projects received:", projects);
-
   return (
-    <div className="projects-content mt-10 flex flex-wrap justify-center">
+    <div className="mt-10 flex flex-wrap justify-center">
       {projects?.map((project, index) => (
         <div
+          className="relative overflow-hidden m-4 p-4 bg-white shadow-lg rounded-lg w-custom"
           key={index}
-          className="relative m-4 p-4 bg-white shadow-lg rounded-lg w-custom project-card"
         >
           <div
-            className="relative w-full overflow-hidden"
+            className="relative w-full overflow-hidden rounded-lg"
             onMouseEnter={() => setHoveredImage(index)}
             onMouseLeave={() => setHoveredImage(null)}
           >
             <Image
-              className="w-full h-60 object-cover rounded-lg"
+              className={`w-full h-60 object-cover transition-transform duration-500 ease ${
+                hoveredImage === index
+                  ? "transform scale-110 filter brightness-70"
+                  : ""
+              }`}
               src={project.imageUrl}
               alt={project.title}
               width={900}
               height={900}
             />
             <div
-              className={`absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center text-white text-center p-4 project-card-overlay transition-opacity duration-300 ease-in-out ${
-                hoveredImage === index ? "opacity-75" : "opacity-0"
-              }`}
+              className={`absolute inset-0 bg-primary flex items-center justify-center text-white text-center p-4 transform ${
+                hoveredImage === index
+                  ? "opacity-85 translate-x-0"
+                  : "opacity-0 translate-x-full"
+              } transition-transform duration-500 ease-in-out`}
             >
               <p>{project.information[lang]}</p>
             </div>
@@ -47,13 +49,18 @@ const ProjectsCards = ({ lang, projects }) => {
             {lang === "fr" ? "Voir le projet" : "See the project"}
           </a>
           <div
-            className={`container-wrapper rounded-ss-lg p-2 bg-primary shadow-lg absolute right-0 flex flex-col transform ${
-              hoveredProject === index ? "translate-y-0" : "translate-y-full"
-            } transition-transform duration-300`}
+            className={`rounded-ss-lg p-2 bg-primary shadow-lg absolute right-0 flex flex-col transition-transform duration-300 ease-out ${
+              hoveredProject === index
+                ? "translate-y-8"
+                : "translate-y-[calc(100%-0.15rem)]"
+            }`}
+            style={{
+              bottom: "2rem",
+            }}
             onMouseEnter={() => setHoveredProject(index)}
             onMouseLeave={() => setHoveredProject(null)}
           >
-            <div className="icon-style flex justify-center hover:scale-125 ">
+            <div className="flex justify-center hover:scale-125 transition-transform">
               <a
                 href={project.github}
                 target="_blank"
@@ -65,7 +72,7 @@ const ProjectsCards = ({ lang, projects }) => {
                   width={20}
                   height={20}
                   style={{ width: "20px", height: "20px" }}
-                  className="cursor-pointer icon"
+                  className="cursor-pointer icon-style"
                 />
               </a>
             </div>
@@ -82,4 +89,5 @@ const ProjectsCards = ({ lang, projects }) => {
     </div>
   );
 };
+
 export default ProjectsCards;
