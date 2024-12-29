@@ -36,9 +36,9 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
           orientation="vertical"
         />
       </div>
-      <div className="mt-6 ">
+      <div className="mt-8 ">
         <SocialLinks />
-        <div className="mt-6 text-center">
+        <div className="my-6 text-center">
           <p
             className="text-sm"
             dangerouslySetInnerHTML={{

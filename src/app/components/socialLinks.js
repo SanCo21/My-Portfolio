@@ -10,8 +10,7 @@ const SocialLinks = () => {
           key={index}
           href={link.url}
           target={link.name !== "Email" ? "_blank" : "_self"}
-          rel="noopener noreferrer"
-          className="hover:text-secondary"
+          rel="noopener noreferrer"          
         >
           <Image
             src={link.icon}

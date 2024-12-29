@@ -47,7 +47,7 @@ const ProjectsCards = ({ lang, projects }) => {
             {lang === "fr" ? "Voir le projet" : "See the project"}
           </a>
           <div
-            className={`container-wrapper rounded-ss-lg p-2 bg-primary shadow-lg absolute  right-0 flex flex-col transform ${
+            className={`container-wrapper rounded-ss-lg p-2 bg-primary shadow-lg absolute right-0 flex flex-col transform ${
               hoveredProject === index ? "translate-y-0" : "translate-y-full"
             } transition-transform duration-300`}
             onMouseEnter={() => setHoveredProject(index)}
