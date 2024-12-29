@@ -242,7 +242,7 @@ html {
 } */
 
 .card-back {
-  background: #122558;
+  /* background: #122558; */
   color: white;
   transform: rotateY(180deg);
 }

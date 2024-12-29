@@ -13,7 +13,7 @@ const ActivityCards = ({ lang }) => {
           {activitiesList.map((activity, index) => (
             <div key={index} className="relative w-64 h-64 m-4 p-4 card">
               <div className="card-inner">
-                <div className="card-front flex flex-col items-center justify-center bg-white bg-opacity-80 border border-gray-200 rounded-lg shadow-lg">
+                <div className="card-front flex flex-col items-center justify-center bg-white rounded-lg shadow-lg">
                   {activity.icon && (
                     <i className={`fas fa-${activity.icon} text-6xl text-accent mb-10`}></i>
                   )}
@@ -21,7 +21,7 @@ const ActivityCards = ({ lang }) => {
                     {lang === "fr" ? activity.name.fr : activity.name.en}
                   </h3>
                 </div>
-                <div className="card-back flex flex-col items-center justify-center rounded-lg shadow-lg">
+                <div className="card-back flex flex-col items-center justify-center bg-primary rounded-lg shadow-lg">
                   <Image
                     src="/images/working.jpg"
                     alt="Activity image"
