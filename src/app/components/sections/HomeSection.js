@@ -8,7 +8,7 @@ const HomeSection = ({ section, lang }) => (
     </h2>
     <div className="flex mt-16 items-center justify-center">
       <div className="w-1/3 flex justify-center">
-        <div className="photo rounded-full bg-white">
+        <div className="photo pl-8 rounded-full bg-white">
           <Image
             src="/images/Portrait4.jpg"
             alt="Portrait Sandra"
