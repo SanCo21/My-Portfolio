@@ -32,7 +32,7 @@ const ProjectsCards = ({ lang, projects }) => {
             <div
               className={`absolute inset-0 bg-primary flex items-center justify-center text-white text-center p-4 transform ${
                 hoveredImage === index
-                  ? "opacity-85 translate-x-0"
+                  ? "opacity-75 translate-x-0"
                   : "opacity-0 translate-x-full"
               } transition-transform duration-500 ease-in-out`}
             >
