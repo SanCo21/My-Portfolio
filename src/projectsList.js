@@ -12,7 +12,7 @@ export const projectsList = {
       },
       imageUrl: "/images/Booki.jpg",
       link: "https://sanco21.github.io/Booki/",
-      github: "https://github.com/utilisateur/projet1",
+      github: "https://github.com/SanCo21/Booki",
       tools: ["HTML & CSS", "Responsive design"],
     },
     {
@@ -27,7 +27,7 @@ export const projectsList = {
       },
       imageUrl: "/images/OhMyFood.jpg",
       link: "https://sanco21.github.io/Ohmyfood/",
-      github: "https://github.com/utilisateur/projet1",
+      github: "https://github.com/SanCo21/Ohmyfood",
       tools: ["HTML & CSS", "Animation Sass"],
     },
     {
@@ -41,8 +41,8 @@ export const projectsList = {
         en: "Creation of a dynamic web application using React to offer a smooth user experience, accompanied by modern routing management and attractive designs.",
       },
       imageUrl: "/images/Kasa.png",
-      link: "https://lien-vers-le-projet3.com",
-      github: "https://github.com/utilisateur/projet1",
+      link: "http://s-and-co-solutions.digital/kasa",
+      github: "https://github.com/SanCo21/kasa",
       tools: ["React.js", "Node.js", "Sass"],
     },
     {
@@ -57,7 +57,7 @@ export const projectsList = {
       },
       imageUrl: "/images/NinaCarducci.jpg",
       link: "https://sanco21.github.io/ninacarducci/",
-      github: "https://github.com/utilisateur/projet1",
+      github: "https://github.com/SanCo21/ninacarducci",
       tools: ["LightHouse", "Rich Snippet", "WaveTools"],
     },
   ],
