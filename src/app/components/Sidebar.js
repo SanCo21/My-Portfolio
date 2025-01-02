@@ -29,11 +29,12 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
           <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} />
         </div>
       </div>
-      <div className="text-xl flex-grow flex flex-col justify-center ">
+      <div className="text-xl flex-grow flex flex-col justify-center">
         <Navbar
           lang={lang}
           activeSection={activeSection}
           orientation="vertical"
+          sidebar
         />
       </div>
       <div className="mt-8 ">

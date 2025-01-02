@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { content } from "../../content";
+import classNames from "classnames";
 
 const Navbar = ({
   lang,
@@ -8,14 +9,20 @@ const Navbar = ({
   orientation = "horizontal",
   header = false,
   compact = false,
+  sidebar = false,
+  hamburger = false
 }) => {
   const sections = content.sectionsData;
-  const navClass =
-    orientation === "vertical"
-      ? "flex flex-col items-start justify-evenly space-y-8"
-      : header
-      ? "flex items-center justify-center space-x-2"
-      : "flex items-center justify-center space-x-4";
+  const navClass = classNames({
+    "flex flex-col items-start justify-evenly space-y-16":
+      orientation === "vertical" && sidebar,
+    "flex flex-col items-start justify-evenly space-y-8":
+      orientation === "vertical" && hamburger,
+    "flex items-center justify-center space-x-2":
+      orientation !== "vertical" && header,
+    "flex items-center justify-center space-x-4":
+      orientation !== "vertical" && !header,
+  });
 
   const itemClass =
     orientation === "vertical"
@@ -25,7 +32,7 @@ const Navbar = ({
   const activeClass =
     "bg-white text-primary font-medium p-2 rounded w-full text-center";
 
-  const inactiveClass = "p-2 text-center w-full"; 
+  const inactiveClass = "p-2 text-center w-full";
 
   const handleLinkClick = (event, id) => {
     event.preventDefault();
@@ -49,8 +56,7 @@ const Navbar = ({
           >
             <a
               className={`${itemClass} font-medium ${
-                activeSection === sections[key].id
-                  ? activeClass : inactiveClass
+                activeSection === sections[key].id ? activeClass : inactiveClass
               }`}
               onClick={(event) => handleLinkClick(event, sections[key].id)}
             >
@@ -60,7 +66,7 @@ const Navbar = ({
                 ></i>
               )}
               <span className="group-hover:text-accent">
-                {sections[key].title[lang].replace(' ', '\u00A0')}
+                {sections[key].title[lang].replace(" ", "\u00A0")}
               </span>
             </a>
           </Link>

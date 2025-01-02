@@ -76,7 +76,7 @@ const ContactForm = ({ lang }) => {
 
     if (!isFormValid) {
       setShowConfirmation(false);
-    //   setShowError(true);
+      //   setShowError(true);
       return;
     }
 
@@ -118,11 +118,11 @@ const ContactForm = ({ lang }) => {
     }, 5000);
   };
 
-//   const handleButtonClick = () => {
-//     if (!isFormValid) {
-//       setShowError(true);
-//     }
-//   };
+  //   const handleButtonClick = () => {
+  //     if (!isFormValid) {
+  //       setShowError(true);
+  //     }
+  //   };
 
   return (
     <div className="mt-10 flex max-w-xl justify-center mx-auto w-full">
@@ -190,7 +190,7 @@ const ContactForm = ({ lang }) => {
           )}
           <label
             htmlFor="message"
-            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-700 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
+            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-700 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-3.5"
           >
             {lang === "fr" ? "Votre message" : "Your message"}
           </label>
