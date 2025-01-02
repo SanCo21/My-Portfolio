@@ -42,13 +42,13 @@ const ProjectsCards = ({ lang, projects }) => {
           <h4 className="mt-4 text-xl font-bold">{project.title}</h4>
           <p className="mt-2 mb-2 text-primary">{project.description[lang]}</p>
           <a
-            className="mt-4 bg-transparent p-2"
+            className=" bg-transparent p-2"
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="voir le projet"
           >
-            <i className="fas fa-play text-accent text-2xl transform transition duration-300 hover:scale-125"></i>
+            <i className="fas fa-play pt-1 text-accent text-2xl transform transition duration-300 hover:scale-125"></i>
           </a>
           <div
             className={`rounded-ss-lg px-2 py-1.5 bg-primary shadow-lg absolute right-0 flex flex-col transition-transform duration-300 ease-out ${
