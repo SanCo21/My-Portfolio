@@ -51,7 +51,7 @@ const ProjectsCards = ({ lang, projects }) => {
             <i className="fas fa-play text-accent text-2xl transform transition duration-300 hover:scale-125"></i>
           </a>
           <div
-            className={`rounded-ss-lg p-2 bg-primary shadow-lg absolute right-0 flex flex-col transition-transform duration-300 ease-out ${
+            className={`rounded-ss-lg px-2 py-1.5 bg-primary shadow-lg absolute right-0 flex flex-col transition-transform duration-300 ease-out ${
               hoveredProject === index
                 ? "translate-y-8"
                 : "translate-y-[calc(100%-0.15rem)]"
