@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const ProjectsCards = ({ lang, projects }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -41,12 +42,13 @@ const ProjectsCards = ({ lang, projects }) => {
           <h4 className="mt-4 text-xl font-bold">{project.title}</h4>
           <p className="mt-2 mb-2 text-primary">{project.description[lang]}</p>
           <a
-            className="mt-4 font-medium text-accent bg-transparent transform transition duration-300 hover:text-white hover:bg-accent hover:scale-105 p-2 rounded inline-block"
+            className="mt-4 bg-transparent p-2"
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="voir le projet"
           >
-            {lang === "fr" ? "Voir le projet" : "See the project"}
+            <i className="fas fa-play text-accent text-2xl transform transition duration-300 hover:scale-125"></i>
           </a>
           <div
             className={`rounded-ss-lg p-2 bg-primary shadow-lg absolute right-0 flex flex-col transition-transform duration-300 ease-out ${
@@ -65,15 +67,9 @@ const ProjectsCards = ({ lang, projects }) => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="voir le code source"
               >
-                <Image
-                  src="/icons/code-icon.svg"
-                  alt="Code Icon"
-                  width={20}
-                  height={20}
-                  style={{ width: "20px", height: "20px" }}
-                  className="cursor-pointer icon-style"
-                />
+                <i className="fas fa-code icon-style"></i>
               </a>
             </div>
             <div className="p-0.5 mt-2 w-20 h-14 text-white text-xs">

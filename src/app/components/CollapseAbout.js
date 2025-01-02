@@ -15,10 +15,13 @@ const CollapseAbout = ({ content, textSize }) => {
   return (
     <div className="collapse-about p-2">
       <div className="flex flex-col items-center">
-        <p className={`flex-grow text-justify ${textSize} mb-2`}>
+        <p className={`flex-grow text-left ${textSize} mb-2`}>
           {firstSentence}
         </p>
-        <span
+        <button
+          aria-expanded={isOpen}
+          aria-controls="collapse-content"
+          aria-label={isOpen ? "Réduire le contenu" : "Développer le contenu"}
           className="cursor-pointer ml-2 inline-flex items-center"
           onClick={toggleOpen}
         >
@@ -27,16 +30,17 @@ const CollapseAbout = ({ content, textSize }) => {
               isOpen ? "rotate-180" : "rotate-0"
             } ${!isOpen && "hover:bg-primary"}`}
           ></i>
-        </span>
+        </button>
       </div>
       <div
+        id="collapse-content"
+        role="region"
+        aria-hidden={!isOpen}
         className={`transition-all duration-700 ease-in-out overflow-hidden ${
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <p className={`text-justify ${textSize} mt-2`}>
-          {remainingText}
-        </p>
+        <p className={`text-left ${textSize} mt-2`}>{remainingText}</p>
       </div>
     </div>
   );

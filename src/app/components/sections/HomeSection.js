@@ -11,10 +11,12 @@ const HomeSection = ({ section, lang }) => (
         <div className="photo rounded-full bg-white">
           <Image
             src="/images/Portrait4.jpg"
-            alt="Portrait Sandra"
+            alt="Portrait de Sandra"
             width={720}
             height={1040}
             priority
+            role="img"
+            tabIndex="0" // to make the image focusable
           />
         </div>
       </div>

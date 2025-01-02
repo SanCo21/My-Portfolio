@@ -145,7 +145,7 @@ const ContactForm = ({ lang }) => {
           )}
           <label
             htmlFor="name"
-            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-500 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
+            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-700 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
           >
             {lang === "fr" ? "Votre nom" : "Your name"}
           </label>
@@ -168,7 +168,7 @@ const ContactForm = ({ lang }) => {
           )}
           <label
             htmlFor="email"
-            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-500 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
+            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-700 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
           >
             {lang === "fr" ? "Votre email" : "Your email"}
           </label>
@@ -190,7 +190,7 @@ const ContactForm = ({ lang }) => {
           )}
           <label
             htmlFor="message"
-            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-500 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
+            className="absolute left-4 -top-0.5 text-gray-500 text-md bg-secondary px-1 transition-all duration-300 transform -translate-y-1/2 scale-90 peer-focus:top-0 peer-focus:left-4 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-secondary peer-focus:px-1 peer-placeholder-shown:text-gray-700 text-md peer-placeholder-shown:top-6 peer-placeholder-shown:left-4"
           >
             {lang === "fr" ? "Votre message" : "Your message"}
           </label>
@@ -202,6 +202,7 @@ const ContactForm = ({ lang }) => {
             className={`px-4 py-2 ${
               isFormValid ? "bg-primary hover:bg-accent" : "bg-gray-400"
             } text-white text-lg rounded focus:outline-none focus:ring-2 focus:ring-accent shadow-md transition-transform transform hover:scale-105`}
+            aria-label="Envoyer le formulaire"
             // onClick={handleButtonClick}
           >
             {isLoading

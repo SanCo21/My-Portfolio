@@ -188,12 +188,12 @@ export const content = {
         },
         {
           src: "/icons/nextjs.svg",
-          alt: "Next.js",
+          alt: "Next logo",
           name: "Next.js",
         },
         {
           src: "/icons/tailwind.svg",
-          alt: "Tailwind",
+          alt: "Tailwind logo",
           name: "Tailwind",
         },
       ],

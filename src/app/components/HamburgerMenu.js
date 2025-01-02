@@ -5,6 +5,7 @@ const HamburgerMenu = ({ isOpen, onClick }) => {
     <button
       className="text-white focus:outline-none lg:hidden flex items-center justify-center relative w-10 h-10"
       onClick={onClick}
+      aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
     >
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
         {/* <div className="w-6 h-6 relative"> */}

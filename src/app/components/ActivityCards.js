@@ -24,10 +24,11 @@ const ActivityCards = ({ lang }) => {
                 <div className="card-back flex flex-col items-center justify-center bg-primary rounded-lg shadow-lg">
                   <Image
                     src="/images/working.jpg"
-                    alt="Activity image"
+                    alt="" // alt empty because aria-hidden is set to true
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="rounded-lg object-cover opacity-30"
+                    aria-hidden="true"
                   />
                   <p className="absolute px-4 text-white text-center">
                     {lang === "fr" ? activity.description.fr : activity.description.en}

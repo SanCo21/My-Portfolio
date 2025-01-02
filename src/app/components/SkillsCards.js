@@ -20,7 +20,10 @@ const SkillsCards = () => {
           direction="left"
         >
           {repeatedSkills.map((skill, index) => (
-            <div key={index} className="card-container mx-4 py-6">
+            <div
+              key={index}
+              className="card-container mx-4 py-6"
+            >
               <div className="skill-card rounded-lg shadow-lg text-center p-3 bg-primary transform transition-transform duration-300 hover:scale-110 hover:z-10">
                 <Image
                   src={skill.src}
