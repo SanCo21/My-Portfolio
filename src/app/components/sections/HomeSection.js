@@ -14,8 +14,8 @@ const HomeSection = ({ section, lang }) => (
             alt="Portrait de Sandra"
             width={720}
             height={1040}
-            priority
-            role="img"
+            priority={true}
+            // role="img"
             tabIndex="0" // to make the image focusable
           />
         </div>
