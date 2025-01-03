@@ -41,7 +41,7 @@ export const projectsList = {
         en: "Creation of a dynamic web application using React to offer a smooth user experience, accompanied by modern routing management and attractive designs.",
       },
       image: "/images/Kasa.webp",
-      link: "http://s-and-co-solutions.digital/kasa",
+      link: "https://s-and-co-solutions.digital/kasa",
       github: "https://github.com/SanCo21/kasa",
       tools: ["React.js", "Node.js", "Sass"],
     },
