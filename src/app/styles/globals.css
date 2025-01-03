@@ -1,10 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
@@ -184,4 +183,3 @@ html {
   letter-spacing: 2px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-

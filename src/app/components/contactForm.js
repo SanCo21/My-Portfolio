@@ -132,6 +132,7 @@ const ContactForm = ({ lang }) => {
             type="text"
             id="name"
             name="name"
+            autoComplete="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             onBlur={(e) => handleBlur("name", e.target.value)}
@@ -155,6 +156,7 @@ const ContactForm = ({ lang }) => {
             type="email"
             id="email"
             name="email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             onBlur={(e) => handleBlur("email", e.target.value)}
@@ -177,6 +179,7 @@ const ContactForm = ({ lang }) => {
           <textarea
             id="message"
             name="message"
+            autoComplete="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onBlur={(e) => handleBlur("message", e.target.value)}
