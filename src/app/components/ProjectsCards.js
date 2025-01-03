@@ -28,6 +28,7 @@ const ProjectsCards = ({ lang, projects }) => {
               alt={project.title}
               width={900}
               height={900}
+              priority={true}
             />
             <div
               className={`absolute inset-0 bg-primary flex items-center justify-center text-white text-center p-4 transform ${
