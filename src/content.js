@@ -44,6 +44,11 @@ export const content = {
         en: "I am Sandra COLOMER, a creator of dynamic and interactive web interfaces.",
         fr: "Je suis Sandra COLOMER, une créatrice d'interfaces web dynamiques et interactives.",
       },
+      image: 
+        {
+          src: "/images/Portrait4.jpg",
+          alt: "Portrait de Sandra COLOMER",
+        },
       component: "null",
       backgroundColor: "null",
       icon: "home",
