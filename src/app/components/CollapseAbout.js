@@ -1,5 +1,6 @@
 import { useState } from "react";
-("@fortawesome/fontawesome-free/css/all.min.css");
+// ("@fortawesome/fontawesome-free/css/all.min.css");
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const CollapseAbout = ({ content, textSize }) => {
   const [isOpen, setIsOpen] = useState(false);

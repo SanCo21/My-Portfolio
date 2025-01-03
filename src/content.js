@@ -46,7 +46,7 @@ export const content = {
       },
       image: 
         {
-          src: "/images/Portrait4.jpg",
+          src: "/images/Portrait4.webp",
           alt: "Portrait de Sandra COLOMER",
         },
       component: "null",

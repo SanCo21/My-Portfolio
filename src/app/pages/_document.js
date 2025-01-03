@@ -30,6 +30,7 @@ class MyDocument extends Document {
             name="description"
             content="Bienvenue sur le portfolio de Sandra COLOMER. Explorez mes projets de développement web, apprenez-en davantage sur moi, et contactez-moi pour vos projets numériques."
           />
+          <meta name="robots" content="noindex, nofollow" /> {/* metadata not to be indexed */}
           {imagesToPreload.map((image, index) => (
             <link
               key={index}
