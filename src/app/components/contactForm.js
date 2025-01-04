@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 
 const ContactForm = ({ lang }) => {
@@ -9,7 +11,7 @@ const ContactForm = ({ lang }) => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
-  const [showError, setShowError] = useState(false);
+  const [showError] = useState(false);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

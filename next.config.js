@@ -2,9 +2,10 @@ const TerserPlugin = require("terser-webpack-plugin");
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  output: "export", // Indicate the static deployment
-  // basePath: "/MyPortfolio", // Base path for the application
   assetPrefix: process.env.NODE_ENV === "production" ? "/MyPortfolio" : "", // Prefix for static assets
+  basePath: process.env.NODE_ENV === "production" ? "/MyPortfolio" : "",
+  output: "export", // Indicate the static deployment
+  // basePath: "/MyPortfolio", // Base path for the application  
   trailingSlash: true, // Add trailing slash to the end of URLs
   images: {
     unoptimized: true, // Deactivate image optimization for static deployment

@@ -36,7 +36,7 @@ export const content = {
     },
     {
       name: "Email",
-      url: "mailto:sandra.colomer@outlook.fr",
+      url: "mailto:	contact@s-and-co-solutions.digital",
       icon: "/icons/email.svg",
     },
   ],
@@ -52,7 +52,7 @@ export const content = {
         fr: "Je suis Sandra COLOMER, une créatrice d'interfaces web dynamiques et interactives.",
       },
       imageSrc: "/images/Portrait4.webp",
-      imageAlt: "Portrait de Sandra COLOMER",
+      imageAlt: "Portrait de Sandra COLOMER ",
       component: "null",
       backgroundColor: "null",
       icon: "home",

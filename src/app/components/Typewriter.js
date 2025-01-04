@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+
+import { useState, useEffect } from 'react';
 
 const Typewriter = ({ text }) => {
   const [displayedText, setDisplayedText] = useState('');

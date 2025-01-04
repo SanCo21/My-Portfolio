@@ -1,14 +1,14 @@
 "use client";
 
+import { content } from "../content";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import { content } from "../content";
 import SectionManager from "./components/sections/SectionManager";
 import ScrollHandler from "./components/scroll/ScrollHandler";
 import Footer from "./components/Footer";
 
-const HomePage = () => {
+export default function HomePage() {
   const [lang, setLang] = useState("fr");
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
@@ -56,6 +56,6 @@ const HomePage = () => {
       </div>
     </div>
   );
-};
+}
 
-export default HomePage;
+// export default HomePage;

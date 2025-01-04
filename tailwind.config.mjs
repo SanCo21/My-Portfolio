@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-const config = {
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
+module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,9 +21,13 @@ const config = {
       width: {
         custom: "34rem",
       },
+      fontFamily: {
+        sans: ["Poppins", ...fontFamily.sans],
+      },
+      screens: {
+        xs: "315px",
+      },
     },
   },
   plugins: [],
 };
-
-export default config;

@@ -1,4 +1,5 @@
 import CollapseAbout from "../CollapseAbout";
+import ActivityCards from "../ActivityCards";
 
 const GeneralSection = ({ section, lang, textSize, textMargin }) => (
   <>
@@ -8,6 +9,11 @@ const GeneralSection = ({ section, lang, textSize, textMargin }) => (
     {section.id === "about" ? (
       <CollapseAbout
         content={lang === "fr" ? section.content.fr : section.content.en}
+        textSize={textSize.content}
+      />
+    ) : section.id === "activities" ? (
+      <ActivityCards
+        lang={lang}
         textSize={textSize.content}
       />
     ) : (

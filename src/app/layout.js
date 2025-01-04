@@ -2,6 +2,8 @@ import { Poppins, Inter } from "next/font/google";
 import "./styles/globals.css";
 import { content } from "../content";
 import { projectsList } from "../projectsList";
+import BackgroundStyle from "./components/BackgroundStyle";
+import getImagePath from "./components/getImagePath";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -10,7 +12,7 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 // Determine the type of the image based on its extension
 const getImageType = (src) => {
@@ -32,7 +34,7 @@ const getImageType = (src) => {
 
 export const metadata = {
   metadataBase: new URL("https://s-and-co-solutions.digital"), // Base URL for metadata
-  title: content.siteMetadata.title, 
+  title: content.siteMetadata.title,
   description: content.siteMetadata.description,
   keywords: content.siteMetadata.keywords, // Keywords for SEO
   authors: [
@@ -45,9 +47,9 @@ export const metadata = {
       "Bienvenue sur le portfolio de Sandra COLOMER. Explorez mes projets de développement web, apprenez-en davantage sur moi, et contactez-moi pour vos projets numériques.",
     url: "/MyPortfolio",
     images: {
-      url: "/MyPortfolio/images/og-image.jpg", // relative path to the image
-      alt: "Image de partage pour le portfolio", 
-      width: 1200, 
+      url: getImagePath("/images/og-image.jpg"), // relative path to the image
+      alt: "Image de partage pour le portfolio",
+      width: 1200,
       height: 630,
     },
     locale: "fr_FR",
@@ -62,8 +64,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   // Get all images to preload
   const imagesToPreload = [
-    content.sectionsData.home.imageSrc,
-    ...projectsList.projects.map((project) => project.image),
+    getImagePath(content.sectionsData.home.imageSrc),
+    ...projectsList.projects.map((project) => getImagePath(project.image)),
   ];
   return (
     <html lang="fr" className={inter.className}>
@@ -78,7 +80,10 @@ export default function RootLayout({ children }) {
           />
         ))}
       </head>
-      <body className={`antialiased ${poppins.variable}`}>{children}</body>
+      <body className={`antialiased ${poppins.variable}`}>
+        <BackgroundStyle />
+        {children}
+      </body>
     </html>
   );
 }

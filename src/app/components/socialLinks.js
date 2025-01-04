@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { content } from "../../content";
+import getImagePath from "./getImagePath";
 
 const SocialLinks = () => {
   return (
@@ -10,10 +11,10 @@ const SocialLinks = () => {
           key={index}
           href={link.url}
           target={link.name !== "Email" ? "_blank" : "_self"}
-          rel="noopener noreferrer"          
+          rel="noopener noreferrer"
         >
           <Image
-            src={link.icon}
+            src={getImagePath(link.icon)}
             alt={link.name}
             width={16}
             height={16}

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 // ("@fortawesome/fontawesome-free/css/all.min.css");
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -41,7 +43,7 @@ const CollapseAbout = ({ content, textSize }) => {
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <p className={`text-left ${textSize} mt-2`}>{remainingText}</p>
+        <p className={`text-left ${textSize} mt-2 mb-6`}>{remainingText}</p>
       </div>
     </div>
   );

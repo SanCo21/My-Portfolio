@@ -1,13 +1,16 @@
+"use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import getImagePath from "./getImagePath";
 
 const ProjectsCards = ({ lang, projects }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [hoveredImage, setHoveredImage] = useState(null);
 
   return (
-    <div className="mt-10 flex flex-wrap justify-center">
+    <div className="mt-10 mb-8 flex flex-wrap justify-center">
       {projects?.map((project, index) => (
         <div
           className="relative overflow-hidden m-4 p-4 bg-white shadow-lg rounded-lg w-custom"
@@ -24,10 +27,10 @@ const ProjectsCards = ({ lang, projects }) => {
                   ? "transform scale-110 filter brightness-70"
                   : ""
               }`}
-              src={project.image}
+              src={getImagePath(project.image)}
               alt={project.title}
               width={900}
-              height={900}              
+              height={900}
               loading="lazy"
             />
             <div
