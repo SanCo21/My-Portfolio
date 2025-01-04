@@ -10,8 +10,8 @@ const HomeSection = ({ section, lang }) => (
       <div className="w-1/3 flex justify-center">
         <div className="photo rounded-full bg-white">
           <Image
-            src={section.image.src}
-            alt={section.image.alt}
+            src={section.imageSrc}
+            alt={section.imageAlt}
             width={720}
             height={1040}
             priority={true}

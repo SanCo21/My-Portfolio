@@ -6,7 +6,7 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins); 
 }
 
 input,
@@ -179,7 +179,13 @@ html {
 }
 
 .title-home {
-  @apply text-5xl lg:text-6xl xl:text-7xl font-bold text-primary mb-4 leading-tight;
+  font-size: 3rem; /* text-5xl */
+  font-size: 3.75rem; /* lg:text-6xl */
+  font-size: 4.5rem; /* xl:text-7xl */
+  font-weight: 700; /* font-bold */
+  color: var(--primary); /* text-primary */
+  margin-bottom: 1rem; /* mb-4 */
+  line-height: 1.25; /* leading-tight */
   letter-spacing: 2px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }

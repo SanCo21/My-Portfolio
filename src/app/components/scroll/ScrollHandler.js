@@ -1,8 +1,19 @@
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import ScrollToTopButton from "./ScrollToTopButton";
 
-const ScrollHandler = ({ sectionsData, setActiveSection, setIsVisible, isVisible }) => {
+const ScrollHandler = ({
+  sectionsData,
+  setActiveSection,
+  setIsVisible,
+  isVisible,
+}) => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   const handleScroll = useCallback(() => {
+    if (!isClient) return;
+
     const headerElement = document.querySelector("header");
     if (!headerElement) return;
 
@@ -40,20 +51,26 @@ const ScrollHandler = ({ sectionsData, setActiveSection, setIsVisible, isVisible
     const hasScrolledDown = window.scrollY > 200;
     const isHeaderVisible = rect?.top < window.innerHeight && rect?.bottom >= 0;
     setIsVisible(hasScrolledDown && isHeaderVisible);
-  }, [sectionsData, setActiveSection, setIsVisible]);
+  }, [sectionsData, setActiveSection, setIsVisible, isClient]);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+    if (isClient) {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [handleScroll, isClient]);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (isClient) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
-  return <ScrollToTopButton isVisible={isVisible} scrollToTop={scrollToTop} />;
+  return isClient ? (
+    <ScrollToTopButton isVisible={isVisible} scrollToTop={scrollToTop} />
+  ) : null;
 };
 
 export default ScrollHandler;

@@ -1,19 +1,7 @@
-// import { Geist, Geist_Mono } from "next/font/google";
-import { Poppins } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import "./styles/globals.css";
-// import { appWithTranslation } from 'next-i18next';
-// import { i18n } from '../../next-i18next.config.mjs';
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-//   display: 'swap'
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import { content } from "../content";
+import { projectsList } from "../projectsList";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -22,20 +10,75 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const inter = Inter({ subsets: ['latin'] })
+
+// Determine the type of the image based on its extension
+const getImageType = (src) => {
+  if (typeof src !== "string") {
+    return "image/*"; // Or handle the error differently, like throwing an error
+  }
+
+  if (src.endsWith(".jpg") || src.endsWith(".jpeg")) {
+    return "image/jpeg";
+  } else if (src.endsWith(".png")) {
+    return "image/png";
+  } else if (src.endsWith(".webp")) {
+    // Add webp support
+    return "image/webp";
+  } else {
+    return "image/*"; // Default for other or unknown types
+  }
+};
+
 export const metadata = {
-  title: "Portfolio - Sandra COLOMER",
-  description:
-    "Bienvenue sur le portfolio de Sandra COLOMER. Explorez mes projets de développement web, apprenez-en davantage sur moi, et contactez-moi pour vos projets numériques.",
+  metadataBase: new URL("https://s-and-co-solutions.digital"), // Base URL for metadata
+  title: content.siteMetadata.title, 
+  description: content.siteMetadata.description,
+  keywords: content.siteMetadata.keywords, // Keywords for SEO
+  authors: [
+    { name: "Sandra COLOMER", url: "https://s-and-co-solutions.digital" },
+  ],
+  openGraph: {
+    // metadata for social networks
+    title: "Portfolio - Sandra COLOMER",
+    description:
+      "Bienvenue sur le portfolio de Sandra COLOMER. Explorez mes projets de développement web, apprenez-en davantage sur moi, et contactez-moi pour vos projets numériques.",
+    url: "/MyPortfolio",
+    images: {
+      url: "/MyPortfolio/images/og-image.jpg", // relative path to the image
+      alt: "Image de partage pour le portfolio", 
+      width: 1200, 
+      height: 630,
+    },
+    locale: "fr_FR",
+    type: "website",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }) {
+  // Get all images to preload
+  const imagesToPreload = [
+    content.sectionsData.home.imageSrc,
+    ...projectsList.projects.map((project) => project.image),
+  ];
   return (
-    <html lang="fr">
-      <body className={`${poppins.variable} antialiased`}>
-        {children}
-      </body>
+    <html lang="fr" className={inter.className}>
+      <head>
+        {imagesToPreload.map((image, index) => (
+          <link
+            key={index}
+            rel="preload"
+            as="image"
+            href={image}
+            type={getImageType(image)} // Determine the type of the image based on its extension
+          />
+        ))}
+      </head>
+      <body className={`antialiased ${poppins.variable}`}>{children}</body>
     </html>
   );
 }
-
-// export default appWithTranslation(RootLayout, { ...i18n });

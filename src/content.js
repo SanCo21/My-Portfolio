@@ -1,4 +1,11 @@
 export const content = {
+  siteMetadata: {
+    title: "Portfolio - Sandra COLOMER",
+    description:
+      "Bienvenue sur le portfolio de Sandra COLOMER, développeuse web passionnée. Découvrez mes projets et mon expertise en développement front-end et back-end.",
+    keywords:
+      "portfolio, développeur web, front-end, back-end, React, JavaScript, HTML, CSS, projets web, Sandra COLOMER",
+  },
   companyName: {
     base: "",
     complement: {
@@ -44,11 +51,8 @@ export const content = {
         en: "I am Sandra COLOMER, a creator of dynamic and interactive web interfaces.",
         fr: "Je suis Sandra COLOMER, une créatrice d'interfaces web dynamiques et interactives.",
       },
-      image: 
-        {
-          src: "/images/Portrait4.webp",
-          alt: "Portrait de Sandra COLOMER",
-        },
+      imageSrc: "/images/Portrait4.webp",
+      imageAlt: "Portrait de Sandra COLOMER",
       component: "null",
       backgroundColor: "null",
       icon: "home",
@@ -92,7 +96,7 @@ export const content = {
           },
           description: {
             en: "Transformation of graphic mockups into HTML, CSS and JavaScript code (design and browser/device compatibility).",
-            fr: "Transformation de maquettes graphiques en code HTML, CSS et JavaScript (respect du design et compatibilité navigateurs/appareils).",
+            fr: "Transformation de maquettes graphiques en code HTML, CSS et JavaScript (respect du design et compatibilité; navigateurs/appareils).",
           },
           icon: "trowel-bricks",
         },
@@ -114,7 +118,7 @@ export const content = {
           },
           description: {
             en: "Improve SEO and performance (loading time, rendering and accessibility, web best practices).",
-            fr: "Améliorer le référencement (SEO) et les performances (temps de chargement, rendu et accessibilité, bonnes pratiques du web).",
+            fr: "Améliorer le référencement (SEO) et les performances (temps de chargement, rendu et accessibilité;, bonnes pratiques du web).",
           },
           icon: "chart-line",
         },

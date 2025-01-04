@@ -52,7 +52,7 @@ export const projectsList = {
         en: "Portfolio of a professional photographer",
       },
       information: {
-        fr: "Amélioration du SEO d'un site web existant en utilisant des outils de référencement et de bonnes pratiques.",
+        fr: "Am&eacute;lioration du SEO d'un site web existant en utilisant des outils de référencement et de bonnes pratiques.",
         en: "SEO improvement of an existing website using SEO tools and best practices.",
       },
       image: "/images/NinaCarducci.webp",
