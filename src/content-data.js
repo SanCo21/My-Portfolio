@@ -9,8 +9,8 @@ export const content = {
     companyName: {
       base: "S-and-CO",
       complement: {
-        en: "null",
-        fr: "null",
+        en: "solutions",
+        fr: "solutions",
       },
     },
     legalNotices: {
