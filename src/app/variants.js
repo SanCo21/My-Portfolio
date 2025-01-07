@@ -1,3 +1,4 @@
+// Motion-framer for the animated display of sections
 export const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

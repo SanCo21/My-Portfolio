@@ -1,5 +1,5 @@
 import LanguageSwitcher from "./LanguageSwitcher";
-import { content } from "../../content";
+import { content } from "@/content-data";
 import SocialLinks from "./socialLinks";
 import Navbar from "./Navbar";
 
@@ -18,7 +18,7 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
   return (
     <aside className="hidden lg:flex bg-primary text-white items-center w-64 min-h-screen fixed top-0 left-0 flex-col  ">
       <div className="flex-shrink-0 mb-8">
-        <div className="text-2xl text-center font-bold mb-5">
+        <div className="text-2xl text-center font-bold my-5">
           <a href="#home">
             {base}
             <br />

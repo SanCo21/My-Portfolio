@@ -1,6 +1,6 @@
 "use client";
 
-import { content } from "../content";
+import { content } from "@/content-data";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
@@ -57,5 +57,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-// export default HomePage;

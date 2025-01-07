@@ -1,6 +1,6 @@
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { content } from "../../content";
+import { content } from "@/content-data";
 import classNames from "classnames";
 
 const Navbar = ({
@@ -62,7 +62,7 @@ const Navbar = ({
             >
               {orientation === "vertical" && sections[key].icon && (
                 <i
-                  className={`fas fa-${sections[key].icon} text-2xl text-accent mr-4 `}
+                  className={`fas fa-${sections[key].icon} text-2xl w-6 text-accent mr-4 `}
                 ></i>
               )}
               <span className="group-hover:text-accent">

@@ -11,7 +11,7 @@ const nextConfig = {
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
-      config.optimization.minimize = false; // Deactivate code minification
+      config.optimization.minimize = false; // Code minification activation
     }
     // config.module.rules.push(
     //   {

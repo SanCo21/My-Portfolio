@@ -1,6 +1,6 @@
-import React from "react";
+
 import Image from "next/image";
-import { content } from "../../content";
+import { content } from "@/content-data";
 import getImagePath from "./getImagePath";
 
 const SocialLinks = () => {

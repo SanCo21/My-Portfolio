@@ -1,8 +1,8 @@
 import { Poppins, Inter } from "next/font/google";
 import "./styles/globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { content } from "../content";
-import { projectsList } from "../projectsList";
+import { content } from "@/content-data";
+import { projectsList } from "@/projects-data";
 import BackgroundStyle from "./components/BackgroundStyle";
 import getImagePath from "./components/getImagePath";
 

@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-// import Image from 'next/image';
 import Navbar from "./Navbar";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { content } from "../../content";
+import { content } from "@/content-data";
 import HamburgerMenu from "./HamburgerMenu";
 
 const Header = ({ lang, toggleLanguage, activeSection }) => {
@@ -21,7 +20,7 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
         <div className="text-left ml-4">
           {/* <Image src="Logo Sandra.svg" alt="Logo" width={50} height={50} /> */}
 
-          <div className="text-md font-bold whitespace-pre-line">
+          <div className="text-md font-bold">
             <a href="#home">
               {base}
               <span className="block">

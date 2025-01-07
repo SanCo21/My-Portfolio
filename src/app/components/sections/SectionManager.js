@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import { containerVariants } from "../../variants";
 import HomeSection from "../../components/sections/HomeSection";
 import GeneralSection from "../../components/sections/GeneralSection";
-import { projectsList } from "../../../projectsList";
+import { projectsList } from "@/projects-data";
 import ProjectsCards from "../ProjectsCards";
 import SkillsCards from "../SkillsCards";
 import ContactForm from "../ContactForm";
-// import CloudsBackground from "../CloudsBackground";
 
 const colorMapping = {
   primary: "bg-primary",
