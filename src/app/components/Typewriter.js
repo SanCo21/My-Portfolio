@@ -23,13 +23,13 @@ const Typewriter = ({ text, className }) => {
   }, [index, text, displayedText]);
 
   return (
-    <h2 className={className}>
+    <h1 className={className}>
       <span className="visually-hidden text-[0.001px] opacity-0">{text}</span>
       <br />
       <span ref={textRef} aria-hidden={displayedText === "" ? "true" : "false"}>
         {displayedText}
       </span>
-    </h2>
+    </h1>
   );
 };
 

@@ -44,12 +44,12 @@ export const content = {
     home: {
       id: "home",
       title: {
-        en: "Welcome to my Portfolio!",
-        fr: "Bienvenue sur mon Portfolio !",
+        en: "Sandra COLOMER",
+        fr: "Sandra COLOMER",
       },
       content: {
-        en: "I am Sandra COLOMER, a creator of dynamic and interactive web interfaces.",
-        fr: "Je suis Sandra COLOMER, une créatrice d'interfaces web dynamiques et interactives.",
+        en: "Creator of dynamic and interactive web interfaces.",
+        fr: "Créatrice d'interfaces web dynamiques et interactives.",
       },
       imageSrc: "/images/Portrait4.webp",
       imageAlt: "Portrait de Sandra COLOMER ",

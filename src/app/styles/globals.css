@@ -191,3 +191,7 @@ html {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* collapse animation */
+.transition-height {
+  transition: max-height 1s ease-in-out, transform 1s ease-in-out, opacity 1s ease-in-out;
+}
