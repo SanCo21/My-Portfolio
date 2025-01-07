@@ -36,7 +36,7 @@ export const content = {
     },
     {
       name: "Email",
-      url: "mailto:	contact@s-and-co-solutions.digital",
+      url: "mailto:contact@s-and-co-solutions.digital",
       icon: "/icons/email.svg",
     },
   ],
@@ -85,7 +85,7 @@ export const content = {
       backgroundColor: "null",
       icon: "hands-helping",
       commonImage: {
-        src: "/images/working.jpg",
+        src: "/images/working.webp",
         alt: "Activity image",
       },
       activitiesList: [
@@ -95,8 +95,8 @@ export const content = {
             fr: "Intégration",
           },
           description: {
-            en: "Transformation of graphic mockups into HTML, CSS and JavaScript code (design and browser/device compatibility).",
-            fr: "Transformation de maquettes graphiques en code HTML, CSS et JavaScript (respect du design et compatibilité; navigateurs/appareils).",
+            en: "Graphic mockups into HTML, CSS and JavaScript code (design and browser/device compatibility).",
+            fr: "Maquette graphique en code HTML, CSS et JavaScript (respect design et compatibilité navigateurs et appareils).",
           },
           icon: "trowel-bricks",
         },
@@ -118,7 +118,7 @@ export const content = {
           },
           description: {
             en: "Improve SEO and performance (loading time, rendering and accessibility, web best practices).",
-            fr: "Améliorer le référencement (SEO) et les performances (temps de chargement, rendu et accessibilité;, bonnes pratiques du web).",
+            fr: "Référencement (SEO) et performances (temps de chargement, rendu et accessibilité, bonnes pratiques du web).",
           },
           icon: "chart-line",
         },
@@ -128,8 +128,8 @@ export const content = {
             fr: "Maintenance",
           },
           description: {
-            en: "Add new functionalities, improve the user interface, optimize performance...",
-            fr: "Ajout de nouvelles fonctionnalités, amélioration de l'interface utilisateur, optimisation des performances...",
+            en: "New functionalities, improve the user interface, optimize performance...",
+            fr: "Nouvelles fonctionnalités, amélioration de l'interface utilisateur, optimisation des performances...",
           },
           icon: "screwdriver-wrench",
         },

@@ -1,5 +1,6 @@
 import { Poppins, Inter } from "next/font/google";
 import "./styles/globals.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { content } from "../content";
 import { projectsList } from "../projectsList";
 import BackgroundStyle from "./components/BackgroundStyle";
@@ -45,7 +46,7 @@ export const metadata = {
     title: "Portfolio - Sandra COLOMER",
     description:
       "Bienvenue sur le portfolio de Sandra COLOMER. Explorez mes projets de développement web, apprenez-en davantage sur moi, et contactez-moi pour vos projets numériques.",
-    url: "/MyPortfolio",
+    url: "/Portfolio",
     images: {
       url: getImagePath("/images/og-image.jpg"), // relative path to the image
       alt: "Image de partage pour le portfolio",

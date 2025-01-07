@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from "react";
 
-const Typewriter = ({ text }) => {
-  const [displayedText, setDisplayedText] = useState('');
+const Typewriter = ({ text, className }) => {
+  const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
+  const textRef = useRef(null);
 
   useEffect(() => {
-    setDisplayedText('');
+    setDisplayedText("");
     setIndex(0);
   }, [text]);
 
@@ -16,12 +17,20 @@ const Typewriter = ({ text }) => {
       const timeout = setTimeout(() => {
         setDisplayedText(displayedText + text[index]);
         setIndex(index + 1);
-      }, 100); // Time between each character
+      }, 100);
       return () => clearTimeout(timeout);
     }
   }, [index, text, displayedText]);
 
-  return <span>{displayedText}</span>;
+  return (
+    <h2 className={className}>
+      <span className="visually-hidden text-[0.001px] opacity-0">{text}</span>
+      <br />
+      <span ref={textRef} aria-hidden={displayedText === "" ? "true" : "false"}>
+        {displayedText}
+      </span>
+    </h2>
+  );
 };
 
 export default Typewriter;

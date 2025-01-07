@@ -37,7 +37,7 @@ export const projectsList = {
         en: "Peer-to-peer accommodation rental website",
       },
       information: {
-        fr: "Création d'une application web dynamique utilisant React pour une expérience utilisateur fluide et une gestion moderne du routage. ",
+        fr: "Création d'une application web dynamique avec React pour une expérience utilisateur fluide et une gestion moderne du routage. ",
         en: "Creation of a dynamic web application using React to offer a smooth user experience, accompanied by modern routing management and attractive designs.",
       },
       image: "/images/Kasa.webp",
@@ -52,7 +52,7 @@ export const projectsList = {
         en: "Portfolio of a professional photographer",
       },
       information: {
-        fr: "Am&eacute;lioration du SEO d'un site web existant en utilisant des outils de référencement et de bonnes pratiques.",
+        fr: "Amélioration du SEO d'un site web existant en utilisant des outils de référencement et de bonnes pratiques.",
         en: "SEO improvement of an existing website using SEO tools and best practices.",
       },
       image: "/images/NinaCarducci.webp",

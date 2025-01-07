@@ -22,7 +22,8 @@ label {
   --primary: black;
   --secondary: #d2d7df;
   --accent: #de369d;
-  --background-image: url("/images/connected.png");
+  --background-image: none;
+  /* --background-image: url("/images/connected.png"); */
 }
 
 html,
@@ -32,6 +33,7 @@ body {
 
 body {
   background-color: var(--background);
+  background-image: var(--background-image);
   color: var(--foreground);
   /* font-family: "Poppins", sans-serif; */
   margin: 0;
@@ -189,12 +191,3 @@ html {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* const textSizes = {
-  title: "text-4xl md:text-5xl lg:text-6xl",
-  content: "sm:text-sm text-base md:text-lg lg:text-xl",
-  h3: "sm:text-xl text-2xl md:text-3xl lg:text-4xl xl:text-5xl",
-};
-const textMargins = {
-  title: "mb-4 md:mb-6 lg:mb-8",
-  h3: "mb-6 md:mb-7 lg:mb-20",
-}; */

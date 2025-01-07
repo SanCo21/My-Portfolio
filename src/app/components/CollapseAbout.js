@@ -39,11 +39,11 @@ const CollapseAbout = ({ content, textSize }) => {
         id="collapse-content"
         role="region"
         aria-hidden={!isOpen}
-        className={`transition-all duration-700 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-96" : "max-h-0"
+        className={`transition-all duration-700 ease-in-out transform overflow-hidden ${
+          isOpen ? "max-h-150 opacity-100 translate-y-0" : "max-h-0 opacity-0 translate-y-10"
         }`}
       >
-        <p className={`text-left ${textSize} mt-2 mb-6`}>{remainingText}</p>
+        <p className={`text-left ${textSize} mt-2 mb-10`}>{remainingText}</p>
       </div>
     </div>
   );

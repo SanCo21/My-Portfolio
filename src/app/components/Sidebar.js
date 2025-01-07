@@ -18,13 +18,13 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
   return (
     <aside className="hidden lg:flex bg-primary text-white items-center w-64 min-h-screen fixed top-0 left-0 flex-col  ">
       <div className="flex-shrink-0 mb-8">
-        <h1 className="text-2xl text-center font-bold mb-5">
+        <div className="text-2xl text-center font-bold mb-5">
           <a href="#home">
             {base}
             <br />
             {complement[lang]}
           </a>
-        </h1>
+        </div>
         <div className="flex justify-center mt-8 mb-4">
           <LanguageSwitcher lang={lang} toggleLanguage={toggleLanguage} />
         </div>

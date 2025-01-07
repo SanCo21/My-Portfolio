@@ -20,14 +20,15 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
       <div className=" flex items-center justify-between w-full lg:w-auto">
         <div className="text-left ml-4">
           {/* <Image src="Logo Sandra.svg" alt="Logo" width={50} height={50} /> */}
-          <h1 className="text-md font-bold  whitespace-pre-line">
+
+          <div className="text-md font-bold whitespace-pre-line">
             <a href="#home">
               {base}
               <span className="block">
                 {complement[lang].replace(" ", "\n")}
               </span>
             </a>
-          </h1>
+          </div>
         </div>
         <div className="md:hidden items-center justify-center mr-1">
           <HamburgerMenu isOpen={IsNavbarOpen} onClick={handleHamburgerClick} />

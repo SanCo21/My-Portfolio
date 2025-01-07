@@ -10,7 +10,7 @@ const Navbar = ({
   header = false,
   compact = false,
   sidebar = false,
-  hamburger = false
+  hamburger = false,
 }) => {
   const sections = content.sectionsData;
   const navClass = classNames({
@@ -30,9 +30,9 @@ const Navbar = ({
       : "flex items-center group";
 
   const activeClass =
-    "bg-white text-primary font-medium p-2 rounded w-full text-center";
+    "bg-white text-primary font-medium p-2 rounded text-center";
 
-  const inactiveClass = "p-2 text-center w-full";
+  const inactiveClass = "p-2 text-center";
 
   const handleLinkClick = (event, id) => {
     event.preventDefault();

@@ -181,7 +181,7 @@ const ContactForm = ({ lang }) => {
           <textarea
             id="message"
             name="message"
-            autoComplete="message"
+            // autoComplete="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onBlur={(e) => handleBlur("message", e.target.value)}

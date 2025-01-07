@@ -4,7 +4,7 @@ import { content } from "../../content";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import getImagePath from "./getImagePath";
 
-const ActivityCards = ({ lang, textSize }) => {
+const ActivityCards = ({ lang }) => {
   const activitiesList = content.sectionsData.activities.activitiesList;
 
   return (
@@ -20,13 +20,13 @@ const ActivityCards = ({ lang, textSize }) => {
                       className={`fas fa-${activity.icon} text-6xl text-accent mb-10`}
                     ></i>
                   )}
-                  <h3 className="font-bold text-primary">
+                  <h3 className="font-bold text-primary text-base xs:text-lg sm:text-lg md:text-lg lg:text-lg xl:text-xl 2xl:text-xl">
                     {lang === "fr" ? activity.name.fr : activity.name.en}
                   </h3>
                 </div>
                 <div className="card-back flex flex-col items-center justify-center bg-primary rounded-lg shadow-lg">
                   <Image
-                    src={getImagePath("/images/working.jpg")}
+                    src={getImagePath("/images/working.webp")}
                     alt="" // alt empty because aria-hidden is set to true
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -34,7 +34,7 @@ const ActivityCards = ({ lang, textSize }) => {
                     aria-hidden="true"
                   />
                   <p
-                    className={`absolute px-4 text-white text-center ${textSize}`}
+                    className="absolute px-4 text-white text-center text-base xs:text-sm sm:text-md md:text-md lg:text-lg xl:text-lg 2xl:text-lg"
                   >
                     {lang === "fr"
                       ? activity.description.fr
