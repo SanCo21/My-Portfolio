@@ -7,10 +7,10 @@ export const content = {
         "portfolio, développeur web, front-end, React, JavaScript, HTML, CSS, projets web, Sandra COLOMER",
     },
     companyName: {
-      base: "Sandra",
+      base: "S-and-CO",
       complement: {
-        en: "COLOMER",
-        fr: "COLOMER",
+        en: "",
+        fr: "",
       },
     },
     legalNotices: {
@@ -44,8 +44,8 @@ export const content = {
       home: {
         id: "home",
         title: {
-          en: "Sandra COLOMER",
-          fr: "Sandra COLOMER",
+          en: "welcome! I am Sandra COLOMER",
+          fr: "Bienvenue ! Je suis Sandra COLOMER",
         },
         content: {
           en: "Creator of dynamic and interactive web interfaces.",
@@ -118,7 +118,7 @@ export const content = {
             },
             description: {
               en: "Improve SEO and performance (loading time, rendering and accessibility, web best practices).",
-              fr: "Référencement (SEO) et performances (temps de chargement, rendu et accessibilité, bonnes pratiques du web).",
+              fr: "SEO et performances (chargement, rendu et accessibilité, bonnes pratiques du web).",
             },
             icon: "chart-line",
           },

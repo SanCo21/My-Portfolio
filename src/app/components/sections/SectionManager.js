@@ -24,13 +24,12 @@ const textSizes = {
   title:
     "text-4xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl",
   content:
-    "text-base xs:text-sm sm:text-md md:text-md lg:text-lg, xl:text-lg 2xl:text-xl",
-  h3: "text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl",
-  // h3: "xs:text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl",
+    "text-base xs:text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl 2xl:text-xl",
+  h3: "text-base xs:text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl",
 };
 const textMargins = {
   title: "mb-4 md:mb-6 lg:mb-8",
-  h3: "mb-6 md:mb-7 lg:mb-20",
+  h3: "mb-6 md:mb-7 lg:mb-10",
 };
 
 const SectionManager = ({ lang, sectionsData }) => {
@@ -61,7 +60,7 @@ const SectionManager = ({ lang, sectionsData }) => {
                 <HomeSection
                   section={section}
                   lang={lang}
-                  textSize={textSizes.title}
+                  textSize={textSizes}
                   textMargin={textMargins.title}
                 />
               ) : (

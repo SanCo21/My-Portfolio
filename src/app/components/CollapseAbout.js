@@ -2,8 +2,6 @@
 
 import { useState } from "react"
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// import { titreSection } from "@/test-content";
-// import { texteExemple } from "@/test-content";
 
 const CollapseAbout = ({ content, textSize }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,8 +43,6 @@ const CollapseAbout = ({ content, textSize }) => {
         }`}
       >
         <p className={`text-left ${textSize} mt-2 mb-10`}>{remainingText}</p>
-        {/* <p> {titreSection}</p> */}
-        {/* <p> {texteExemple}</p> */}
       </div>
     </div>
   );

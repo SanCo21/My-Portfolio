@@ -33,7 +33,7 @@ const ActivityCards = ({ lang }) => {
                     className="rounded-lg object-cover opacity-30"
                     aria-hidden="true"
                   />
-                  <p className="absolute px-4 text-white text-center text-base xs:text-sm sm:text-md md:text-md lg:text-lg xl:text-lg 2xl:text-lg">
+                  <p className="absolute px-4 text-white text-center">
                     {lang === "fr"
                       ? activity.description.fr
                       : activity.description.en}
