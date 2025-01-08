@@ -9,8 +9,8 @@ export const content = {
     companyName: {
       base: "S-and-CO",
       complement: {
-        en: "solutions",
-        fr: "solutions",
+        en: "Solutions",
+        fr: "Solutions",
       },
     },
     legalNotices: {
@@ -44,8 +44,8 @@ export const content = {
       home: {
         id: "home",
         title: {
-          en: "welcome! I am Sandra COLOMER",
-          fr: "Bienvenue ! Je suis Sandra COLOMER",
+          en: "Sandra COLOMER, web integrator",
+          fr: "Sandra COLOMER, intégratrice web",
         },
         content: {
           en: "Creator of dynamic and interactive web interfaces.",
