@@ -23,9 +23,9 @@ const HomeSection = ({ section, lang, textSize, textMargin }) => (
         </div>
       </div>
       <div className="w-2/3 p-10 flex flex-col justify-center">
-        <h3 className={`${textSize.h3} mt-0 text-primary text-left`}>
+        <h2 className={`${textSize.h3} mt-0 text-primary text-left`}>
           {lang === "fr" ? section.content.fr : section.content.en}
-        </h3>
+        </h2>
       </div>
     </div>
   </>
