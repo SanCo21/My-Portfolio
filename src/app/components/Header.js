@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Navbar from "./Navbar";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { content } from "@/content-data";
 import HamburgerMenu from "./HamburgerMenu";
+import getImagePath from "./getImagePath";
 
 const Header = ({ lang, toggleLanguage, activeSection }) => {
-  const { base, complement } = content.companyName;
+  // const { base, complement } = content.companyName;
+  const { companyLogo } = content;
   const [IsNavbarOpen, setIsNavbarOpen] = useState(false);
 
   const handleHamburgerClick = () => {
@@ -17,19 +20,25 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
   return (
     <header className="bg-primary text-white py-4 fixed top-0 w-full z-10 lg:hidden">
       <div className=" flex items-center justify-between w-full lg:w-auto">
-        <div className="text-left ml-4">
-          {/* <Image src="Logo Sandra.svg" alt="Logo" width={50} height={50} /> */}
+        <div className="text-left ml-1 flex justify-start">
+          <Image
+            src={getImagePath(companyLogo.src)}
+            alt={companyLogo.alt}
+            width={120}
+            height={52}
+            priority
+          />
 
-          <div className="text-md font-bold">
+          {/* <div className="text-md font-bold">
             <a href="#home">
               {base}
               <span className="block">
                 {complement[lang].replace(" ", "\n")}
               </span>
             </a>
-          </div>
+          </div> */}
         </div>
-        <div className="md:hidden items-center justify-center mr-1">
+        <div className="md:hidden items-center justify-center mr-5">
           <HamburgerMenu isOpen={IsNavbarOpen} onClick={handleHamburgerClick} />
         </div>
         <div className="md:flex hidden text-sm">

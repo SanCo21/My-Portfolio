@@ -1,10 +1,19 @@
 import LanguageSwitcher from "./LanguageSwitcher";
+import Image from "next/image";
 import { content } from "@/content-data";
 import SocialLinks from "./socialLinks";
 import Navbar from "./Navbar";
+import getImagePath from "./getImagePath";
 
 const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
   //   const sections = content.sectionsData;
+  const { companyLogo } = content;
+  // <Image
+  //           src={getImagePath(companyLogo.src)}
+  //           alt={companyLogo.alt}
+  //           width={120}
+  //           height={120}
+  //         />
   const { base, complement } = content.companyName;
   const legalNoticesTextBreaks = {
     en: content.legalNotices.textBreaks.en
@@ -20,9 +29,16 @@ const Sidebar = ({ lang, toggleLanguage, activeSection }) => {
       <div className="flex-shrink-0 mb-8">
         <div className="text-2xl text-center font-bold my-5">
           <a href="#home">
-            {base}
+            <Image
+              src={getImagePath(companyLogo.src)}
+              alt={companyLogo.alt}
+              width={200}
+              height={87}
+              priority
+            />
+            {/* {base}
             <br />
-            {complement[lang]}
+            {complement[lang]} */}
           </a>
         </div>
         <div className="flex justify-center mt-8 mb-4">

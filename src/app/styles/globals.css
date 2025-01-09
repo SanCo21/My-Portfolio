@@ -185,8 +185,8 @@ html {
   /* font-size: 4.5rem; /* xl:text-7xl */
   /*font-weight: 700; /* font-bold */
   color: var(--primary); /* text-primary */
-  /*margin-bottom: 1rem; /* mb-4 */
-  line-height: 1.25; /* leading-tight */
+  /*margin-bottom: 1rem; /* mb-4 */  
+  line-height: 1.5; /* leading-tight */
   letter-spacing: 2px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }

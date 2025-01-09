@@ -26,7 +26,7 @@ const Typewriter = ({ text, className }) => {
     <h1 className={className}>
       <span className="visually-hidden text-[0.001px] opacity-0">{text}</span>
       <br />
-      <span ref={textRef} aria-hidden={displayedText === "" ? "true" : "false"}>
+      <span className="inline-block leading-tight"ref={textRef} aria-hidden={displayedText === "" ? "true" : "false"}>
         {displayedText}
       </span>
     </h1>
