@@ -8,7 +8,7 @@ export const content = {
   },
   companyLogo:{
     src: "/images/logo.webp",
-    alt: "Logo S-AND-CO Solutions digitales",
+    alt: "Logo de S-AND-CO Solutions digitales",
   },
   companyName: {
     base: "S-AND-CO",
