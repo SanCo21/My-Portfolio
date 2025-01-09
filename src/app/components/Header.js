@@ -21,23 +21,18 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
     <header className="bg-primary text-white py-4 fixed top-0 w-full z-10 lg:hidden">
       <div className=" flex items-center justify-between w-full lg:w-auto">
         <div className="text-left ml-1 pb-1 flex justify-start">
-          <Image
-            src={getImagePath(companyLogo.src)}
-            alt={companyLogo.alt}
-            width={120}
-            height={52}
-            className="w-[120px] h-[52px]"
-            priority
-          />
-
-          {/* <div className="text-md font-bold">
+          <div className="text-md font-bold">
             <a href="#home">
-              {base}
-              <span className="block">
-                {complement[lang].replace(" ", "\n")}
-              </span>
+              <Image
+                src={getImagePath(companyLogo.src)}
+                alt={companyLogo.alt}
+                width={120}
+                height={52}
+                className="w-[120px] h-[52px]"
+                priority
+              />
             </a>
-          </div> */}
+          </div>
         </div>
         <div className="md:hidden items-center justify-center mr-5">
           <HamburgerMenu isOpen={IsNavbarOpen} onClick={handleHamburgerClick} />

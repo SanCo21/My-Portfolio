@@ -6,25 +6,25 @@ export const content = {
     keywords:
       "portfolio, développeur web, front-end, React, JavaScript, HTML, CSS, projets web, Sandra COLOMER",
   },
-  companyLogo:{
+  companyLogo: {
     src: "/images/logo.webp",
-    alt: "Logo de S-AND-CO Solutions digitales",
+    alt: "Logo de S AND CO - Solutions digitales",
   },
   companyName: {
-    base: "S-AND-CO",
+    base: "S AND CO",
     complement: {
-      en: "",
-      fr: "",
+      en: "Digital Solutions",
+      fr: "Solutions digitales",
     },
-  },  
+  },
   legalNotices: {
     text: {
-      en: "Copyright 2024 - ${base}  ${complement.en} - All Rights Reserved",
-      fr: "Copyright 2024 - ${base}  ${complement.fr} - Tous droits réservés",
+      en: "© 2024 - ${base}  ${complement.en} - All Rights Reserved",
+      fr: "© 2024 - ${base}  ${complement.fr} - Tous droits réservés",
     },
     textBreaks: {
-      en: "Copyright 2024<br>${base}<br>${complement.en}<br>All Rights Reserved",
-      fr: "Copyright 2024<br>${base}<br>${complement.fr}<br>Tous droits réservés",
+      en: "© 2024<br>${base}<br>${complement.en}<br>All Rights Reserved",
+      fr: "© 2024<br>${base}<br>${complement.fr}<br>Tous droits réservés",
     },
   },
   socialLinks: [
@@ -48,8 +48,8 @@ export const content = {
     home: {
       id: "home",
       title: {
-        en: "Sandra COLOMER, web integrator",
-        fr: "Sandra COLOMER, intégratrice web",
+        en: "Sandra COLOMER, web developer",
+        fr: "Sandra COLOMER, développeuse web",
       },
       content: {
         en: "Creator of dynamic and interactive web interfaces.",

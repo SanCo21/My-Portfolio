@@ -1,12 +1,18 @@
 "use client";
 
-import { content } from "@/content-data";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
+import { content } from "@/content-data";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import SectionManager from "./components/sections/SectionManager";
-import ScrollHandler from "./components/scroll/ScrollHandler";
+// import ScrollHandler from "./components/scroll/ScrollHandler";
 import Footer from "./components/Footer";
+
+const ScrollHandler = dynamic(
+  () => import("./components/scroll/ScrollHandler"),
+  { ssr: false }
+);
 
 export default function HomePage() {
   const [lang, setLang] = useState("fr");
