@@ -20,12 +20,13 @@ const Header = ({ lang, toggleLanguage, activeSection }) => {
   return (
     <header className="bg-primary text-white py-4 fixed top-0 w-full z-10 lg:hidden">
       <div className=" flex items-center justify-between w-full lg:w-auto">
-        <div className="text-left ml-1 flex justify-start">
+        <div className="text-left ml-1 pb-1 flex justify-start">
           <Image
             src={getImagePath(companyLogo.src)}
             alt={companyLogo.alt}
             width={120}
             height={52}
+            className="w-[120px] h-[52px]"
             priority
           />
 
