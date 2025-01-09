@@ -71,7 +71,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr" className={inter.className}>
       <head>
-        <meta charSet="UTF-8" />
         {imagesToPreload.map((image, index) => (
           <link
             key={index}
